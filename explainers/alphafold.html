@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How AlphaFold predicts a protein's shape — Cultured Machine</title>
+<meta name="description" content="Why protein folding is so hard, and how AI solved a 50-year-old problem. An interactive, plain-language explainer.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="../index.html">
+      <span class="logo">CM</span>
+      <span>Cultured Machine <span class="tagline">· biology learns to compute</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="alphafold.html">Explainers</a>
+      <a href="../news/2026-06-11.html">News</a>
+      <a href="../about.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="eyebrow">Explainer</div>
+  <h1>How AlphaFold predicts a protein's shape</h1>
+  <p class="meta">~6 min read · Concepts: protein folding, deep learning · Updated June 2026</p>
+
+  <p class="lead">A protein is just a string of beads. But that string folds into a precise 3D shape — and the shape is everything. For 50 years, predicting it from the string alone was one of biology's hardest open problems. Then an AI solved it. Here's the intuition, no chemistry degree required.</p>
+
+  <h2>1. A protein is a chain that folds itself</h2>
+  <p>Your body builds proteins from 20 kinds of building blocks called <strong>amino acids</strong>, strung together like beads on a thread. The order of beads is written in your DNA. So far, so simple — it's just a sequence, like letters in a word.</p>
+  <p>But the chain doesn't stay a floppy thread. The moment it's made, it folds up on itself into a compact, intricate 3D shape — in a fraction of a second. And that <em>shape</em> decides what the protein does: whether it carries oxygen, digests food, or becomes the spike a virus uses to break into your cells.</p>
+
+  <div class="callout">
+    <strong>The puzzle:</strong> we can read the sequence of beads easily and cheaply. But knowing the sequence tells you almost nothing about the final shape — and the shape is what we actually need to design drugs, understand disease, or engineer enzymes.
+  </div>
+
+  <h2>2. Why guessing the shape is so hard</h2>
+  <p>Here's the scale of the problem. Even a small protein chain can fold into an astronomical number of possible shapes. If a protein tried every possibility one by one, it would take longer than the age of the universe — yet real proteins fold in microseconds. This contradiction is called <strong>Levinthal's paradox</strong>.</p>
+  <p>The widget below makes it concrete: drag the slider to add amino acids to the chain and watch how fast the number of possible shapes explodes.</p>
+
+  <div class="viz" id="levinthal">
+    <h4>The folding explosion</h4>
+    <p class="hint">Each amino acid added multiplies the number of possible 3D shapes. Drag the slider.</p>
+    <div style="display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;">
+      <span style="font-size:.9rem; color:var(--ink-soft);">Chain length:</span>
+      <strong id="lenLabel" style="font-size:1.1rem;">10</strong>
+      <span style="font-size:.9rem; color:var(--ink-soft);">amino acids</span>
+    </div>
+    <input type="range" id="lenSlider" min="2" max="100" value="10" style="width:100%; margin:14px 0; accent-color: var(--accent);">
+    <div style="background:var(--accent-soft); border-radius:10px; padding:16px;">
+      <div style="font-size:.85rem; color:var(--ink-soft);">Approximate number of possible shapes:</div>
+      <div id="shapeCount" style="font-size:1.6rem; font-weight:800; color:var(--accent); font-variant-numeric: tabular-nums; word-break: break-all;">59,049</div>
+      <div id="shapeWords" style="font-size:.9rem; color:var(--ink-soft); margin-top:4px;">about 59 thousand</div>
+    </div>
+    <p class="hint" id="levinthalTakeaway" style="margin-top:14px;">A 10-bead chain already has tens of thousands of options. Keep dragging…</p>
+  </div>
+
+  <h2>3. The key insight: evolution leaves clues</h2>
+  <p>AlphaFold's breakthrough wasn't brute force. It was noticing that <strong>evolution has already run the experiment millions of times.</strong></p>
+  <p>The same protein exists in humans, mice, fish, and bacteria — slightly different in each, because mutations accumulated over millions of years. When scientists line up all these versions, a pattern emerges: certain pairs of positions in the chain <em>mutate together</em>. If position 12 changes, position 80 reliably changes too.</p>
+  <p>Why would two distant beads be linked? Because in the folded shape, <strong>they're touching</strong>. A mutation in one only works if its partner adjusts to keep the contact intact. So these "co-evolving" pairs are a map of which parts of the chain end up next to each other in 3D — even though they're far apart in the sequence.</p>
+
+  <div class="viz" id="coevo">
+    <h4>Co-evolution reveals contacts</h4>
+    <p class="hint">Hover or tap a highlighted pair. Positions far apart in the sequence (top) can be neighbors in the fold (bottom).</p>
+    <svg viewBox="0 0 600 260" style="width:100%; height:auto;" id="coevoSvg" aria-label="Diagram showing sequence positions and their 3D contacts">
+      <!-- Sequence line -->
+      <text x="10" y="30" font-size="13" fill="#4a5160">Sequence (the chain of beads):</text>
+      <g id="seqBeads"></g>
+      <!-- Folded blob -->
+      <text x="10" y="160" font-size="13" fill="#4a5160">Folded shape (same beads, now in 3D):</text>
+      <g id="foldBeads"></g>
+    </svg>
+    <p class="hint">The dashed links connect the same pair of amino acids. Far apart on the chain — touching in the fold. AI learns to predict exactly these links.</p>
+  </div>
+
+  <h2>4. What AlphaFold actually does</h2>
+  <p>Put the pieces together and the recipe is surprisingly intuitive:</p>
+  <p>First, AlphaFold gathers every known version of your protein across species and lines them up — that's the evolutionary record. From those alignments it spots the co-evolving pairs, building a rich picture of which beads probably touch. A deep neural network (a <em>transformer</em>, the same family of model behind ChatGPT) then turns that web of likely contacts into a single, self-consistent 3D structure, refining it over and over until everything fits — like solving a 3D jigsaw where the co-evolution clues tell you which pieces share an edge.</p>
+  <p>The result, released in 2021 and expanded since, was startling: AlphaFold predicts structures about as accurately as slow, expensive lab experiments — in minutes. Its creators have now released predicted shapes for <strong>nearly every known protein</strong>, over 200 million of them, free for any researcher.</p>
+
+  <div class="callout">
+    <strong>Why it matters:</strong> knowing a protein's shape jump-starts drug design, helps explain genetic diseases, and lets engineers build new enzymes — for example to break down plastic or capture carbon. A bottleneck that took years per protein now takes an afternoon.
+  </div>
+
+  <h2>5. What it still can't do</h2>
+  <p>AlphaFold predicts the shape a protein settles into, but proteins are not statues. They flex, snap between states, and grab onto other molecules — and predicting that <em>motion</em>, or how a protein behaves with a drug bound to it, is still an open frontier. It also leans on the evolutionary record, so truly novel or fast-changing proteins (like some immune and viral ones) are harder. Newer models are chipping away at all of this.</p>
+
+  <p class="meta" style="margin-top:32px;">Spotted an error or have a suggestion? This explainer is open source — corrections welcome.</p>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© <span id="year"></span> Cultured Machine · Biotech learns to compute.</div>
+    <div><a href="../about.html">About</a> · <a href="../news/2026-06-11.html">News</a> · <a href="../index.html">Home</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ---- Widget 1: Levinthal explosion ---- */
+(function(){
+  const slider = document.getElementById('lenSlider');
+  const lenLabel = document.getElementById('lenLabel');
+  const count = document.getElementById('shapeCount');
+  const words = document.getElementById('shapeWords');
+  const takeaway = document.getElementById('levinthalTakeaway');
+
+  // ~3 rotational states per bond is the classic simplified assumption
+  function update(){
+    const n = +slider.value;
+    lenLabel.textContent = n;
+    const exponent = (n - 1) * Math.log10(3); // 3^(n-1)
+    if (exponent < 15) {
+      const val = Math.pow(3, n - 1);
+      count.textContent = Math.round(val).toLocaleString('en-US');
+    } else {
+      count.textContent = '10^' + Math.round(exponent) + ' (a 1 followed by ' + Math.round(exponent) + ' zeros)';
+    }
+    // words
+    if (exponent < 3) words.textContent = 'just a few hundred';
+    else if (exponent < 6) words.textContent = 'tens of thousands to a million';
+    else if (exponent < 12) words.textContent = 'millions to trillions';
+    else if (exponent < 24) words.textContent = 'more than all the grains of sand on Earth';
+    else if (exponent < 80) words.textContent = 'more than the atoms in the Solar System';
+    else words.textContent = 'more than the atoms in the observable universe';
+
+    if (n < 15) takeaway.textContent = 'A short chain already has tens of thousands of options. Keep dragging…';
+    else if (n < 50) takeaway.textContent = 'Trying these one by one would take longer than the universe has existed. Yet a real protein folds in microseconds.';
+    else takeaway.textContent = 'This is Levinthal’s paradox: the search space is impossibly huge, so proteins can’t be folding by trial and error — and neither can a computer brute-force it.';
+  }
+  slider.addEventListener('input', update);
+  update();
+})();
+
+/* ---- Widget 2: Co-evolution contacts ---- */
+(function(){
+  const seqG = document.getElementById('seqBeads');
+  const foldG = document.getElementById('foldBeads');
+  const svg = document.getElementById('coevoSvg');
+  const N = 14;
+  // contact pairs (indices) that are far in sequence but near in fold
+  const pairs = [[2,11],[5,9],[1,13]];
+  const colors = ['#14857a', '#7c5cff', '#d97706'];
+
+  // sequence positions: evenly spaced along a line
+  const seqX = i => 40 + i * (520/(N-1));
+  const seqY = 55;
+  // fold positions: a rough blob layout (hand-placed-ish via circle + noise)
+  const foldPos = [];
+  for (let i=0;i<N;i++){
+    const ang = (i/N)*Math.PI*2;
+    const r = 42 + (i%3)*10;
+    foldPos.push([300 + Math.cos(ang)*r*1.6, 205 + Math.sin(ang)*r*0.7]);
+  }
+  // make contact pairs actually close in the fold
+  pairs.forEach(([a,b],k)=>{
+    foldPos[b] = [foldPos[a][0] + 14, foldPos[a][1] + 12];
+  });
+
+  function bead(cx,cy,i,highlight){
+    const c = document.createElementNS('http://www.w3.org/2000/svg','circle');
+    c.setAttribute('cx',cx); c.setAttribute('cy',cy); c.setAttribute('r', highlight?9:6);
+    c.setAttribute('fill', highlight || '#cfd8d6');
+    c.setAttribute('stroke','#fff'); c.setAttribute('stroke-width','1.5');
+    c.setAttribute('data-i', i);
+    return c;
+  }
+
+  // backbone lines
+  function backbone(g, posFn){
+    for (let i=0;i<N-1;i++){
+      const l = document.createElementNS('http://www.w3.org/2000/svg','line');
+      const [x1,y1] = posFn(i), [x2,y2] = posFn(i+1);
+      l.setAttribute('x1',x1); l.setAttribute('y1',y1);
+      l.setAttribute('x2',x2); l.setAttribute('y2',y2);
+      l.setAttribute('stroke','#cfd8d6'); l.setAttribute('stroke-width','2');
+      g.appendChild(l);
+    }
+  }
+  const seqPos = i => [seqX(i), seqY];
+  const foldPosFn = i => foldPos[i];
+
+  backbone(seqG, seqPos);
+  backbone(foldG, foldPosFn);
+
+  // highlight which beads are in a pair
+  const pairColor = {};
+  pairs.forEach(([a,b],k)=>{ pairColor[a]=colors[k]; pairColor[b]=colors[k]; });
+
+  for (let i=0;i<N;i++){
+    seqG.appendChild(bead(seqX(i), seqY, i, pairColor[i]));
+    foldG.appendChild(bead(foldPos[i][0], foldPos[i][1], i, pairColor[i]));
+  }
+
+  // dashed contact links in the fold + connector showing same pair
+  pairs.forEach(([a,b],k)=>{
+    const l = document.createElementNS('http://www.w3.org/2000/svg','line');
+    l.setAttribute('x1',foldPos[a][0]); l.setAttribute('y1',foldPos[a][1]);
+    l.setAttribute('x2',foldPos[b][0]); l.setAttribute('y2',foldPos[b][1]);
+    l.setAttribute('stroke',colors[k]); l.setAttribute('stroke-width','2.5');
+    l.setAttribute('stroke-dasharray','4 3');
+    foldG.appendChild(l);
+    // arc on sequence showing the same pair are far apart
+    const path = document.createElementNS('http://www.w3.org/2000/svg','path');
+    const x1=seqX(a), x2=seqX(b), midx=(x1+x2)/2, h=seqY-28-k*8;
+    path.setAttribute('d',`M ${x1} ${seqY-8} Q ${midx} ${h} ${x2} ${seqY-8}`);
+    path.setAttribute('fill','none'); path.setAttribute('stroke',colors[k]);
+    path.setAttribute('stroke-width','2'); path.setAttribute('stroke-dasharray','4 3');
+    seqG.appendChild(path);
+  });
+})();
+</script>
+</body>
+</html>

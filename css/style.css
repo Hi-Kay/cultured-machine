@@ -1,0 +1,166 @@
+/* Cultured Machine — shared styles
+   Design: clean, scientific, warm. One CSS file the whole site shares. */
+
+:root {
+  --bg: #fbfaf8;
+  --surface: #ffffff;
+  --ink: #1a1d24;
+  --ink-soft: #4a5160;
+  --line: #e7e4de;
+  --accent: #14857a;       /* teal — "cultured" / biology */
+  --accent-2: #7c5cff;     /* violet — "machine" / AI */
+  --accent-soft: #e6f3f1;
+  --max: 760px;
+  --radius: 14px;
+  --shadow: 0 1px 2px rgba(20,20,30,.04), 0 8px 24px rgba(20,20,30,.05);
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --mono: "SF Mono", ui-monospace, "Cascadia Code", Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- Header / nav ---------- */
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: rgba(251,250,248,.85);
+  backdrop-filter: saturate(180%) blur(10px);
+  position: sticky; top: 0; z-index: 10;
+}
+.nav {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--ink); font-size: 1.05rem; }
+.brand:hover { text-decoration: none; }
+.brand .logo {
+  width: 30px; height: 30px; flex: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  display: grid; place-items: center;
+  color: #fff; font-weight: 800; font-size: .85rem;
+}
+.brand .tagline { font-weight: 400; color: var(--ink-soft); font-size: .8rem; }
+.nav-links { display: flex; gap: 20px; font-size: .95rem; }
+.nav-links a { color: var(--ink-soft); }
+.nav-links a:hover { color: var(--accent); text-decoration: none; }
+
+/* ---------- Layout ---------- */
+main { max-width: var(--max); margin: 0 auto; padding: 48px 20px 80px; }
+.wide { max-width: 920px; }
+
+h1 { font-size: 2.2rem; line-height: 1.15; letter-spacing: -.02em; margin: 0 0 .4em; }
+h2 { font-size: 1.5rem; letter-spacing: -.01em; margin: 2em 0 .6em; }
+h3 { font-size: 1.15rem; margin: 1.6em 0 .4em; }
+p { margin: 0 0 1.1em; }
+.lead { font-size: 1.2rem; color: var(--ink-soft); }
+
+.eyebrow {
+  text-transform: uppercase; letter-spacing: .08em; font-size: .75rem;
+  font-weight: 700; color: var(--accent); margin-bottom: 8px;
+}
+
+/* ---------- Hero ---------- */
+.hero { padding: 28px 0 8px; }
+.hero h1 { font-size: 2.6rem; }
+.hero .lead { max-width: 600px; }
+.pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 0; }
+.pill {
+  font-size: .82rem; padding: 5px 12px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent); font-weight: 600;
+}
+
+/* ---------- Cards ---------- */
+.card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 28px 0; }
+.card {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow);
+  transition: transform .15s ease, box-shadow .15s ease;
+  display: block; color: inherit;
+}
+.card:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(20,20,30,.06), 0 16px 40px rgba(20,20,30,.08); text-decoration: none; }
+.card .kicker { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--accent-2); }
+.card h3 { margin: 8px 0 6px; font-size: 1.15rem; color: var(--ink); }
+.card p { color: var(--ink-soft); font-size: .95rem; margin: 0; }
+
+/* ---------- Article meta ---------- */
+.meta { color: var(--ink-soft); font-size: .9rem; margin-bottom: 28px; }
+.meta a { color: var(--ink-soft); text-decoration: underline; }
+
+/* ---------- Callout / figure ---------- */
+figure { margin: 28px 0; }
+figcaption { font-size: .88rem; color: var(--ink-soft); text-align: center; margin-top: 10px; }
+.callout {
+  background: var(--accent-soft); border-left: 3px solid var(--accent);
+  padding: 16px 18px; border-radius: 0 10px 10px 0; margin: 24px 0;
+  font-size: .98rem;
+}
+.callout strong { color: var(--accent); }
+
+/* ---------- Interactive widget shell ---------- */
+.viz {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow);
+  margin: 28px 0;
+}
+.viz h4 { margin: 0 0 4px; font-size: 1rem; }
+.viz .hint { font-size: .85rem; color: var(--ink-soft); margin: 0 0 16px; }
+.controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 16px; }
+.btn {
+  font: inherit; font-size: .9rem; font-weight: 600; cursor: pointer;
+  padding: 9px 16px; border-radius: 9px; border: 1px solid var(--line);
+  background: var(--surface); color: var(--ink); transition: all .12s ease;
+}
+.btn:hover { border-color: var(--accent); color: var(--accent); }
+.btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.btn.primary:hover { background: #0f6e65; color: #fff; }
+
+/* ---------- News digest ---------- */
+.story { border-bottom: 1px solid var(--line); padding: 22px 0; }
+.story:last-child { border-bottom: none; }
+.story .tag {
+  display: inline-block; font-size: .72rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .05em; color: var(--accent-2); margin-bottom: 6px;
+}
+.story h3 { margin: 0 0 6px; font-size: 1.15rem; }
+.story p { margin: 0 0 8px; color: var(--ink-soft); }
+.story .source { font-size: .85rem; color: var(--ink-soft); }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--line); margin-top: 40px;
+  background: var(--surface);
+}
+.footer-inner {
+  max-width: var(--max); margin: 0 auto; padding: 32px 20px;
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+  font-size: .9rem; color: var(--ink-soft);
+}
+.footer-inner a { color: var(--ink-soft); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .card-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2rem; }
+  h1 { font-size: 1.8rem; }
+  .nav-links { gap: 14px; font-size: .9rem; }
+  .brand .tagline { display: none; }
+}

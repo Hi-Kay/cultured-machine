@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cultured Machine — Where biology learns to compute</title>
+<meta name="description" content="Biotech meets AI, explained simply. Weekly news and visual explainers on AI for biology, drug discovery, and bioprocessing.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <span class="logo">CM</span>
+      <span>Cultured Machine <span class="tagline">· biology learns to compute</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="explainers/alphafold.html">Explainers</a>
+      <a href="news/2026-06-11.html">News</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="eyebrow">Biotech × AI, explained</div>
+    <h1>Where biology learns to compute.</h1>
+    <p class="lead">Plain-language explainers and a weekly news digest on artificial intelligence in biology — protein design, drug discovery, and the machines now running the lab.</p>
+    <div class="pill-row">
+      <span class="pill">Protein AI</span>
+      <span class="pill">Drug discovery</span>
+      <span class="pill">Bioprocessing</span>
+      <span class="pill">Synthetic biology</span>
+    </div>
+  </section>
+
+  <h2>Start here</h2>
+  <div class="card-grid">
+    <a class="card" href="explainers/alphafold.html">
+      <span class="kicker">Explainer · Interactive</span>
+      <h3>How AlphaFold predicts a protein's shape</h3>
+      <p>Why a protein's 3D fold is so hard to guess — and how AI cracked a 50-year-old problem. With a hands-on visualization.</p>
+    </a>
+    <a class="card" href="news/2026-06-11.html">
+      <span class="kicker">Weekly digest</span>
+      <h3>This week in Biotech + AI</h3>
+      <p>The handful of stories that actually matter, summarized in plain English. Updated every week.</p>
+    </a>
+    <a class="card" href="about.html">
+      <span class="kicker">About</span>
+      <h3>Who writes this</h3>
+      <p>A bioprocess engineer turned AI practitioner, translating between the wet lab and the model.</p>
+    </a>
+    <a class="card" href="#topics">
+      <span class="kicker">Coming soon</span>
+      <h3>The explainer roadmap</h3>
+      <p>From "what is a protein language model?" to "how does AI design an antibody?" — see what's next.</p>
+    </a>
+  </div>
+
+  <h2 id="topics">On the roadmap</h2>
+  <p>Each explainer takes one idea and makes it click — no jargon, with a visual you can poke at.</p>
+  <div class="card-grid">
+    <div class="card">
+      <span class="kicker">Next up</span>
+      <h3>What is a protein language model?</h3>
+      <p>How models like ESM "read" protein sequences the way GPT reads text.</p>
+    </div>
+    <div class="card">
+      <span class="kicker">Next up</span>
+      <h3>How AI designs a new antibody</h3>
+      <p>From target to candidate — generative models in drug discovery, step by step.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong>New here?</strong> This site pairs a curated weekly news digest with deep, visual explainers. No newsletter sign-up wall — everything's free and open. Bookmark it, or follow the repo on GitHub.
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© <span id="year"></span> Cultured Machine · Biotech learns to compute.</div>
+    <div><a href="about.html">About</a> · <a href="news/2026-06-11.html">News</a> · <a href="explainers/alphafold.html">Explainers</a></div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
