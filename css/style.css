@@ -156,6 +156,87 @@ figcaption { font-size: .88rem; color: var(--ink-soft); text-align: center; marg
 }
 .footer-inner a { color: var(--ink-soft); }
 
+/* ---------- News v2: topic filter + story cards ---------- */
+/* Topic color tokens */
+:root {
+  --t-foundation: #7c5cff;   /* Foundation models */
+  --t-protein:    #14857a;   /* Protein design */
+  --t-discovery:  #d97706;   /* Drug discovery */
+  --t-oncology:   #d6336c;   /* Oncology */
+  --t-funding:    #2563eb;   /* Funding */
+  --t-regulation: #4b5563;   /* Regulation */
+  --t-reality:    #0891b2;   /* Reality check */
+}
+
+.topic-filter { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 28px; }
+.topic-chip {
+  font: inherit; font-size: .82rem; font-weight: 600; cursor: pointer;
+  padding: 6px 13px; border-radius: 999px; border: 1px solid var(--line);
+  background: var(--surface); color: var(--ink-soft); transition: all .12s ease;
+  display: inline-flex; align-items: center; gap: 7px;
+}
+.topic-chip .dot { width: 9px; height: 9px; border-radius: 50%; background: currentColor; }
+.topic-chip[aria-pressed="true"] { color: #fff; border-color: transparent; }
+.topic-chip.all[aria-pressed="true"] { background: var(--ink); }
+.topic-chip:hover { border-color: var(--ink-soft); }
+
+/* Story card */
+.news-card {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+  margin: 18px 0; overflow: hidden; display: flex; gap: 0;
+  transition: opacity .2s ease, transform .2s ease, box-shadow .15s ease;
+}
+.news-card:hover { box-shadow: 0 4px 8px rgba(20,20,30,.06), 0 16px 40px rgba(20,20,30,.08); }
+.news-card.hidden { display: none; }
+/* color rail by topic */
+.news-card .rail { width: 6px; flex: none; background: var(--ink-soft); }
+.news-card .body { padding: 22px 24px; flex: 1; min-width: 0; }
+.news-card .topbar { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
+.topic-tag {
+  font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em;
+  padding: 3px 9px; border-radius: 6px; color: #fff;
+}
+.news-card .date { font-size: .8rem; color: var(--ink-soft); }
+.news-card h3 { margin: 2px 0 8px; font-size: 1.3rem; line-height: 1.25; }
+.news-card .summary { color: var(--ink); margin: 0 0 12px; }
+.news-card .why {
+  background: var(--bg); border-radius: 8px; padding: 11px 14px; margin: 0 0 14px;
+  font-size: .94rem; color: var(--ink-soft);
+}
+.news-card .why strong { color: var(--ink); }
+.news-card .sources { font-size: .85rem; color: var(--ink-soft); }
+.news-card .sources a { font-weight: 600; }
+
+/* Lead (hero) story: bigger */
+.news-card.lead .body { padding: 28px; }
+.news-card.lead h3 { font-size: 1.6rem; }
+.news-card.lead .summary { font-size: 1.08rem; }
+
+/* topic color mapping (rail + tag) */
+.topic-foundation .rail, .tag-foundation { background: var(--t-foundation); }
+.topic-protein .rail,    .tag-protein    { background: var(--t-protein); }
+.topic-discovery .rail,  .tag-discovery  { background: var(--t-discovery); }
+.topic-oncology .rail,   .tag-oncology   { background: var(--t-oncology); }
+.topic-funding .rail,    .tag-funding    { background: var(--t-funding); }
+.topic-regulation .rail, .tag-regulation { background: var(--t-regulation); }
+.topic-reality .rail,    .tag-reality    { background: var(--t-reality); }
+
+.chip-foundation { color: var(--t-foundation); }
+.chip-protein    { color: var(--t-protein); }
+.chip-discovery  { color: var(--t-discovery); }
+.chip-oncology   { color: var(--t-oncology); }
+.chip-funding    { color: var(--t-funding); }
+.chip-regulation { color: var(--t-regulation); }
+.chip-reality    { color: var(--t-reality); }
+.chip-foundation[aria-pressed="true"] { background: var(--t-foundation); }
+.chip-protein[aria-pressed="true"]    { background: var(--t-protein); }
+.chip-discovery[aria-pressed="true"]  { background: var(--t-discovery); }
+.chip-oncology[aria-pressed="true"]   { background: var(--t-oncology); }
+.chip-funding[aria-pressed="true"]    { background: var(--t-funding); }
+.chip-regulation[aria-pressed="true"] { background: var(--t-regulation); }
+.chip-reality[aria-pressed="true"]    { background: var(--t-reality); }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 640px) {
   .card-grid { grid-template-columns: 1fr; }
@@ -163,4 +244,6 @@ figcaption { font-size: .88rem; color: var(--ink-soft); text-align: center; marg
   h1 { font-size: 1.8rem; }
   .nav-links { gap: 14px; font-size: .9rem; }
   .brand .tagline { display: none; }
+  .news-card .body { padding: 18px; }
+  .news-card.lead h3 { font-size: 1.35rem; }
 }

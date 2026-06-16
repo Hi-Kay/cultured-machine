@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This week in Biotech + AI — June 16, 2026 — Cultured Machine</title>
+<meta name="description" content="Curated, plain-English news at the intersection of biotech and AI: open-source protein models, Isomorphic's raise, a pancreatic cancer breakthrough, and more — each with why it matters and a link to the source.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="../index.html">
+      <span class="logo">CM</span>
+      <span>Cultured Machine <span class="tagline">· biology learns to compute</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../explainers/alphafold.html">Explainers</a>
+      <a href="2026-06-16.html">News</a>
+      <a href="../about.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="eyebrow">Weekly digest</div>
+  <h1>This week in Biotech + AI</h1>
+  <p class="meta">Week of June 16, 2026 · 6 stories · ~6 min read</p>
+  <p class="lead">The stories worth your attention right now — each in plain English, with why it matters and a link to the source. Filter by topic below.</p>
+
+  <div class="topic-filter" id="topicFilter">
+    <button class="topic-chip all" data-topic="all" aria-pressed="true"><span class="dot"></span>All</button>
+    <button class="topic-chip chip-foundation" data-topic="foundation" aria-pressed="false"><span class="dot"></span>Foundation models</button>
+    <button class="topic-chip chip-protein" data-topic="protein" aria-pressed="false"><span class="dot"></span>Protein design</button>
+    <button class="topic-chip chip-funding" data-topic="funding" aria-pressed="false"><span class="dot"></span>Funding</button>
+    <button class="topic-chip chip-oncology" data-topic="oncology" aria-pressed="false"><span class="dot"></span>Oncology</button>
+    <button class="topic-chip chip-regulation" data-topic="regulation" aria-pressed="false"><span class="dot"></span>Regulation</button>
+    <button class="topic-chip chip-reality" data-topic="reality" aria-pressed="false"><span class="dot"></span>Reality check</button>
+  </div>
+
+  <div id="stories">
+
+    <!-- LEAD STORY -->
+    <article class="news-card lead topic-foundation" data-topic="foundation">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-foundation">Foundation models</span>
+          <span class="date">June 9, 2026</span>
+        </div>
+        <h3>Biohub open-sources a new generation of protein AI — and uses it to design working drug binders</h3>
+        <p class="summary">Biohub, the nonprofit backed by Priscilla Chan and Mark Zuckerberg, released updated open-source ESM protein language models after absorbing the team from EvolutionaryScale. The headline pair: <strong>ESMC</strong>, trained on ~2.8 billion protein sequences from across the tree of life, and <strong>ESMFold2</strong>, a prediction-and-design engine that skips the slow sequence-alignment step earlier tools needed. In the lab, ESMFold2's designed binders hit five cancer and immune targets (including EGFR, PD-L1 and CTLA-4) with nanomolar affinity and hit rates up to 88% — and benchmarked favorably against AlphaFold 3, Chai-1 and Boltz-1.</p>
+        <div class="why"><strong>Why it matters:</strong> Open weights mean any academic or startup lab can design candidate binders without a big-pharma data moat. That some binders restored T-cell signaling in the dish hints at AI-designed immunotherapies — and the companion "ESM Atlas" of 6.8 billion sequences even surfaced potential new gene-editing tools.</div>
+        <p class="sources">Sources: <a href="https://rosettacommons.org/2026/06/09/biohub-releases-open-source-models-that-utilize-evolution-to-design-disease-target-binders/">Rosetta Commons</a> · <a href="https://www.genengnews.com/topics/artificial-intelligence/biohub-releases-protein-biology-world-model-to-address-disease/">GEN</a></p>
+      </div>
+    </article>
+
+    <!-- FUNDING -->
+    <article class="news-card topic-funding" data-topic="funding">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-funding">Funding</span>
+          <span class="date">May 12 &amp; June 11, 2026</span>
+        </div>
+        <h3>Isomorphic Labs raises $2.1B to turn AlphaFold into actual drugs</h3>
+        <p class="summary">The DeepMind spinout founded by Nobel laureate Demis Hassabis closed a $2.1 billion Series B led by Thrive Capital, with Alphabet, GV, Temasek and others. Days later it detailed a partnership with NVIDIA built around AlphaFold and the BioNeMo platform. The capital is earmarked to move Isomorphic's own AI-designed candidates — in oncology and immunology, alongside partners Eli Lilly, Novartis and Johnson &amp; Johnson — toward clinical trials.</p>
+        <div class="why"><strong>Why it matters:</strong> This is the biggest bet yet that AlphaFold-class models can do more than predict structures — that they can design medicines end to end. The number to watch: whether 2026–27 brings Isomorphic's first molecule into the clinic.</div>
+        <p class="sources">Sources: <a href="https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-series-b-investment-round">Isomorphic Labs</a> · <a href="https://endpoints.news/five-burning-qs-for-isomorphic-labs-after-2-1b-raise-for-ai-biotech/">Endpoints News</a></p>
+      </div>
+    </article>
+
+    <!-- ONCOLOGY -->
+    <article class="news-card topic-oncology" data-topic="oncology">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-oncology">Oncology</span>
+          <span class="date">May 31, 2026</span>
+        </div>
+        <h3>An "unprecedented" survival result in pancreatic cancer — against the long-"undruggable" RAS</h3>
+        <p class="summary">Revolution Medicines' daraxonrasib, a once-daily oral drug that targets mutant RAS proteins, nearly doubled median overall survival versus chemotherapy — 13.2 vs 6.7 months, a 60% reduction in the risk of death — in the Phase 3 RASolute 302 trial in previously treated metastatic pancreatic cancer. Results were presented in a plenary session at ASCO on May 31 and published simultaneously in the New England Journal of Medicine.</p>
+        <div class="why"><strong>Why it matters:</strong> RAS mutations drive some of the deadliest cancers and were considered "undruggable" for decades — exactly the hard target class that structure-based and AI-guided design now aims at. This particular drug wasn't AI-discovered, but it's the benchmark the AI-design field is chasing, and proof that "impossible" targets are falling.</div>
+        <p class="sources">Sources: <a href="https://ir.revmed.com/news-releases/news-release-details/daraxonrasib-demonstrates-unprecedented-overall-survival-benefit/">Revolution Medicines</a> · <a href="https://www.cancernetwork.com/view/daraxonrasib-shows-unprecedented-survival-in-pretreated-pancreatic-cancer">CancerNetwork</a></p>
+      </div>
+    </article>
+
+    <!-- PROTEIN DESIGN -->
+    <article class="news-card topic-protein" data-topic="protein">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-protein">Protein design</span>
+          <span class="date">April–May 2026</span>
+        </div>
+        <h3>The new frontier: designing binders from scratch, and predicting proteins in motion</h3>
+        <p class="summary">A May 2026 review in <em>Communications Biology</em> frames structural biology's next phase, beyond AlphaFold 2, around two goals: routinely designing high-affinity protein binders <em>de novo</em>, and predicting a protein's full range of shapes (its conformational landscape) rather than a single snapshot. A concrete taste of the first goal: researchers built an AI-designed protein that recognizes the stress hormone cortisol and turned it into a working biosensor.</p>
+        <div class="why"><strong>Why it matters:</strong> Predicting static structures was act one. Designing brand-new functional proteins on demand — biosensors, enzymes, therapeutics — and capturing how proteins actually move is what turns prediction into engineering.</div>
+        <p class="sources">Sources: <a href="https://www.nature.com/articles/s42003-026-10112-3">Communications Biology</a> · <a href="https://phys.org/news/2026-04-ai-proteins-built-specific-compounds.html">Phys.org</a></p>
+      </div>
+    </article>
+
+    <!-- REGULATION -->
+    <article class="news-card topic-regulation" data-topic="regulation">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-regulation">Regulation</span>
+          <span class="date">2026</span>
+        </div>
+        <h3>FDA and EMA put out a shared rulebook for AI in drug development</h3>
+        <p class="summary">US and European regulators released a collaborative framework on how AI and machine-learning models used in drug discovery and clinical trials should be validated and documented. The FDA's own draft guidance is expected to be finalized in 2026, asking sponsors to submit "credibility assessment" plans and to detail model architectures, training data and governance for higher-risk uses.</p>
+        <div class="why"><strong>Why it matters:</strong> Clear, shared expectations are what let AI tools graduate from flashy demos to approvable products — and they lower the risk of a company building on a model that regulators later reject. Unglamorous infrastructure that quietly decides who gets to scale.</div>
+        <p class="sources">Sources: <a href="https://www.clinicaltrialsarena.com/news/fda-ema-ai-guidance-pharma-drug-development/">Clinical Trials Arena</a> · <a href="https://www.drugtargetreview.com/ai-in-drug-discovery-predictions-for-2026/1865962.article">Drug Target Review</a></p>
+      </div>
+    </article>
+
+    <!-- REALITY CHECK -->
+    <article class="news-card topic-reality" data-topic="reality">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-reality">Reality check</span>
+          <span class="date">2026</span>
+        </div>
+        <h3>200+ AI-discovered drugs are in trials. Zero are approved — yet</h3>
+        <p class="summary">Industry trackers now count more than 200 AI-discovered drug candidates in clinical development, spread across early and mid-stage trials, with no FDA approvals so far; analysts put roughly 60% odds on the first approval arriving in 2027–28. The furthest-along proof point is Insilico Medicine's rentosertib for idiopathic pulmonary fibrosis — widely cited as the first drug where AI chose both the target and the molecule, reaching Phase 1 dosing in about 30 months.</p>
+        <div class="why"><strong>Why it matters:</strong> The gap between a strong benchmark and an approved therapy is where the field's credibility — and a great deal of money — will be settled. Knowing the limits is how you spot the real openings rather than the hype.</div>
+        <p class="sources">Sources: <a href="https://www.drugtargetreview.com/2026-the-year-ai-stops-being-optional-in-drug-discovery/682243.article">Drug Target Review</a></p>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="callout" style="margin-top:36px;">
+    <strong>How this digest is made:</strong> stories are gathered from trusted biotech and AI sources, summarized in plain English, and fact-checked against the primary source before publishing. Each links out so you can go deeper. <a href="../about.html">More on the process →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© <span id="year"></span> Cultured Machine · Biotech learns to compute.</div>
+    <div><a href="../about.html">About</a> · <a href="../explainers/alphafold.html">Explainers</a> · <a href="../index.html">Home</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* Topic filter */
+(function(){
+  const filter = document.getElementById('topicFilter');
+  const chips = [...filter.querySelectorAll('.topic-chip')];
+  const cards = [...document.querySelectorAll('#stories .news-card')];
+  filter.addEventListener('click', e => {
+    const chip = e.target.closest('.topic-chip');
+    if (!chip) return;
+    chips.forEach(c => c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'));
+    const topic = chip.dataset.topic;
+    cards.forEach(card => {
+      const show = (topic === 'all') || (card.dataset.topic === topic);
+      card.classList.toggle('hidden', !show);
+    });
+  });
+})();
+</script>
+</body>
+</html>
