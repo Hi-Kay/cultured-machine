@@ -67,7 +67,7 @@
 
   <div class="viz" id="coevo">
     <h4>Co-evolution reveals contacts</h4>
-    <p class="hint">Hover or tap a highlighted pair. Positions far apart in the sequence (top) can be neighbors in the fold (bottom).</p>
+    <p class="hint">Hover or tap a colored pair below. Positions far apart in the sequence (top) turn out to be neighbors in the fold (bottom).</p>
     <svg viewBox="0 0 600 260" style="width:100%; height:auto;" id="coevoSvg" aria-label="Diagram showing sequence positions and their 3D contacts">
       <!-- Sequence line -->
       <text x="10" y="30" font-size="13" fill="#4a5160">Sequence (the chain of beads):</text>
@@ -76,7 +76,8 @@
       <text x="10" y="160" font-size="13" fill="#4a5160">Folded shape (same beads, now in 3D):</text>
       <g id="foldBeads"></g>
     </svg>
-    <p class="hint">The dashed links connect the same pair of amino acids. Far apart on the chain — touching in the fold. AI learns to predict exactly these links.</p>
+    <div class="controls" id="coevoLegend"></div>
+    <p class="hint" id="coevoReadout">The dashed links connect the same pair of amino acids. Far apart on the chain — touching in the fold. AI learns to predict exactly these links.</p>
   </div>
 
   <h2>4. What AlphaFold actually does</h2>
@@ -194,26 +195,84 @@ document.getElementById('year').textContent = new Date().getFullYear();
   const pairColor = {};
   pairs.forEach(([a,b],k)=>{ pairColor[a]=colors[k]; pairColor[b]=colors[k]; });
 
+  // store per-bead element refs so we can highlight on demand
+  const seqBeadEls = [], foldBeadEls = [];
   for (let i=0;i<N;i++){
-    seqG.appendChild(bead(seqX(i), seqY, i, pairColor[i]));
-    foldG.appendChild(bead(foldPos[i][0], foldPos[i][1], i, pairColor[i]));
+    const sb = bead(seqX(i), seqY, i, pairColor[i]);
+    const fb = bead(foldPos[i][0], foldPos[i][1], i, pairColor[i]);
+    seqG.appendChild(sb); foldG.appendChild(fb);
+    seqBeadEls.push(sb); foldBeadEls.push(fb);
   }
 
-  // dashed contact links in the fold + connector showing same pair
-  pairs.forEach(([a,b],k)=>{
+  // dashed contact link (fold) + arc (sequence) per pair; keep refs
+  const pairEls = pairs.map(([a,b],k)=>{
     const l = document.createElementNS('http://www.w3.org/2000/svg','line');
     l.setAttribute('x1',foldPos[a][0]); l.setAttribute('y1',foldPos[a][1]);
     l.setAttribute('x2',foldPos[b][0]); l.setAttribute('y2',foldPos[b][1]);
     l.setAttribute('stroke',colors[k]); l.setAttribute('stroke-width','2.5');
     l.setAttribute('stroke-dasharray','4 3');
     foldG.appendChild(l);
-    // arc on sequence showing the same pair are far apart
     const path = document.createElementNS('http://www.w3.org/2000/svg','path');
     const x1=seqX(a), x2=seqX(b), midx=(x1+x2)/2, h=seqY-28-k*8;
     path.setAttribute('d',`M ${x1} ${seqY-8} Q ${midx} ${h} ${x2} ${seqY-8}`);
     path.setAttribute('fill','none'); path.setAttribute('stroke',colors[k]);
     path.setAttribute('stroke-width','2'); path.setAttribute('stroke-dasharray','4 3');
     seqG.appendChild(path);
+    return { line: l, arc: path, a, b, color: colors[k] };
+  });
+
+  const readout = document.getElementById('coevoReadout');
+  const defaultText = readout.textContent;
+
+  // emphasize one pair, fade the rest
+  function focusPair(k){
+    pairEls.forEach((p, j) => {
+      const on = (k === null) || (j === k);
+      p.line.setAttribute('stroke-width', k===j ? 4 : 2.5);
+      p.line.setAttribute('opacity', on ? 1 : 0.15);
+      p.arc.setAttribute('opacity', on ? 1 : 0.15);
+      p.arc.setAttribute('stroke-width', k===j ? 3 : 2);
+    });
+    // beads: enlarge the focused pair's beads, dim other colored ones
+    pairs.forEach(([a,b], j) => {
+      const r = (k===j) ? 11 : 9;
+      const op = (k===null || k===j) ? 1 : 0.25;
+      [a,b].forEach(i => {
+        seqBeadEls[i].setAttribute('r', r); seqBeadEls[i].setAttribute('opacity', op);
+        foldBeadEls[i].setAttribute('r', r); foldBeadEls[i].setAttribute('opacity', op);
+      });
+    });
+    if (k === null) { readout.textContent = defaultText; readout.style.color = ''; }
+    else {
+      const p = pairEls[k];
+      const gap = Math.abs(p.b - p.a);
+      readout.innerHTML = 'This pair sits <strong>' + gap + ' beads apart</strong> along the chain (top) — yet they <strong>touch</strong> in the folded shape (bottom). That’s the clue AlphaFold reads from co-evolution.';
+      readout.style.color = p.color;
+    }
+  }
+
+  // build tappable legend buttons (reliable on mobile) + hover on SVG beads
+  const legend = document.getElementById('coevoLegend');
+  pairEls.forEach((p, k) => {
+    const btn = document.createElement('button');
+    btn.className = 'btn';
+    btn.style.borderColor = p.color;
+    btn.innerHTML = '<span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:'+p.color+';margin-right:7px;vertical-align:middle;"></span>Pair ' + (k+1);
+    btn.addEventListener('mouseenter', () => focusPair(k));
+    btn.addEventListener('mouseleave', () => focusPair(null));
+    btn.addEventListener('click', () => focusPair(k));
+    legend.appendChild(btn);
+  });
+  // also let hovering/tapping the colored beads themselves work
+  pairs.forEach(([a,b], k) => {
+    [a,b].forEach(i => {
+      [seqBeadEls[i], foldBeadEls[i]].forEach(el => {
+        el.style.cursor = 'pointer';
+        el.addEventListener('mouseenter', () => focusPair(k));
+        el.addEventListener('mouseleave', () => focusPair(null));
+        el.addEventListener('click', () => focusPair(k));
+      });
+    });
   });
 })();
 </script>
