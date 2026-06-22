@@ -2,6 +2,8 @@
 
 *Where biology learns to compute.* — A static site of plain-language explainers and a weekly news digest on Biotech + AI.
 
+👉 **[Link →](https://hi-kay.github.io/cultured-machine/)**
+
 ## Structure
 ```
 cultured-machine/
