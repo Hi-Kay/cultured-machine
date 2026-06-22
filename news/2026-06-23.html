@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This week in Biotech + AI — June 23, 2026 — Cultured Machine</title>
+<meta name="description" content="Curated, plain-English news at the intersection of biotech and AI: an AI-designed universal coronavirus vaccine clears its first human trial, GLP-1 drugs cut breast cancer risk by up to 47%, and more — each with why it matters and a link to the source.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="../index.html">
+      <span class="logo">CM</span>
+      <span>Cultured Machine <span class="tagline">· biology learns to compute</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../explainers/alphafold.html">Explainers</a>
+      <a href="2026-06-23.html">News</a>
+      <a href="../about.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="eyebrow">Weekly digest</div>
+  <h1>This week in Biotech + AI</h1>
+  <p class="meta">Week of June 23, 2026 · 6 stories · ~6 min read</p>
+  <p class="lead">The stories worth your attention right now — each in plain English, with why it matters and a link to the source. Filter by topic below.</p>
+
+  <div class="topic-filter" id="topicFilter">
+    <button class="topic-chip all" data-topic="all" aria-pressed="true"><span class="dot"></span>All</button>
+    <button class="topic-chip chip-discovery" data-topic="discovery" aria-pressed="false"><span class="dot"></span>Drug discovery</button>
+    <button class="topic-chip chip-oncology" data-topic="oncology" aria-pressed="false"><span class="dot"></span>Oncology</button>
+    <button class="topic-chip chip-funding" data-topic="funding" aria-pressed="false"><span class="dot"></span>Funding</button>
+    <button class="topic-chip chip-regulation" data-topic="regulation" aria-pressed="false"><span class="dot"></span>Regulation</button>
+    <button class="topic-chip chip-reality" data-topic="reality" aria-pressed="false"><span class="dot"></span>Reality check</button>
+  </div>
+
+  <div id="stories">
+
+    <!-- LEAD STORY -->
+    <article class="news-card lead topic-discovery" data-topic="discovery">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-discovery">Drug discovery</span>
+          <span class="date">June 5, 2026</span>
+        </div>
+        <h3>An AI designed a "universal" coronavirus vaccine from scratch — and it just passed its first human trial</h3>
+        <p class="summary">Researchers at the University of Cambridge and its spinout DIOSynVax used AI and machine learning to build a single vaccine antigen that targets features shared across the entire Sarbecovirus family — the group that includes SARS-CoV-2, original SARS, and related bat coronaviruses with pandemic potential. The antigen (called a "super-antigen") was designed entirely in silico: no wet lab tinkering of a known strain, just pattern-recognition across global virus surveillance data. A Phase 1 trial in 39 healthy volunteers found the vaccine safe, well-tolerated, and capable of generating immune responses against multiple coronaviruses simultaneously — including bat viruses that haven't yet infected humans. The trial used needle-free delivery via a micro fluid jet; results were published in the <em>Journal of Infection</em>.</p>
+        <div class="why"><strong>Why it matters:</strong> This is the first time a vaccine whose active ingredient was generated entirely by computer has cleared a human safety trial — a milestone separate from its efficacy. If Phase 2 confirms broad protection, the same design logic could be applied to other virus families (Ebola, influenza) and could eventually eliminate the need to reformulate vaccines every time a new variant emerges.</div>
+        <p class="sources">Sources: <a href="https://www.sciencedaily.com/releases/2026/06/260605023357.htm">ScienceDaily / University of Cambridge</a> · <a href="https://medicalxpress.com/news/2026-06-ai-universal-vaccine-human-trial.html">Medical Xpress</a></p>
+      </div>
+    </article>
+
+    <!-- ONCOLOGY -->
+    <article class="news-card topic-oncology" data-topic="oncology">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-oncology">Oncology</span>
+          <span class="date">June 10, 2026</span>
+        </div>
+        <h3>Ozempic linked to 30–47% lower breast cancer risk — and weight loss may not be why</h3>
+        <p class="summary">A large real-world study presented at ASCO 2026 (the American Society of Clinical Oncology annual meeting) found that women with type 2 diabetes or obesity who used GLP-1 receptor agonists — semaglutide (Ozempic, Wegovy) or tirzepatide (Mounjaro, Zepbound) — had a 30–47% lower risk of developing breast cancer compared to non-users. The striking part: the protective signal held up even after researchers controlled for body mass index and weight change, suggesting that something beyond simple fat-mass reduction is at work. Proposed mechanisms include reduced insulin-like growth factor (IGF-1) signalling, anti-inflammatory effects, and possible direct activity of GLP-1 receptors on breast tissue.</p>
+        <div class="why"><strong>Why it matters:</strong> This is observational data, not a randomised trial — so causation isn't proven yet. But with ~15 million Americans already on GLP-1 drugs, an independently acting cancer-protective effect would be a major public health development. A prospective trial (the ORCA study) is under way. Watch for those results before drawing strong conclusions.</div>
+        <p class="sources">Sources: <a href="https://www.medicaldaily.com/glp-1-ozempic-breast-cancer-risk-reduction-2026-asco-study-47-percent-475652">Medical Daily</a></p>
+      </div>
+    </article>
+
+    <!-- DRUG DISCOVERY -->
+    <article class="news-card topic-discovery" data-topic="discovery">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-discovery">Drug discovery</span>
+          <span class="date">June 4–5, 2026</span>
+        </div>
+        <h3>Recursion's AI-identified cancer drug clears its first human safety bar — a small but necessary step</h3>
+        <p class="summary">At the Goldman Sachs Global Healthcare Conference, Recursion Pharmaceuticals reported early Phase 1 data for REC-1245 — a first-in-class degrader of RBM39 (RNA Binding Motif Protein 39), an oncology target Recursion's platform identified by mining its massive cellular imaging library. In 16 patients with treatment-resistant solid tumors or lymphoma, no dose-limiting toxicities were observed — the primary safety hurdle for a Phase 1 trial. Recursion's stock rose ~5% on the update. A parallel program, REC-4881 for a rare blood disorder, is also in the clinic.</p>
+        <div class="why"><strong>Why it matters:</strong> Recursion's entire investment thesis depends on its AI finding real targets that survive the jump into humans — not just computational predictions that fail on contact with biology. No DLTs is the lowest bar, but it's a bar. The field needs to see these AI-origin programs progress through Phase 2 before the platform claim holds.</div>
+        <p class="sources">Sources: <a href="https://www.genengnews.com/topics/artificial-intelligence/as-pipeline-advances-recursion-expands-ai-focus-to-clinical-trials/">GEN</a> · <a href="https://ir.recursion.com/news-events/press-releases">Recursion IR</a></p>
+      </div>
+    </article>
+
+    <!-- FUNDING -->
+    <article class="news-card topic-funding" data-topic="funding">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-funding">Funding</span>
+          <span class="date">June 2026</span>
+        </div>
+        <h3>Lila Sciences raises $350M to build AI that runs the scientific method — autonomously, around the clock</h3>
+        <p class="summary">Lila Sciences, a Flagship Pioneering spinout co-founded by Noubar Afeyan (also the co-founder of Moderna) and CEO Geoffrey von Maltzahn, closed a $350 million Series A — bringing total funding to $550 million. NVIDIA's venture arm NVentures joined the round, alongside General Catalyst, ARK Venture Fund, and Abu Dhabi's ADIA. Lila's model: AI agents that run the full scientific loop (hypothesis → experiment → observation → reasoning) continuously across materials, chemistry, and life sciences. An early demonstration: Lila's agents identified water-splitting catalysts that outperform precious metals — and a third of the highest-performing candidates initially made no sense to the Caltech-trained team. They turned out to be the best catalysts on record.</p>
+        <div class="why"><strong>Why it matters:</strong> This is the step beyond AlphaFold. Structure prediction was act one; autonomous AI-driven experimentation across disciplines is act two. The NVIDIA investment is a tell — they're betting that foundation models and lab-in-the-loop AI will converge, and that Lila is building the infrastructure to run that future.</div>
+        <p class="sources">Sources: <a href="https://www.finsmes.com/2026/06/lila-sciences-raises-350m-in-series-a-funding.html">Finsmes</a> · <a href="https://fortune.com/2026/06/10/nvidia-drug-pharma-isomorphic-brainstorm-tech-ai-healthcare-biotech-term-sheet/">Fortune Brainstorm Tech</a></p>
+      </div>
+    </article>
+
+    <!-- REALITY CHECK -->
+    <article class="news-card topic-reality" data-topic="reality">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-reality">Reality check</span>
+          <span class="date">June 10, 2026</span>
+        </div>
+        <h3>"Defunding science right now is an unimaginable strategic mistake." AI biotech leaders speak out at Fortune Brainstorm Tech</h3>
+        <p class="summary">At Fortune's Brainstorm Tech conference in Aspen, Lila Sciences CEO Geoffrey von Maltzahn and NVIDIA VP of Healthcare Kimberly Powell warned that US government cuts to health research funding — arriving just as AI is having its "ChatGPT moment" in biology — risk ceding ground to Europe and Asia. Powell: "If we defund now, while the rest of the world leans in — which Europe is leaning in, which a lot of Asian countries are leaning in — we will be left behind." Von Maltzahn: "Falling below the scientific intelligence of one's adversary is almost like an unimaginable competitive disadvantage." The AI drug discovery market currently stands at $3.25 billion and is growing at ~26% annually.</p>
+        <div class="why"><strong>Why it matters:</strong> Open-source foundation models for biology — the ones companies like Recursion, Isomorphic, and Lila build on — depend heavily on public science infrastructure: NIH-funded datasets, academic training runs, university spinouts. Defund the base layer and the private stack slows down too. This is a longer-term threat than it looks.</div>
+        <p class="sources">Sources: <a href="https://fortune.com/2026/06/10/nvidia-drug-pharma-isomorphic-brainstorm-tech-ai-healthcare-biotech-term-sheet/">Fortune</a></p>
+      </div>
+    </article>
+
+    <!-- REGULATION -->
+    <article class="news-card topic-regulation" data-topic="regulation">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-regulation">Regulation</span>
+          <span class="date">June 2026</span>
+        </div>
+        <h3>AI is moving faster in healthcare than trust is. The Philips Future Health Index 2026 puts numbers on the gap.</h3>
+        <p class="summary">Philips' annual Future Health Index surveyed healthcare leaders globally and found that while AI adoption in clinical care is accelerating, a majority of doctors and patients report significant trust gaps: they describe unclear AI decision-making, inadequate training, and anxiety about AI errors. The report finds AI outpacing the governance, communication, and workflow integration needed to make it safe in practice — creating a scenario where clinicians either over-rely on AI outputs or route around them entirely.</p>
+        <div class="why"><strong>Why it matters:</strong> A diagnostic AI that clinicians don't trust doesn't get used. One they trust blindly causes harm. Getting adoption right requires the unglamorous work of explainability, interface design, and institutional governance — none of which shows up in benchmark papers. The report is a useful reality check on the gap between "we deployed an AI" and "patients benefit from it."</div>
+        <p class="sources">Sources: <a href="https://www.medicaldaily.com/ai-healthcare-trust-gap-2026-future-health-index-philips-475612">Medical Daily / Philips Future Health Index 2026</a></p>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="callout" style="margin-top:36px;">
+    <strong>How this digest is made:</strong> stories are gathered from trusted biotech and AI sources, summarized in plain English, and fact-checked against the primary source before publishing. Each links out so you can go deeper. <a href="../about.html">More on the process →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© <span id="year"></span> Cultured Machine · Biotech learns to compute.</div>
+    <div><a href="../about.html">About</a> · <a href="../explainers/alphafold.html">Explainers</a> · <a href="../index.html">Home</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* Topic filter */
+(function(){
+  const filter = document.getElementById('topicFilter');
+  const chips = [...filter.querySelectorAll('.topic-chip')];
+  const cards = [...document.querySelectorAll('#stories .news-card')];
+  filter.addEventListener('click', e => {
+    const chip = e.target.closest('.topic-chip');
+    if (!chip) return;
+    chips.forEach(c => c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'));
+    const topic = chip.dataset.topic;
+    cards.forEach(card => {
+      const show = (topic === 'all') || (card.dataset.topic === topic);
+      card.classList.toggle('hidden', !show);
+    });
+  });
+})();
+</script>
+</body>
+</html>
