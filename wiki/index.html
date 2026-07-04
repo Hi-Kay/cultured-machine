@@ -54,7 +54,7 @@
     <div class="nav-links">
       <a href="../index.html">Home</a>
       <a href="../explainers/alphafold.html">Explainers</a>
-      <a href="../news/2026-06-22.html">News</a>
+      <a href="../news/2026-07-04.html">News</a>
       <a href="../news/index.html">Archive</a>
       <a href="../about.html">About</a>
     </div>
@@ -68,6 +68,7 @@
 
   <div class="glossary-index">
     <a href="#checkpoint-inhibitor">Checkpoint inhibitor</a>
+    <a href="#de-novo-protein-design">De novo protein design</a>
     <a href="#foundation-model">Foundation model</a>
     <a href="#glp-1">GLP-1</a>
     <a href="#ind">IND application</a>
@@ -78,8 +79,10 @@
     <a href="#neoantigen">Neoantigen</a>
     <a href="#phase-trials">Phase 1 / 2 / 3 trials</a>
     <a href="#placebo-response">Placebo response</a>
+    <a href="#protein-language-model">Protein language model</a>
     <a href="#receptor-antagonist">Receptor antagonist</a>
     <a href="#transcription-factor">Transcription factor</a>
+    <a href="#transcriptome">Transcriptome</a>
   </div>
 
   <div id="glossary-entries">
@@ -88,6 +91,12 @@
       <div class="term-label">Cancer immunology</div>
       <h3>Checkpoint inhibitor</h3>
       <p>Immune checkpoints are molecular "brakes" that stop the immune system from attacking the body's own healthy cells. Many tumours hijack these brakes to hide from immune attack. A checkpoint inhibitor is a drug — usually an antibody — that releases a specific brake, freeing the immune system's T-cells to recognise and kill cancer cells. <strong>Keytruda (pembrolizumab)</strong> is the best-known example; it blocks a checkpoint called PD-1. Checkpoint inhibitors transformed the treatment of melanoma and several other cancers, but they only work well in a fraction of patients — which is why researchers combine them with other approaches, such as personalised cancer vaccines, to boost the response.</p>
+    </div>
+
+    <div class="glossary-term" id="de-novo-protein-design">
+      <div class="term-label">Protein engineering</div>
+      <h3>De novo protein design</h3>
+      <p>"De novo" is Latin for "from new." De novo protein design means building a protein from scratch on a computer — choosing an amino-acid sequence that will fold into a shape and do a job that no natural protein does — rather than starting from an existing protein and tweaking it. AI tools have made this practical: models such as RFdiffusion generate a plausible 3D shape for a desired function (for example, a pocket that grips a specific target), and companion models then work out an amino-acid sequence predicted to fold into that shape. The designed proteins are then made in the lab and tested, since a computational prediction is only a starting hypothesis. The approach is now used to design binders, enzymes, antibodies, and self-assembling structures like vaccine scaffolds.</p>
     </div>
 
     <div class="glossary-term" id="foundation-model">
@@ -150,6 +159,12 @@
       <p>Improvement in symptoms that occurs in clinical trial participants who receive an inactive treatment (the placebo) rather than the drug being tested. Placebo responses are a genuine biological phenomenon, not simply patients pretending to feel better: expectation, attention from medical staff, natural fluctuation in disease severity, and regression to the mean (the tendency of symptoms that were unusually bad at enrolment to improve on their own) all contribute. In depression trials specifically, placebo response rates are consistently high — often 35–45% of patients improve substantially on placebo alone. This makes it harder to demonstrate that an active drug does anything beyond what a placebo would achieve, because the difference between the two groups (the "drug effect") must reach statistical significance to count as evidence of efficacy.</p>
     </div>
 
+    <div class="glossary-term" id="protein-language-model">
+      <div class="term-label">Artificial intelligence</div>
+      <h3>Protein language model</h3>
+      <p>A protein language model is an AI system trained on huge numbers of protein sequences the way a text model like the one behind ChatGPT is trained on sentences. Proteins are chains of 20 amino-acid "letters," and evolution has produced billions of real sequences; by learning which letters tend to follow and accompany which others, the model picks up the statistical rules of what makes a protein look natural and fold and function properly. Once trained, it can suggest sequences that "read" like real proteins, predict how a mutation will affect a protein, or — combined with a structure predictor — help design new proteins such as antibodies. In short, structure models know what <em>fits</em> in 3D; language models know what looks <em>natural</em>. ESM and IgLM (an antibody-specific model) are well-known examples.</p>
+    </div>
+
     <div class="glossary-term" id="receptor-antagonist">
       <div class="term-label">Pharmacology</div>
       <h3>Receptor antagonist</h3>
@@ -160,6 +175,12 @@
       <div class="term-label">Molecular biology</div>
       <h3>Transcription factor</h3>
       <p>A transcription factor is a protein that controls which genes in a cell are switched on or off at any given moment. Every cell in your body contains the same DNA, but transcription factors decide which instructions are actually read — and that is what makes a liver cell different from a nerve cell. Because they sit at the control panel of gene activity, specific combinations of transcription factors can reprogram a cell's identity or "age state." This is the basis of <em>cellular reprogramming</em>: introducing a chosen set of transcription factors to reset an aged cell toward a younger, healthier state without changing the underlying DNA.</p>
+    </div>
+
+    <div class="glossary-term" id="transcriptome">
+      <div class="term-label">Molecular biology</div>
+      <h3>Transcriptome</h3>
+      <p>The transcriptome is the full set of RNA messages a cell (or a tissue sample) is producing at a given moment — in effect, a snapshot of which genes are switched on and how strongly. If the genome is the fixed instruction manual, the transcriptome is the list of instructions actually being read right now, and it differs between a healthy cell and a diseased one, or between a tumour that will respond to a drug and one that will not. Scientists measure it by sequencing the RNA in a sample (a technique called RNA-seq), producing a rich numerical fingerprint of cell state. Because that fingerprint is high-dimensional and hard to interpret by eye, it is a natural input for AI models, which can learn to link transcriptome patterns to outcomes such as how a patient will respond to immunotherapy.</p>
     </div>
 
   </div>

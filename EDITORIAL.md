@@ -25,6 +25,7 @@ This is a **Biotech + AI** site. The AI angle is the reason a story belongs here
 - Link the term on first use in each issue; do not repeat the link in the same article.
 - Current glossary entries and their anchor IDs:
   - `checkpoint-inhibitor` — Checkpoint inhibitor
+  - `de-novo-protein-design` — De novo protein design
   - `foundation-model` — Foundation model
   - `glp-1` — GLP-1
   - `ind` — IND application
@@ -35,8 +36,10 @@ This is a **Biotech + AI** site. The AI angle is the reason a story belongs here
   - `neoantigen` — Neoantigen
   - `phase-trials` — Phase 1 / 2 / 3 trials
   - `placebo-response` — Placebo response
+  - `protein-language-model` — Protein language model
   - `receptor-antagonist` — Receptor antagonist
   - `transcription-factor` — Transcription factor
+  - `transcriptome` — Transcriptome
 
 ## Terms suggested for future glossary additions
 
@@ -44,9 +47,6 @@ These appear in existing issues and are candidates for the next glossary update.
 
 - **epigenetic / epigenome** (NewLimit / longevity stories)
 - **cellular reprogramming** (longevity / NewLimit)
-- **protein language model** (ESM / Biohub stories)
-- **transcriptome** (Verge Labs vBx-1.0)
-- **de novo protein design** (Biohub / protein binder stories)
 - **RAS mutation / RAS oncogene** (daraxonrasib / pancreatic cancer story)
 - **Phase 1b** (Verge Labs ALS trial)
 
