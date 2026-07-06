@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is a protein language model? — Cultured Machine</title>
+<meta name="description" content="How AI models like ESM 'read' protein sequences the way ChatGPT reads text — and why filling in the blank teaches them biology. An interactive, plain-language explainer.">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  /* local styles for the residue tiles used in this explainer's widgets */
+  .seq { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 4px; }
+  .res {
+    width: 34px; height: 38px; border-radius: 8px;
+    display: grid; place-items: center; font-family: var(--mono);
+    font-weight: 700; font-size: 1rem; color: #12303b;
+    background: #eef1f0; border: 1px solid var(--line); user-select: none;
+  }
+  .res small { display:block; font-size:.55rem; font-weight:600; color:var(--ink-soft); line-height:1; }
+  .res.hydro  { background:#fde9d3; }   /* hydrophobic  */
+  .res.polar  { background:#d6efe9; }   /* polar        */
+  .res.charge { background:#e2ddff; }   /* charged      */
+  .res.masked { background:#fff; border:2px dashed var(--accent); color:var(--accent); cursor:pointer; }
+  .res.masked:hover { background: var(--accent-soft); }
+  .res.masked.active { background: var(--accent); color:#fff; border-style:solid; }
+  .bars { margin-top: 6px; }
+  .bar-row { display:flex; align-items:center; gap:10px; margin:5px 0; font-size:.9rem; }
+  .bar-row .aa { width:120px; flex:none; font-family:var(--mono); color:var(--ink); }
+  .bar-track { flex:1; background:#eef1f0; border-radius:6px; height:16px; overflow:hidden; }
+  .bar-fill { height:100%; background:linear-gradient(90deg,var(--accent),var(--accent-2)); border-radius:6px; transition:width .4s ease; }
+  .bar-row .pct { width:44px; flex:none; text-align:right; font-variant-numeric:tabular-nums; color:var(--ink-soft); }
+  .legend-key { display:flex; flex-wrap:wrap; gap:14px; font-size:.8rem; color:var(--ink-soft); margin-top:12px; }
+  .legend-key span { display:inline-flex; align-items:center; gap:6px; }
+  .swatch { width:14px; height:14px; border-radius:4px; border:1px solid var(--line); }
+  .verdict { margin-top:14px; padding:12px 14px; border-radius:10px; font-size:.95rem; background:var(--bg); border:1px solid var(--line); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="../index.html">
+      <span class="logo">CM</span>
+      <span>Cultured Machine <span class="tagline">· biology learns to compute</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="alphafold.html">Explainers</a>
+      <a href="../news/2026-07-04.html">News</a>
+      <a href="../news/index.html">Archive</a>
+      <a href="../wiki/index.html">Glossary</a>
+      <a href="../about.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="eyebrow">Explainer</div>
+  <h1>What is a protein language model?</h1>
+  <p class="meta">~7 min read · Concepts: protein sequences, masked prediction, embeddings · Published July 2026</p>
+
+  <p class="lead">ChatGPT learned to write by predicting the next word, billions of times, until it absorbed the hidden rules of language. A protein language model does the same thing — but its "language" is the 20-letter alphabet of life. Feed it enough real proteins and, without ever being told any biology, it starts to grasp which sequences fold, function, and survive. Here's the intuition, no chemistry degree required.</p>
+
+  <div class="callout">
+    <strong>The one-sentence version:</strong> a protein language model reads protein sequences the way a text model reads sentences, and by learning to fill in missing letters it quietly learns the rules of what makes a protein real.
+  </div>
+
+  <h2>1. Proteins are written in a 20-letter alphabet</h2>
+  <p>Every protein is a chain of <strong>amino acids</strong> — 20 different kinds, each written as a single letter: A, C, D, E, F, and so on. A real protein is just a long string of these letters, like <span style="font-family:var(--mono);">M K T A Y I A K Q R…</span>, sometimes hundreds or thousands of letters long.</p>
+  <p>Evolution has been writing in this alphabet for billions of years, and we've now read out the "text" of hundreds of millions of proteins. That is an enormous library of examples — and wherever there's a huge pile of sequences with hidden rules, a language model can learn to imitate it.</p>
+
+  <h2>2. The trick: learn by filling in the blank</h2>
+  <p>Here's the clever part. Nobody hands the model a textbook. Instead, you take a real protein, <strong>hide one of its letters</strong>, and ask the model to guess what belongs there. Then you show it the real answer. Do this across hundreds of millions of proteins, billions of times, and the model is forced to learn the patterns that make a guess good.</p>
+  <p>This is exactly how a text model learns that "the cat sat on the ___" is probably "mat," not "helicopter." The model never memorises; it learns what <em>fits</em>.</p>
+
+  <div class="viz" id="maskViz">
+    <h4>Predict the hidden amino acid</h4>
+    <p class="hint">This is a real protein fragment with three letters hidden. Tap a dashed box — the model reads the surrounding letters and shows its best guesses, most confident first.</p>
+    <div class="seq" id="maskSeq" aria-label="Protein sequence with masked positions"></div>
+    <div id="maskPanel" style="margin-top:16px;">
+      <p class="hint" id="maskPrompt" style="margin:0;">👆 Tap one of the dashed boxes above to see the model's prediction.</p>
+      <div class="bars" id="maskBars"></div>
+      <div class="verdict" id="maskWhy" style="display:none;"></div>
+    </div>
+    <div class="legend-key">
+      <span><span class="swatch" style="background:#fde9d3;"></span> hydrophobic (water-avoiding)</span>
+      <span><span class="swatch" style="background:#d6efe9;"></span> polar</span>
+      <span><span class="swatch" style="background:#e2ddff;"></span> charged</span>
+    </div>
+  </div>
+
+  <p>Notice what's happening: the model isn't looking anything up. From the surrounding letters alone it forms an opinion about which amino acid belongs — and often it's confident about a small group with similar chemistry, because in a real protein those positions are picky.</p>
+
+  <h2>3. What the model learns without being told</h2>
+  <p>To get good at filling in blanks, the model has to internalise things no one programmed into it:</p>
+  <ul>
+    <li><strong>Chemistry.</strong> Some positions must stay oily (buried in the protein's core, away from water); others must stay charged (out on the surface). The model learns which is which.</li>
+    <li><strong>Grammar of folding.</strong> Certain letter patterns form spirals (helices) or strands; the model learns these recurring "phrases."</li>
+    <li><strong>What's forbidden.</strong> Most random changes would break the protein. The model learns which swaps a real protein would never tolerate.</li>
+  </ul>
+  <p>Along the way it builds an internal summary of each protein — a list of numbers called an <strong>embedding</strong> — that captures its gist, the way a text model captures the meaning of a sentence. Proteins with similar jobs end up with similar embeddings, even if their letters look quite different. That numerical fingerprint is what makes the model useful for the tasks below.</p>
+
+  <div class="callout">
+    <strong>Structure models vs. language models:</strong> <a href="alphafold.html">AlphaFold</a> answers "what 3D shape does this sequence fold into?" A protein language model answers "does this sequence look like something evolution would actually make?" One knows what <em>fits</em> in space; the other knows what looks <em>natural</em>. The most powerful tools today use both together.
+  </div>
+
+  <h2>4. What you can actually do with it</h2>
+  <p>Once a model knows what "natural" looks like, several useful things fall out for free.</p>
+  <p><strong>Judge a mutation.</strong> Change one letter in a protein and ask the model: does this still look like a real protein, or something evolution would reject? A confident "that looks wrong" is a strong hint that the mutation is damaging — which helps flag disease-causing variants in a person's DNA, no lab experiment required.</p>
+
+  <div class="viz" id="mutViz">
+    <h4>Does this mutation look natural?</h4>
+    <p class="hint">Pick a single-letter change to this fragment. The model scores how "natural" the result looks — the same signal used to flag harmful mutations.</p>
+    <div class="controls" id="mutButtons"></div>
+    <div style="margin-top:16px;">
+      <div class="bar-row">
+        <span class="aa">Naturalness</span>
+        <div class="bar-track"><div class="bar-fill" id="mutBar" style="width:82%;"></div></div>
+        <span class="pct" id="mutPct">—</span>
+      </div>
+      <div class="verdict" id="mutVerdict">Pick a mutation above to see how the model reacts.</div>
+    </div>
+  </div>
+
+  <p><strong>Design new proteins.</strong> Run the model in reverse and it can suggest fresh sequences that "read" like real proteins — the starting point for <a href="../wiki/index.html#de-novo-protein-design">designing proteins from scratch</a>. Paired with a structure predictor, this is how new antibodies and enzymes get drafted on a computer before anything is made in a lab.</p>
+  <p><strong>Search by meaning.</strong> Because the model turns each protein into an embedding, you can find proteins with a similar <em>function</em> even when their letters barely match — something older text-matching search completely misses.</p>
+
+  <div class="callout">
+    <strong>Seen in the news:</strong> the open-source <a href="../news/2026-07-04.html">Germinal</a> antibody designer pairs a structure predictor with a protein language model trained on real antibody sequences — the language model's job is to make sure each designed antibody doesn't just fold correctly but also <em>looks like</em> a natural antibody. That is a protein language model doing exactly what this page describes.
+  </div>
+
+  <h2>5. Where it falls short</h2>
+  <p>A protein language model only knows what it has read. Proteins from families with few known relatives — including many fast-changing immune and viral proteins — are harder, because the model has seen fewer examples of "normal." It judges what looks natural, but "natural-looking" is not the same as "does the specific job you want": a sequence can look perfectly plausible and still be useless for your target. And like any model trained on the past, it inherits the gaps and biases of the databases it learned from. As with AlphaFold, a prediction is a well-educated hypothesis — the lab still has the final say.</p>
+
+  <div class="callout">
+    <strong>The takeaway:</strong> a protein language model is autocomplete for biology. By doing nothing but guessing hidden letters across life's entire library, it absorbs the rules of what makes a protein real — and that quiet, general understanding is now a building block inside drug discovery, genetics, and protein design. Related: <a href="../wiki/index.html#foundation-model">foundation models</a>, <a href="../wiki/index.html#protein-language-model">protein language model (glossary)</a>.
+  </div>
+
+  <p class="meta" style="margin-top:32px;">Next explainer on the roadmap: how AI designs a new antibody, step by step. Spotted an error or have a suggestion? This explainer is open source — corrections welcome.</p>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© <span id="year"></span> Cultured Machine · Biotech learns to compute.</div>
+    <div><a href="alphafold.html">AlphaFold explainer</a> · <a href="../news/2026-07-04.html">News</a> · <a href="../index.html">Home</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* class each amino acid by broad chemistry (for coloring) */
+const AACLASS = {
+  A:'hydro', V:'hydro', L:'hydro', I:'hydro', M:'hydro', F:'hydro', W:'hydro', P:'hydro', G:'hydro',
+  S:'polar', T:'polar', C:'polar', Y:'polar', N:'polar', Q:'polar',
+  D:'charge', E:'charge', K:'charge', R:'charge', H:'charge'
+};
+const AANAME = {
+  A:'Alanine', V:'Valine', L:'Leucine', I:'Isoleucine', M:'Methionine', F:'Phenylalanine',
+  W:'Tryptophan', P:'Proline', G:'Glycine', S:'Serine', T:'Threonine', C:'Cysteine',
+  Y:'Tyrosine', N:'Asparagine', Q:'Glutamine', D:'Aspartate', E:'Glutamate',
+  K:'Lysine', R:'Arginine', H:'Histidine'
+};
+
+/* ---- Widget 1: masked-residue prediction ----
+   Illustrative fragment. Three positions are masked; each carries a
+   hand-built prediction distribution and a plain-English reason. */
+(function(){
+  const seq = ['M','K','T','A','Y','I','A','K','Q','R','L','V','I','L','E','G','S'];
+  const masks = {
+    5:  { // index 5 -> 'I'
+      answer:'I',
+      dist:[['I','Isoleucine',46],['L','Leucine',27],['V','Valine',18],['F','Phenylalanine',6],['M','Methionine',3]],
+      why:'This spot is <strong>buried in the oily core</strong>, so the model is confident it must be a water-avoiding amino acid — and quite sure which few. It has never been told this; it learned it from millions of proteins.'
+    },
+    9:  { // index 9 -> 'R'
+      answer:'R',
+      dist:[['R','Arginine',41],['K','Lysine',38],['Q','Glutamine',9],['E','Glutamate',7],['H','Histidine',5]],
+      why:'A <strong>surface, charged</strong> position. The model spreads its bet between the two positively-charged letters (R and K), because in real proteins they are often interchangeable here.'
+    },
+    15: { // index 15 -> 'G'
+      answer:'G',
+      dist:[['G','Glycine',63],['A','Alanine',15],['S','Serine',11],['N','Asparagine',7],['P','Proline',4]],
+      why:'A <strong>tight turn</strong> in the chain. Only the smallest amino acid (Glycine) fits comfortably, so the model is very confident — a rule it discovered purely from patterns.'
+    }
+  };
+
+  const seqEl = document.getElementById('maskSeq');
+  const barsEl = document.getElementById('maskBars');
+  const promptEl = document.getElementById('maskPrompt');
+  const whyEl = document.getElementById('maskWhy');
+  const tiles = [];
+
+  seq.forEach((aa, i) => {
+    const el = document.createElement('div');
+    if (masks[i]) {
+      el.className = 'res masked';
+      el.textContent = '?';
+      el.setAttribute('role','button');
+      el.setAttribute('tabindex','0');
+      el.dataset.i = i;
+      el.addEventListener('click', () => reveal(i, el));
+      el.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){ e.preventDefault(); reveal(i, el); }});
+    } else {
+      el.className = 'res ' + (AACLASS[aa]||'');
+      el.innerHTML = aa + '<small>' + (i+1) + '</small>';
+    }
+    seqEl.appendChild(el);
+    tiles.push(el);
+  });
+
+  function reveal(i, el){
+    tiles.forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+    const m = masks[i];
+    promptEl.style.display = 'none';
+    barsEl.innerHTML = '';
+    m.dist.forEach(([letter, name, pct]) => {
+      const row = document.createElement('div');
+      row.className = 'bar-row';
+      const isAns = letter === m.answer;
+      row.innerHTML =
+        '<span class="aa">' + letter + ' · ' + name + (isAns ? ' ✓' : '') + '</span>' +
+        '<div class="bar-track"><div class="bar-fill" style="width:0%"></div></div>' +
+        '<span class="pct">' + pct + '%</span>';
+      barsEl.appendChild(row);
+      requestAnimationFrame(() => { row.querySelector('.bar-fill').style.width = pct + '%'; });
+    });
+    whyEl.style.display = 'block';
+    whyEl.innerHTML = '<strong>Real answer: ' + AANAME[m.answer] + ' (' + m.answer + ').</strong> ' + m.why;
+  }
+})();
+
+/* ---- Widget 2: mutation "naturalness" scanner ----
+   A few preset single-letter swaps at one position, each with an
+   illustrative naturalness score and verdict. */
+(function(){
+  const btnWrap = document.getElementById('mutButtons');
+  const bar = document.getElementById('mutBar');
+  const pct = document.getElementById('mutPct');
+  const verdict = document.getElementById('mutVerdict');
+
+  // A buried hydrophobic position originally holding Leucine (L).
+  const options = [
+    { label:'L → I', score:88, tone:'ok',
+      text:'<strong>Well tolerated.</strong> Isoleucine is another oily, similar-sized amino acid, so the protein still looks completely natural. Many real relatives carry this exact swap.' },
+    { label:'L → V', score:79, tone:'ok',
+      text:'<strong>Probably fine.</strong> Valine is a little smaller but still water-avoiding — the model sees it as a plausible, if slightly less common, choice here.' },
+    { label:'L → D', score:12, tone:'bad',
+      text:'<strong>Looks wrong.</strong> Aspartate is charged and craves water, but this position is buried in the oily core. The model has almost never seen this, so it scores it very low — a red flag for a damaging mutation.' },
+    { label:'L → P', score:9, tone:'bad',
+      text:'<strong>Looks wrong.</strong> Proline kinks the chain and breaks the local structure. The model strongly rejects it here — the kind of change that would likely stop the protein folding at all.' }
+  ];
+
+  options.forEach((o, idx) => {
+    const b = document.createElement('button');
+    b.className = 'btn';
+    b.textContent = o.label;
+    b.addEventListener('click', () => {
+      [...btnWrap.children].forEach(c => c.classList.remove('primary'));
+      b.classList.add('primary');
+      bar.style.width = o.score + '%';
+      bar.style.background = o.tone === 'bad'
+        ? 'linear-gradient(90deg,#d6336c,#d97706)'
+        : 'linear-gradient(90deg,var(--accent),var(--accent-2))';
+      pct.textContent = o.score + '%';
+      verdict.innerHTML = o.text;
+    });
+    btnWrap.appendChild(b);
+  });
+})();
+</script>
+</body>
+</html>

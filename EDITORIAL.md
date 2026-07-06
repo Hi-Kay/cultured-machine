@@ -19,6 +19,21 @@ This is a **Biotech + AI** site. The AI angle is the reason a story belongs here
 - Tone: smart, plain, slightly skeptical. Never hype a result; never dismiss one unfairly. State what was shown and what was not.
 - Active voice preferred. Keep sentences short enough to parse on first read.
 
+## Story structure (apply to every story)
+
+Write each story in this order so the reader can stop early and still have the point:
+
+1. **The news in one sentence.** Open the summary with a single plain sentence a non-expert could repeat at dinner — what happened and who did it. Do not open with background or trial mechanics.
+2. **Context** — the one or two things the reader needs to understand why this is not trivial.
+3. **The AI mechanism** — name explicitly where the computation does the work (see "Story selection" above). This is the reason the story is here; never let it be implied.
+4. **The honest caveat** goes in the "Why it matters" block: what was *not* shown, the stage it's really at, and what would have to be true for it to matter.
+
+Keep summaries to 3–5 sentences. If a summary runs past six, it is doing too much — cut, don't cram.
+
+## Weekly TL;DR
+
+Start each issue with a short "The week in three lines" block above the stories: three one-line bullets, each naming the single most important story in a topic, so a skimmer gets value in ten seconds. Keep each bullet under ~15 words and link it to the relevant story anchor on the page.
+
 ## Glossary links
 
 - When a technical term appears that has an entry in `/wiki/index.html`, link it using an anchor: `<a href="../wiki/index.html#term-id">term</a>`.
@@ -40,6 +55,13 @@ This is a **Biotech + AI** site. The AI angle is the reason a story belongs here
   - `receptor-antagonist` — Receptor antagonist
   - `transcription-factor` — Transcription factor
   - `transcriptome` — Transcriptome
+
+## Explainer cross-links
+
+The site has standalone explainers in `/explainers/`. When a story leans on a concept an explainer already covers, link the phrase to that explainer (in addition to any glossary link) — it deepens the digest and drives readers to the explainers.
+
+- Protein folding / structure prediction / AlphaFold → `../explainers/alphafold.html`
+- Protein language models / ESM / "learns what a natural sequence looks like" / embeddings → `../explainers/protein-language-models.html`
 
 ## Terms suggested for future glossary additions
 
