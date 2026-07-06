@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explainers — Cultured Machine</title>
+<meta name="description" content="Interactive, plain-language explainers on AI for biology — protein folding, protein language models, and more. Each takes one idea and makes it click.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="../index.html">
+      <span class="logo">CM</span>
+      <span>Cultured Machine <span class="tagline">· biology learns to compute</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="index.html" aria-current="page">Explainers</a>
+      <a href="../news/2026-07-04.html">News</a>
+      <a href="../news/index.html">Archive</a>
+      <a href="../wiki/index.html">Glossary</a>
+      <a href="../about.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="eyebrow">Explainers</div>
+  <h1>One idea at a time, made to click</h1>
+  <p class="lead">Each explainer takes a single concept at the intersection of AI and biology and makes it intuitive — no jargon, with a visualization you can poke at. Start anywhere.</p>
+
+  <div class="card-grid">
+    <a class="card" href="alphafold.html">
+      <span class="kicker">Explainer · Interactive</span>
+      <h3>How AlphaFold predicts a protein's shape</h3>
+      <p>Why a protein's 3D fold is so hard to guess — and how AI cracked a 50-year-old problem. With two hands-on visualizations.</p>
+    </a>
+    <a class="card" href="protein-language-models.html">
+      <span class="kicker">New · Interactive</span>
+      <h3>What is a protein language model?</h3>
+      <p>How models like ESM "read" protein sequences the way ChatGPT reads text — and why filling in the blank teaches them biology.</p>
+    </a>
+    <div class="card">
+      <span class="kicker">Next up</span>
+      <h3>How AI designs a new antibody</h3>
+      <p>From target to candidate — generative models in drug discovery, step by step.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong>Have a topic you'd like explained?</strong> The roadmap is reader-driven — <a href="../about.html">get in touch</a> and tell me what you'd like made clear.
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© <span id="year"></span> Cultured Machine · Biotech learns to compute.</div>
+    <div><a href="../index.html">Home</a> · <a href="../news/2026-07-04.html">News</a> · <a href="../about.html">About</a></div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

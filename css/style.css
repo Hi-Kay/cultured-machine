@@ -60,8 +60,9 @@ a:hover { text-decoration: underline; }
 }
 .brand .tagline { font-weight: 400; color: var(--ink-soft); font-size: .8rem; }
 .nav-links { display: flex; gap: 20px; font-size: .95rem; }
-.nav-links a { color: var(--ink-soft); }
+.nav-links a { color: var(--ink-soft); padding-bottom: 3px; border-bottom: 2px solid transparent; }
 .nav-links a:hover { color: var(--accent); text-decoration: none; }
+.nav-links a[aria-current="page"] { color: var(--accent); font-weight: 700; border-bottom-color: var(--accent); }
 
 /* ---------- Layout ---------- */
 main { max-width: var(--max); margin: 0 auto; padding: 48px 20px 80px; }
