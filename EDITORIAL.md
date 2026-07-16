@@ -86,6 +86,11 @@ These appear in existing issues and are candidates for the next glossary update.
 - All pages must include an "Archive" link pointing to `news/index.html` (or `../news/index.html` from subdirectories).
 - The "News" link always points to the most recent issue file.
 
+## Share button
+
+- Every news issue ends with a "Share on X" button, placed right after the "How this digest is made" callout and before `</main>`. Copy the markup from the most recent issue (a centered `<a class="btn">` with the X logo SVG) and update the `twitter.com/intent/tweet` link's `text` and `url` query params for the new issue's title and URL — base URL is `https://hi-kay.github.io/cultured-machine/`.
+- Keep the tweet `text` plain ASCII where possible (e.g. `This week in Biotech + AI (Month Day, Year) — Cultured Machine`) and URL-encode both params.
+
 ## Fact-checking
 
 - Every statistic must be traceable to a source URL that was fetched or confirmed in the current session.
