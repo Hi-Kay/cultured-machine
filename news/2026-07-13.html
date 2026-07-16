@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This week in Biotech + AI — July 13, 2026 — Cultured Machine</title>
+<meta name="description" content="Curated, plain-English news at the intersection of biotech and AI: Stanford's Biomni AI research agent, a universal foundation model for cell biology, Takeda's $600M AI drug-discovery deal with Insilico, a Microsoft-led stress test exposing cracks in AI health benchmarks, and an AI tool that reads routine tissue slides to diagnose brain-tumor subtypes in minutes — each with why it matters and a link to the source.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="../index.html">
+      <span class="logo">CM</span>
+      <span>Cultured Machine <span class="tagline">· biology learns to compute</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../explainers/index.html">Explainers</a>
+      <a href="2026-07-13.html" aria-current="page">News</a>
+      <a href="index.html">Archive</a>
+      <a href="../wiki/index.html">Glossary</a>
+      <a href="../about.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="eyebrow">Weekly digest</div>
+  <h1>This week in Biotech + AI</h1>
+  <p class="meta">Week of July 13, 2026 · 5 stories · ~6 min read</p>
+  <p class="lead">The stories worth your attention right now — each in plain English, with why it matters and a link to the source. Filter by topic below.</p>
+
+  <div class="callout">
+    <strong>The week in three lines:</strong>
+    <ul style="margin:10px 0 0; padding-left:20px;">
+      <li><a href="#story-biomni">Stanford's Biomni AI agent runs full research workflows — already used in 10,000+ labs.</a></li>
+      <li><a href="#story-insilico">Takeda bets up to $600M on Insilico's AI to design its next drug candidates.</a></li>
+      <li><a href="#story-hetairos">AI reads routine tissue slides to name 102 brain-tumor subtypes in ~12 minutes.</a></li>
+    </ul>
+  </div>
+
+  <div class="topic-filter" id="topicFilter">
+    <button class="topic-chip all" data-topic="all" aria-pressed="true"><span class="dot"></span>All</button>
+    <button class="topic-chip chip-foundation" data-topic="foundation" aria-pressed="false"><span class="dot"></span>Foundation models</button>
+    <button class="topic-chip chip-funding" data-topic="funding" aria-pressed="false"><span class="dot"></span>Funding</button>
+    <button class="topic-chip chip-oncology" data-topic="oncology" aria-pressed="false"><span class="dot"></span>Oncology</button>
+    <button class="topic-chip chip-reality" data-topic="reality" aria-pressed="false"><span class="dot"></span>Reality check</button>
+  </div>
+
+  <div id="stories">
+
+    <!-- LEAD STORY: BIOMNI -->
+    <article class="news-card lead topic-foundation" data-topic="foundation" id="story-biomni">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-foundation">Foundation models</span>
+          <span class="date">July 9, 2026</span>
+        </div>
+        <h3>A new AI "co-scientist" runs entire biomedical research workflows on its own — and 10,000 labs are already using it</h3>
+        <p class="summary">Most AI chatbots answer one question and stop. Researchers at Stanford have released <strong>Biomni</strong>, an <a href="../wiki/index.html#ai-agent">AI agent</a> built for biomedical science that instead works through a whole research problem: it reads the literature, picks the right datasets and software tools, writes and runs analysis code, interprets the results, and suggests what to try next.</p>
+        <p class="summary">Biomni draws on the full text of bioRxiv's life-science papers plus 150 specialized biomedical tools, 105 software packages and 59 databases spanning 25 subfields. In one example, a researcher uploaded over 450 files of blood-sugar, food and activity data and asked it to find plausible patterns; Biomni cleaned the data and identified a link between food intake and body temperature in 40 minutes — work the team estimates would take a person 60-plus hours. A prototype is already used by more than 10,000 academic and industry labs.</p>
+        <div class="why"><strong>Why it matters:</strong> Biomni logs full citations for every step, which its creators argue makes it more traceable than a typical chatbot answer, and it is pitched as freeing scientists for judgment and ideation rather than replacing them. Deciding which questions are worth asking is still a human call, and output from a tool this new and this widely used still needs expert review before anyone acts on it.</div>
+        <p class="sources">Sources: <a href="https://news.stanford.edu/stories/2026/07/biomni-ai-powered-biomedical-co-scientist">Stanford Report</a> · <a href="https://www.science.org/doi/10.1126/science.adz4351">Science</a></p>
+      </div>
+    </article>
+
+    <!-- FOUNDATION MODELS: UCE -->
+    <article class="news-card topic-foundation" data-topic="foundation">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-foundation">Foundation models</span>
+          <span class="date">July 8, 2026</span>
+        </div>
+        <h3>A "universal" AI model can read any cell, from any species, without retraining</h3>
+        <p class="summary">An AI model trained to make sense of one lab's cell dataset usually has to be retrained from scratch for the next one. Researchers at Stanford and the Chan Zuckerberg Biohub built the <strong>Universal Cell Embedding</strong> (UCE), a <a href="../wiki/index.html#foundation-model">foundation model</a> that converts a cell's gene activity into a shared mathematical fingerprint, so a new dataset — from any tissue or species — can be compared against others with no extra training.</p>
+        <p class="summary">UCE represents each active gene by the protein it encodes, using the <a href="../explainers/protein-language-models.html">protein language model</a> ESM2, then processes that through a transformer trained on more than 36 million cells across eight species. On a new, previously unpublished human dataset, it beat the next-best comparable method by nearly 14% — and correctly grouped human macrophages sampled from 73 different tissues, without ever being told what a macrophage looks like.</p>
+        <div class="why"><strong>Why it matters:</strong> Labs currently spend real time and money re-labeling and retraining models for every new experiment; UCE's creators argue this can shortcut much of that for standard analyses, and the model and its 36-million-cell atlas are freely released. It is a research and annotation tool, not a diagnostic one — its value will be judged by how it holds up as more independent labs test it on data it has never seen.</div>
+        <p class="sources">Sources: <a href="https://www.nature.com/articles/s41586-026-10689-z">Nature</a></p>
+      </div>
+    </article>
+
+    <!-- FUNDING: TAKEDA / INSILICO -->
+    <article class="news-card topic-funding" data-topic="funding" id="story-insilico">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-funding">Funding</span>
+          <span class="date">July 3, 2026</span>
+        </div>
+        <h3>Takeda bets up to $600 million that Insilico's AI can design its next drug candidates</h3>
+        <p class="summary">Takeda, one of Japan's largest drugmakers, has signed a strategic collaboration with Insilico Medicine to use its <strong>Pharma.AI</strong> platform for early-stage drug discovery, in a deal worth up to $600 million. Insilico will lead the AI-driven discovery work — its software narrows down which biological targets to pursue and uses a generative model, Chemistry42, to design candidate molecules from scratch — while Takeda develops the resulting candidates in the lab and clinic, with exclusive rights to anything that comes out of it.</p>
+        <div class="why"><strong>Why it matters:</strong> Insilico gets roughly $60 million upfront and in near-term payments, with the rest tied to development, regulatory and sales milestones that may never be reached — so-called "biobucks." Insilico's own most advanced AI-designed drug, for a lung-scarring disease, has only just moved into Phase 3 testing, and no AI-designed drug has yet won approval anywhere — a reminder that a big deal signals confidence in the process, not proof that it works.</div>
+        <p class="sources">Sources: <a href="https://www.artificialintelligence-news.com/news/takeda-insilico-ai-drug-discovery-deal/">AI News</a> · <a href="https://insilico.com/news/4ifuiaal01-insilico-medicine-announces-collaboratio">Insilico Medicine</a></p>
+      </div>
+    </article>
+
+    <!-- REALITY CHECK: MICROSOFT / NATURE MEDICINE -->
+    <article class="news-card topic-reality" data-topic="reality">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-reality">Reality check</span>
+          <span class="date">June 26, 2026</span>
+        </div>
+        <h3>Top AI models ace medical benchmarks — then stumble when researchers quietly change the question</h3>
+        <p class="summary">GPT-5 and Gemini score impressively on standard tests of medical knowledge, a result often cited as evidence they're ready for health applications. A Microsoft Research team, including physician-scientist Eric Topol, tested that claim with "adversarial stress tests" — small, deliberate changes to benchmark questions, such as removing a clue the model needs. Models could often still guess right after a key clue was deleted, a sign of pattern-matching rather than real reasoning, yet got confused by minor rewordings and sometimes gave a confident, detailed explanation for a wrong answer.</p>
+        <div class="why"><strong>Why it matters:</strong> This doesn't mean general chatbots are useless in medicine — an earlier study this year found they beat specialized clinical AI tools on doctors' real questions. It does mean a high benchmark score alone isn't solid evidence a model reasons reliably enough for patient-facing use, and buyers or regulators leaning on those scores should ask exactly what was tested.</div>
+        <p class="sources">Sources: <a href="https://www.nature.com/articles/s41591-026-04501-8">Nature Medicine</a></p>
+      </div>
+    </article>
+
+    <!-- ONCOLOGY: HETAIROS -->
+    <article class="news-card topic-oncology" data-topic="oncology" id="story-hetairos">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-oncology">Oncology</span>
+          <span class="date">June 10, 2026</span>
+        </div>
+        <h3>AI reads a routine tumor slide and names the brain-tumor subtype in about 12 minutes, not two weeks</h3>
+        <p class="summary">Brain and spinal cord tumors come in more than 100 molecular subtypes, and getting the right one usually means <a href="../wiki/index.html#dna-methylation">DNA methylation</a> testing — the gold standard, but a test that needs specialized labs and takes about two weeks to come back. A team at the German Cancer Research Center (DKFZ) and Heidelberg University built <strong>Hetairos</strong>, an AI system that instead predicts the same molecular subtype directly from a routine, already-stained tissue slide of the kind pathology labs worldwide produce as a matter of course.</p>
+        <p class="summary">Trained on more than 11,000 tissue sections from over 9,600 patients across eleven centers, Hetairos distinguishes 102 tumor subtypes and flags its own confidence. In a blinded test against five experienced neuropathologists on 210 cases, its top guess was right 68% of the time versus 30% for the specialists. Run alongside routine diagnosis, it produced a read in about 12 minutes on ordinary hardware, versus roughly 12 days for full molecular testing.</p>
+        <div class="why"><strong>Why it matters:</strong> The researchers are explicit that Hetairos is meant to complement molecular testing, not replace it — it still lags specialists on the rarest tumor types, and this study let it run alongside real diagnoses without influencing them, so it hasn't yet been tested as something doctors act on. Its biggest promise may be in regions without access to specialized methylation labs, where a microscope slide is often all that's available.</div>
+        <p class="sources">Sources: <a href="https://www.eurekalert.org/news-releases/1131493">EurekAlert / DKFZ</a> · <a href="https://doi.org/10.1038/s43018-026-01186-3">Nature Cancer (DOI)</a></p>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="callout" style="margin-top:36px;">
+    <strong>How this digest is made:</strong> stories are gathered from trusted biotech and AI sources, summarized in plain English, and fact-checked against the primary source before publishing. Each links out so you can go deeper. <a href="../about.html">More on the process →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© <span id="year"></span> Cultured Machine · Biotech learns to compute.</div>
+    <div><a href="../about.html">About</a> · <a href="../explainers/alphafold.html">Explainers</a> · <a href="../index.html">Home</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* Topic filter */
+(function(){
+  const filter = document.getElementById('topicFilter');
+  const chips = [...filter.querySelectorAll('.topic-chip')];
+  const cards = [...document.querySelectorAll('#stories .news-card')];
+  filter.addEventListener('click', e => {
+    const chip = e.target.closest('.topic-chip');
+    if (!chip) return;
+    chips.forEach(c => c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'));
+    const topic = chip.dataset.topic;
+    cards.forEach(card => {
+      const show = (topic === 'all') || (card.dataset.topic === topic);
+      card.classList.toggle('hidden', !show);
+    });
+  });
+})();
+</script>
+</body>
+</html>

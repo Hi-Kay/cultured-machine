@@ -39,8 +39,10 @@ Start each issue with a short "The week in three lines" block above the stories:
 - When a technical term appears that has an entry in `/wiki/index.html`, link it using an anchor: `<a href="../wiki/index.html#term-id">term</a>`.
 - Link the term on first use in each issue; do not repeat the link in the same article.
 - Current glossary entries and their anchor IDs:
+  - `ai-agent` — AI agent
   - `checkpoint-inhibitor` — Checkpoint inhibitor
   - `de-novo-protein-design` — De novo protein design
+  - `dna-methylation` — DNA methylation
   - `foundation-model` — Foundation model
   - `glp-1` — GLP-1
   - `ind` — IND application
