@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This week in Biotech + AI — July 20, 2026 — Cultured Machine</title>
+<meta name="description" content="Curated, plain-English news at the intersection of biotech and AI: Jennifer Doudna's team uses AI to design brand-new CRISPR enzymes that outperform nature's own, AI drug-design startup Chai Discovery raises $400M at a $3.8B valuation, Bristol Myers Squibb doubles its AI supercomputer and opens it to every scientist, and an industry-wide AI contest to predict a hidden drug-safety risk ends in a 43-way tie — each with why it matters and a link to the source.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="../index.html">
+      <span class="logo">CM</span>
+      <span>Cultured Machine <span class="tagline">· biology learns to compute</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../explainers/index.html">Explainers</a>
+      <a href="2026-07-20.html" aria-current="page">News</a>
+      <a href="index.html">Archive</a>
+      <a href="../wiki/index.html">Glossary</a>
+      <a href="../about.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="eyebrow">Weekly digest</div>
+  <h1>This week in Biotech + AI</h1>
+  <p class="meta">Week of July 20, 2026 · 4 stories · ~5 min read</p>
+  <p class="lead">The stories worth your attention right now — each in plain English, with why it matters and a link to the source. Filter by topic below.</p>
+
+  <div class="callout">
+    <strong>The week in three lines:</strong>
+    <ul style="margin:10px 0 0; padding-left:20px;">
+      <li><a href="#story-doudna">Jennifer Doudna's lab used AI to design new CRISPR enzymes that outperform the natural version.</a></li>
+      <li><a href="#story-chai">Chai Discovery raises $400M, tripling its valuation, to design drug molecules with AI.</a></li>
+      <li><a href="#story-openadmet">43 different AI models tied for first place on a hidden drug-safety benchmark.</a></li>
+    </ul>
+  </div>
+
+  <div class="topic-filter" id="topicFilter">
+    <button class="topic-chip all" data-topic="all" aria-pressed="true"><span class="dot"></span>All</button>
+    <button class="topic-chip chip-protein" data-topic="protein" aria-pressed="false"><span class="dot"></span>Protein design</button>
+    <button class="topic-chip chip-funding" data-topic="funding" aria-pressed="false"><span class="dot"></span>Funding</button>
+    <button class="topic-chip chip-foundation" data-topic="foundation" aria-pressed="false"><span class="dot"></span>Foundation models</button>
+    <button class="topic-chip chip-reality" data-topic="reality" aria-pressed="false"><span class="dot"></span>Reality check</button>
+  </div>
+
+  <div id="stories">
+
+    <!-- LEAD STORY: DOUDNA / SYNTHETIC TnpB -->
+    <article class="news-card lead topic-protein" data-topic="protein" id="story-doudna">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-protein">Protein design</span>
+          <span class="date">July 16, 2026</span>
+        </div>
+        <h3>AI designs brand-new CRISPR "molecular scissors" — and some cut genes better than the natural version</h3>
+        <p class="summary">Nobel laureate Jennifer Doudna and a team at UC Berkeley and the Innovative Genomics Institute used AI to <a href="../wiki/index.html#de-novo-protein-design">design</a> working CRISPR gene-editing enzymes that don't exist anywhere in nature — and several of them edit genes more efficiently than the natural protein they were built from. The team focused on TnpB, a tiny nuclease (a protein that cuts DNA) that is the evolutionary ancestor of the widely used Cas12 system.</p>
+        <p class="summary">Rather than tweaking a natural sequence, the researchers gave an AI model the 3D shape a working TnpB needs to hold and asked it to work backward: propose new amino-acid sequences — constrained by evolutionary data from real TnpB relatives — that would still fold into that functional shape. This produced thousands of candidate designs on a computer before a single one was tested in a lab. The resulting synthetic enzymes, called SynTnpBs, matched or exceeded natural TnpB's editing efficiency in bacterial, plant, and human cells, with up to roughly 4-fold higher activity at some human gene targets.</p>
+        <div class="why"><strong>Why it matters:</strong> This goes beyond AI predicting or lightly modifying existing proteins — it generated functional enzymes "far afield" from anything evolution produced, according to outside researchers. But this is a lab result in cells, not a therapy: the synthetic nucleases haven't been tested for the safety and precision standards required of a gene-editing medicine, and it will take years of further work to know whether they belong in the same league as Cas9 and Cas12 for real-world use.</div>
+        <p class="sources">Sources: <a href="https://www.nature.com/articles/d41586-026-02217-w">Nature News</a> · <a href="https://doi.org/10.1126/science.aed6123">Science (DOI)</a></p>
+      </div>
+    </article>
+
+    <!-- FUNDING: CHAI DISCOVERY -->
+    <article class="news-card topic-funding" data-topic="funding" id="story-chai">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-funding">Funding</span>
+          <span class="date">July 13, 2026</span>
+        </div>
+        <h3>AI drug-design startup Chai Discovery raises $400 million, tripling its valuation in seven months</h3>
+        <p class="summary">Chai Discovery, a startup that builds AI models to design new drug molecules from scratch, has raised a $400 million Series C led by Index Ventures, valuing the company at $3.8 billion — about triple its valuation from earlier this year. Chai's models are already licensed to Eli Lilly, Pfizer, and Novartis, aimed at "hard to drug" targets that traditional chemistry struggles to reach.</p>
+        <p class="summary">Instead of screening libraries of existing chemicals, Chai's AI takes a description of a biological target and generates candidate molecules and antibody sequences de novo, predicting which designs are likely to bind tightly enough to be useful. Its newest model, Chai-3, is reported to improve binding strength over its predecessor, Chai-2 — which in 2025 became the first zero-shot generative platform to hit double-digit real-world success rates for fully computer-designed antibodies.</p>
+        <div class="why"><strong>Why it matters:</strong> A rising success rate in the lab is a genuine technical marker, but it measures whether a designed molecule binds its target — not whether it becomes a safe, effective medicine. None of Chai's AI-designed candidates has yet reached a patient, so the size of this round reflects investor confidence in the platform, not proof that any resulting drug will work.</div>
+        <p class="sources">Sources: <a href="https://www.businesswire.com/news/home/20260713849009/en/Chai-Discovery-Announces-%24400M-Series-C-to-Advance-AI-Driven-Molecular-Design">Business Wire</a></p>
+      </div>
+    </article>
+
+    <!-- FOUNDATION: BMS / NVIDIA -->
+    <article class="news-card topic-foundation" data-topic="foundation">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-foundation">Foundation models</span>
+          <span class="date">July 20, 2026</span>
+        </div>
+        <h3>Bristol Myers Squibb doubles its AI supercomputer and opens it to every scientist in the company</h3>
+        <p class="summary">Bristol Myers Squibb is deploying a second AI supercomputer, built on NVIDIA's newest chips, and says it will give every researcher at the company — not just a specialized team — direct access to large-scale AI compute for drug discovery. BMS has run a dedicated AI cluster for three years already, which it credits with saving scientists "weeks of manual work" on identifying drug targets and with expanding its library of CELMoD compounds, a class of molecules engineered to degrade cancer-causing proteins.</p>
+        <p class="summary">On the new system, BMS trains its own <a href="../wiki/index.html#foundation-model">foundation models</a> and runs AI agents that carry out routine analysis and target-identification work across its research programs, plus a "Predict First" workflow that uses AI predictions to decide which molecules are worth synthesizing before any lab work begins.</p>
+        <div class="why"><strong>Why it matters:</strong> BMS reports internal workflow gains — for example, a 20–30% cut in the time needed to produce a candidate for clinical testing — but that is a measure of speed, not proof that AI-assisted candidates succeed more often in the clinic. Pharma has invested heavily in AI compute for years without yet producing an AI-discovered drug that has won approval, so the real test remains what comes out of the pipeline, not how large the machine behind it is.</div>
+        <p class="sources">Sources: <a href="https://blogs.nvidia.com/blog/bristol-myers-squibb-building-life-science-industrys-most-advanced-ai-factory-on-nvidia-vera-rubin/">NVIDIA Blog</a></p>
+      </div>
+    </article>
+
+    <!-- REALITY CHECK: OPENADMET / INDUCTIVE BIO -->
+    <article class="news-card topic-reality" data-topic="reality" id="story-openadmet">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-reality">Reality check</span>
+          <span class="date">July 14, 2026</span>
+        </div>
+        <h3>An AI contest to predict a hidden drug-safety risk ended in a 43-way tie for first place</h3>
+        <p class="summary">AI drug-discovery company Inductive Bio won an industry-wide competition to predict a drug-safety liability called PXR induction, beating more than 350 entrants from large pharma, biotech, and academic teams — its third consecutive win in this kind of contest. PXR is a protein that senses foreign chemicals in the body and can trigger faster breakdown of a drug than intended, a problem that often isn't caught until late in development, after a company has already invested heavily in a compound.</p>
+        <p class="summary">The nonprofit consortium OpenADMET ran the contest as a blind test of <a href="../wiki/index.html#admet">ADMET</a> prediction: teams trained AI models on a shared dataset of chemical structures and PXR activity, then predicted PXR activation for compounds nobody had seen. Of the roughly 350 teams that started, 95 made it to the final scoring round — and on the final leaderboard, 43 different teams' models landed in a statistical tie for first place, indistinguishable from Inductive's winning score once measurement noise was accounted for.</p>
+        <div class="why"><strong>Why it matters:</strong> Dozens of very different modeling approaches converged on essentially the same accuracy, suggesting this benchmark may be running into a ceiling set by the data available rather than by how clever any one model is. One independent team, Acellera, found that feeding their model more training data actually hurt its score — a candid reminder that in AI for biology, more data is not automatically better data.</div>
+        <p class="sources">Sources: <a href="https://www.prnewswire.com/news-releases/inductive-bio-wins-3rd-consecutive-ai-drug-discovery-benchmark-302824700.html">Inductive Bio / PR Newswire</a> · <a href="https://www.acellera.com/blog/reaching-the-top-tier-of-the-pxr-blind-challenge-with-an-ai-agent-black-box-trainer">Acellera Blog</a></p>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="callout" style="margin-top:36px;">
+    <strong>How this digest is made:</strong> stories are gathered from trusted biotech and AI sources, summarized in plain English, and fact-checked against the primary source before publishing. Each links out so you can go deeper. <a href="../about.html">More on the process →</a>
+  </div>
+
+  <div style="margin-top:16px; text-align:center;">
+    <a class="btn" href="https://twitter.com/intent/tweet?text=This%20week%20in%20Biotech%20%2B%20AI%20%28July%2020%2C%202026%29%20%E2%80%94%20Cultured%20Machine&url=https%3A%2F%2Fhi-kay.github.io%2Fcultured-machine%2Fnews%2F2026-07-20.html" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      Share on X
+    </a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© <span id="year"></span> Cultured Machine · Biotech learns to compute.</div>
+    <div><a href="../about.html">About</a> · <a href="../explainers/alphafold.html">Explainers</a> · <a href="../index.html">Home</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* Topic filter */
+(function(){
+  const filter = document.getElementById('topicFilter');
+  const chips = [...filter.querySelectorAll('.topic-chip')];
+  const cards = [...document.querySelectorAll('#stories .news-card')];
+  filter.addEventListener('click', e => {
+    const chip = e.target.closest('.topic-chip');
+    if (!chip) return;
+    chips.forEach(c => c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'));
+    const topic = chip.dataset.topic;
+    cards.forEach(card => {
+      const show = (topic === 'all') || (card.dataset.topic === topic);
+      card.classList.toggle('hidden', !show);
+    });
+  });
+})();
+</script>
+</body>
+</html>
