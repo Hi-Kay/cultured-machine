@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This week in Biotech + AI — August 15, 2026 — Cultured Machine</title>
+<meta name="description" content="Curated, plain-English news at the intersection of biotech and AI: a Duke team's AI 'shrink ray' resizes proteins without breaking them, the FDA approves an AI-read blood test for colorectal cancer, GSK pays $110 million for AI-ready cellular data, Novo Nordisk makes AWS its strategic AI partner for drug discovery, and Schrödinger launches an AI co-scientist for its physics-based platform — each with why it matters and a link to the source.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="../index.html">
+      <span class="logo">CM</span>
+      <span>Cultured Machine <span class="tagline">· biology learns to compute</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../explainers/index.html">Explainers</a>
+      <a href="2026-08-15.html" aria-current="page">News</a>
+      <a href="index.html">Archive</a>
+      <a href="../wiki/index.html">Glossary</a>
+      <a href="../about.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="eyebrow">Weekly digest</div>
+  <h1>This week in Biotech + AI</h1>
+  <p class="meta">Week of August 15, 2026 · 5 stories · ~6 min read</p>
+  <p class="lead">The stories worth your attention right now — each in plain English, with why it matters and a link to the source. Filter by topic below.</p>
+
+  <div class="callout">
+    <strong>The week in three lines:</strong>
+    <ul style="margin:10px 0 0; padding-left:20px;">
+      <li><a href="#story-raygun">An AI "shrink ray" resizes existing proteins — from Duke, a genuinely new way to edit biology's building blocks.</a></li>
+      <li><a href="#story-simplescreen">The FDA approved a blood test that uses machine learning to catch colorectal cancer signals from a simple draw.</a></li>
+      <li><a href="#story-novo-aws">Novo Nordisk made AWS its strategic AI partner, betting agentic AI can shorten the path from target to first dose.</a></li>
+    </ul>
+  </div>
+
+  <div class="topic-filter" id="topicFilter">
+    <button class="topic-chip all" data-topic="all" aria-pressed="true"><span class="dot"></span>All</button>
+    <button class="topic-chip chip-protein" data-topic="protein" aria-pressed="false"><span class="dot"></span>Protein design</button>
+    <button class="topic-chip chip-oncology" data-topic="oncology" aria-pressed="false"><span class="dot"></span>Oncology</button>
+    <button class="topic-chip chip-funding" data-topic="funding" aria-pressed="false"><span class="dot"></span>Funding</button>
+    <button class="topic-chip chip-discovery" data-topic="discovery" aria-pressed="false"><span class="dot"></span>Discovery</button>
+  </div>
+
+  <div id="stories">
+
+    <!-- LEAD STORY: RAYGUN PROTEIN RESIZING -->
+    <article class="news-card lead topic-protein" data-topic="protein" id="story-raygun">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-protein">Protein design</span>
+          <span class="date">July 29, 2026</span>
+        </div>
+        <h3>An AI "shrink ray" can resize existing proteins without breaking them</h3>
+        <p class="summary">A Duke University team built an AI tool called Raygun that shrinks or enlarges a natural protein — adding, deleting, or swapping pieces of it — while keeping its 3D shape and function intact. That is a different job from tools like AlphaFold, which mostly <a href="../wiki/index.html#de-novo-protein-design">design new proteins from scratch</a>; Raygun instead edits proteins that already work, which is often more useful for turning a lab tool into something practical.</p>
+        <p class="summary">The AI does the work through <a href="../wiki/index.html#protein-language-model">ESM-2, a protein language model</a> that has learned the evolutionary patterns linking a protein's sequence to its shape (see our <a href="../explainers/protein-language-models.html">explainer on protein language models</a>). Raygun translates a protein into a standardized numerical representation the model can resize predictably, rather than simply cutting or padding the amino-acid list. In lab tests, the team shrank two common fluorescent marker proteins by 10–25% — in some cases over 50% — and confirmed under a microscope that they still glowed.</p>
+        <div class="why"><strong>Why it matters:</strong> This is a general-purpose editing tool, not a finished product — the DNA that has been synthesized and tested so far is limited to a handful of marker proteins. But a University of California San Diego student used the publicly posted method to design a protein that bound an EGFR cancer-signaling target better than the natural molecule it was based on, without prompting from the Duke team, which is a real signal that the tool generalizes beyond its own demo.</div>
+        <p class="sources">Sources: <a href="https://doi.org/10.1038/s41586-026-10842-8">Nature (DOI)</a> · <a href="https://medschool.duke.edu/stories/honey-i-shrunk-proteins">Duke University School of Medicine</a></p>
+      </div>
+    </article>
+
+    <!-- ONCOLOGY: SIMPLESCREEN CRC -->
+    <article class="news-card topic-oncology" data-topic="oncology" id="story-simplescreen">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-oncology">Oncology</span>
+          <span class="date">July 27, 2026</span>
+        </div>
+        <h3>The FDA approved a blood test that uses AI to flag colorectal cancer</h3>
+        <p class="summary">The FDA approved SimpleScreen CRC, a blood-based screening test for colorectal cancer in adults 45 and older at average risk, developed by Freenome and set to be commercialized by Abbott this fall. The test reads <a href="../wiki/index.html#dna-methylation">DNA methylation</a> patterns in cell-free DNA circulating in the blood — chemical marks on DNA that shift in characteristic ways near a tumor — from a simple blood draw rather than a stool sample or colonoscopy prep.</p>
+        <p class="summary">The AI does the work in the classification step: an AI/machine-learning algorithm built into the test's software weighs the methylation and sequencing signal from each sample and calls it positive or negative, a pattern too complex to score with a simple threshold rule. In the PREEMPT CRC validation study, the largest prospective trial of its kind, the test caught 81.1% of colorectal cancers and correctly cleared 90.4% of people without advanced disease.</p>
+        <div class="why"><strong>Why it matters:</strong> A blood draw is a much lower barrier than a colonoscopy or stool kit, so a test like this mainly helps if it gets more people screened at all — but it is markedly less sensitive than colonoscopy for catching precancerous polyps (13.7%), so it is a screening option to raise overall participation, not a replacement for follow-up colonoscopy when it flags positive.</div>
+        <p class="sources">Sources: <a href="https://www.freenome.com/newsroom/fda-approves-freenomes-simplescreen-crc/">Freenome</a> · <a href="https://www.medtechdive.com/news/freenome-secures-fda-nod-for-blood-based-colorectal-cancer-test/826290/">MedTech Dive</a></p>
+      </div>
+    </article>
+
+    <!-- FUNDING: RELATION THERAPEUTICS / GSK -->
+    <article class="news-card topic-funding" data-topic="funding" id="story-relation">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-funding">Funding</span>
+          <span class="date">July 30, 2026</span>
+        </div>
+        <h3>GSK is paying $110 million for lab data, not an AI model</h3>
+        <p class="summary">GSK expanded its partnership with Relation Therapeutics in a deal worth up to $110 million, but the structure is unusual: GSK is not licensing Relation's AI, it is paying Relation to manufacture the biological data that AI needs. Relation will run automated lab experiments at scale to generate large-scale human cellular data — measuring how cells respond to genetic and drug perturbations across immunology, fibrosis, and osteoarthritis — to train MORGAN, Relation's <a href="../wiki/index.html#foundation-model">foundation model</a> of cellular response.</p>
+        <p class="summary">The bet is that AI models for predicting how a human cell reacts to a drug or gene edit are limited less by algorithms than by the scarcity of large, consistent, machine-learning-ready lab data, since the public datasets available were mostly generated before anyone was training AI on them.</p>
+        <div class="why"><strong>Why it matters:</strong> No cellular foundation model — MORGAN included — has yet produced an approved drug or even a clinical candidate, and a 2025 Nature Methods study found today's cellular foundation models perform no better than much simpler models at predicting how cells respond to perturbation; Relation's bet is that better, not just more, data changes that, which remains unproven.</div>
+        <p class="sources">Sources: <a href="https://www.biospace.com/press-releases/relation-announces-expanded-collaboration-with-gsk">BioSpace (press release)</a> · <a href="https://endpoints.news/relation-promises-transformationally-different-success-rates-in-expanded-gsk-pact/">Endpoints News</a></p>
+      </div>
+    </article>
+
+    <!-- DISCOVERY: NOVO NORDISK / AWS -->
+    <article class="news-card topic-discovery" data-topic="discovery" id="story-novo-aws">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-discovery">Discovery</span>
+          <span class="date">August 10, 2026</span>
+        </div>
+        <h3>Novo Nordisk made Amazon's cloud arm its strategic AI partner for drug discovery</h3>
+        <p class="summary">Novo Nordisk named AWS its preferred cloud provider and strategic AI partner, opening a joint "co-innovation hub" in London where AWS engineers and Novo Nordisk scientists work side by side. The AI does the work through two AWS products: Amazon Bio Discovery, which gives scientists direct access to AI models for generating and screening candidate drug molecules and links those predictions to physical lab testing, and Bedrock AgentCore, a platform for building AI agents that can run multi-step research and operations workflows across Novo Nordisk's data.</p>
+        <p class="summary">The companies point to an existing deployment as a track record: more than 25,000 Novo Nordisk employees already use an AWS-built generative AI tool for drafting documents and retrieving information, which the companies say has measurably cut clinical documentation time.</p>
+        <div class="why"><strong>Why it matters:</strong> Neither company disclosed financial terms, a timeline, or any specific drug program tied to the deal, so this is an infrastructure and tooling bet rather than a result — the real test is whether Amazon Bio Discovery's screening actually shortens the target-to-first-dose timeline Novo Nordisk is aiming for, which won't be visible for years.</div>
+        <p class="sources">Sources: <a href="https://www.globenewswire.com/news-release/2026/08/10/3341794/0/en/novo-nordisk-and-aws-enter-strategic-partnership-to-accelerate-drug-discovery-through-ai.html">Novo Nordisk (press release)</a> · <a href="https://aws.amazon.com/blogs/industries/novo-nordisk-selects-aws-as-strategic-partner-to-accelerate-drug-discovery-with-ai/">AWS</a></p>
+      </div>
+    </article>
+
+    <!-- DISCOVERY: SCHRÖDINGER BUNSEN -->
+    <article class="news-card topic-discovery" data-topic="discovery" id="story-bunsen">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-discovery">Discovery</span>
+          <span class="date">July 27, 2026</span>
+        </div>
+        <h3>Schrödinger built an AI "co-scientist" to run its own drug-design software</h3>
+        <p class="summary">Schrödinger launched early access to Bunsen, an <a href="../wiki/index.html#ai-agent">AI agent</a> designed to plan and run computational chemistry workflows on the company's physics-based molecular modeling platform, with Bristol Myers Squibb as an early adopter. Rather than a general chatbot that summarizes existing knowledge, Bunsen interprets a research question in plain language, chooses which of Schrödinger's validated physics-based simulation methods to run, executes the multi-step calculation, and then explains the results back to the scientist — work that previously required a trained computational chemist to plan and supervise by hand.</p>
+        <p class="summary">The company frames this as widening who can use its platform: a "drug hunter" without computational chemistry training could, in principle, ask Bunsen to evaluate a set of candidate molecules and get back a prioritized, physics-grounded answer.</p>
+        <div class="why"><strong>Why it matters:</strong> Bunsen is still an early-access product with no independent, published data yet on how often its recommendations hold up against expert-run analysis — this is Schrödinger's own three-decade-old simulation methods getting an AI planner in front of them, not a new discovery method in itself, and its real value will show up in whether customers' hit rates actually improve.</div>
+        <p class="sources">Sources: <a href="https://www.biospace.com/press-releases/schrodinger-introduces-bunsen-an-ai-co-scientist-for-molecular-discovery">BioSpace (press release)</a></p>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="callout" style="margin-top:36px;">
+    <strong>How this digest is made:</strong> stories are gathered from trusted biotech and AI sources, summarized in plain English, and fact-checked against the primary source before publishing. Each links out so you can go deeper. <a href="../about.html">More on the process →</a>
+  </div>
+
+  <div style="margin-top:16px; text-align:center;">
+    <a class="btn" href="https://twitter.com/intent/tweet?text=This%20week%20in%20Biotech%20%2B%20AI%20%28August%2015%2C%202026%29%20%E2%80%94%20Cultured%20Machine&url=https%3A%2F%2Fhi-kay.github.io%2Fcultured-machine%2Fnews%2F2026-08-15.html" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      Share on X
+    </a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© <span id="year"></span> Cultured Machine · Biotech learns to compute.</div>
+    <div><a href="../about.html">About</a> · <a href="../explainers/alphafold.html">Explainers</a> · <a href="../index.html">Home</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* Topic filter */
+(function(){
+  const filter = document.getElementById('topicFilter');
+  const chips = [...filter.querySelectorAll('.topic-chip')];
+  const cards = [...document.querySelectorAll('#stories .news-card')];
+  filter.addEventListener('click', e => {
+    const chip = e.target.closest('.topic-chip');
+    if (!chip) return;
+    chips.forEach(c => c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'));
+    const topic = chip.dataset.topic;
+    cards.forEach(card => {
+      const show = (topic === 'all') || (card.dataset.topic === topic);
+      card.classList.toggle('hidden', !show);
+    });
+  });
+})();
+</script>
+</body>
+</html>

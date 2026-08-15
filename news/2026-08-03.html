@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This week in Biotech + AI — August 3, 2026 — Cultured Machine</title>
+<meta name="description" content="Curated, plain-English news at the intersection of biotech and AI: Broad Institute researchers combine AI-designed proteins with lab evolution to build an enzyme 79 times better at cutting a neurodegeneration-linked protein, the Baker Lab designs proteins from scratch that light up specific molecules inside living cells, AI-guided imaging finds cancer-associated changes in pancreatic tissue that still looks normal, and a look at how AI-discovered drugs are actually faring in human trials — each with why it matters and a link to the source.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="../index.html">
+      <span class="logo">CM</span>
+      <span>Cultured Machine <span class="tagline">· biology learns to compute</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../explainers/index.html">Explainers</a>
+      <a href="2026-08-03.html" aria-current="page">News</a>
+      <a href="index.html">Archive</a>
+      <a href="../wiki/index.html">Glossary</a>
+      <a href="../about.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="eyebrow">Weekly digest</div>
+  <h1>This week in Biotech + AI</h1>
+  <p class="meta">Week of August 3, 2026 · 4 stories · ~5 min read</p>
+  <p class="lead">The stories worth your attention right now — each in plain English, with why it matters and a link to the source. Filter by topic below.</p>
+
+  <div class="callout">
+    <strong>The week in three lines:</strong>
+    <ul style="margin:10px 0 0; padding-left:20px;">
+      <li><a href="#story-botulinum">AI-stabilized proteins gave lab evolution a head start — the result cuts a neurodegeneration-linked protein 79x better.</a></li>
+      <li><a href="#story-reality">A reality check on AI-designed drugs in the clinic: real progress at Insilico and Recursion, a real failure at Verge.</a></li>
+      <li><a href="#story-pancreatic">AI-guided imaging finds cancer-linked molecular changes in pancreatic cells that still look normal under a microscope.</a></li>
+    </ul>
+  </div>
+
+  <div class="topic-filter" id="topicFilter">
+    <button class="topic-chip all" data-topic="all" aria-pressed="true"><span class="dot"></span>All</button>
+    <button class="topic-chip chip-protein" data-topic="protein" aria-pressed="false"><span class="dot"></span>Protein design</button>
+    <button class="topic-chip chip-oncology" data-topic="oncology" aria-pressed="false"><span class="dot"></span>Oncology</button>
+    <button class="topic-chip chip-reality" data-topic="reality" aria-pressed="false"><span class="dot"></span>Reality check</button>
+  </div>
+
+  <div id="stories">
+
+    <!-- LEAD STORY: BROAD / AI + PACE EVOLUTION -->
+    <article class="news-card lead topic-protein" data-topic="protein" id="story-botulinum">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-protein">Protein design</span>
+          <span class="date">July 22, 2026</span>
+        </div>
+        <h3>Scientists combined AI-designed proteins with lab evolution — and built an enzyme 79 times better at its new job</h3>
+        <p class="summary">Researchers at the Broad Institute, led by gene-editing pioneer David Liu, showed that giving lab evolution an AI-designed starting point produces far better proteins than evolving a natural one from scratch. They used an AI model to redesign botulinum neurotoxin protease — the enzyme behind Botox, which normally cuts a completely different target — into a more stable version of itself, without changing its 3D shape.</p>
+        <p class="summary">That extra stability turned out to matter enormously. The team then used PACE, a rapid lab-evolution method Liu's group invented in 2011, to evolve the AI-stabilized protein to cut ataxin-2, a protein that clumps together and drives neurodegeneration when it misfolds. The AI-redesigned starting point evolved into an enzyme 79 times better at cutting ataxin-2 than versions evolved from the natural, non-redesigned protease — because a more stable protein can absorb more mutations before it breaks.</p>
+        <div class="why"><strong>Why it matters:</strong> This is a lab proof-of-concept, not a therapy — the engineered enzyme hasn't been tested in animals or people, and cutting ataxin-2 in a dish is a long way from treating neurodegeneration. But the underlying finding is general: neither AI design nor lab evolution alone got as far as combining them, and the team says the same trick should work for many other proteins, including ones used in gene-editing tools.</div>
+        <p class="sources">Sources: <a href="https://www.broadinstitute.org/news/combining-ai-laboratory-evolution-yields-improved-proteins">Broad Institute</a> · <a href="https://www.nature.com/articles/s41586-026-10820-0">Nature (DOI)</a></p>
+      </div>
+    </article>
+
+    <!-- PROTEIN: NOVOTAGS -->
+    <article class="news-card topic-protein" data-topic="protein" id="story-novotag">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-protein">Protein design</span>
+          <span class="date">July 16, 2026</span>
+        </div>
+        <h3>Nobel laureate David Baker's lab designed proteins from scratch that light up specific molecules inside living cells</h3>
+        <p class="summary">A team spanning the Baker Lab, Janelia Research Campus, and EMBL Heidelberg built a new class of microscopy tools called NovoTags: small proteins <a href="../wiki/index.html#de-novo-protein-design">designed from scratch</a> by AI to grip a bright synthetic dye tightly and specifically, so scientists can genetically attach the tag to any protein of interest and see exactly where it sits inside a living human cell. The AI pipeline used <a href="../explainers/alphafold.html">AlphaFold</a> and related structure-prediction tools to filter candidate designs before anything was made in the lab.</p>
+        <p class="summary">The tags come in three colors that can be used together, and a follow-on version called NovoSplit only assembles — and lights up — once a specific dye is added, acting as a chemically controlled on/off switch for studying when two proteins interact. Combined with additional imaging tricks, the system could in principle track up to 30 different proteins in the same cell at once.</p>
+        <div class="why"><strong>Why it matters:</strong> This is a laboratory instrument, not a medicine — its direct beneficiaries are researchers studying cell biology, not patients. But better ways to see what's happening inside a cell are exactly the kind of tool that feeds the next round of AI-driven discovery, including future drug-target research.</div>
+        <p class="sources">Sources: <a href="https://www.embl.org/news/science-technology/novotags-ai-designed-proteins-help-scientists-see-inside-living-cells/">EMBL</a> · <a href="https://doi.org/10.1126/science.aeb0822">Science (DOI)</a></p>
+      </div>
+    </article>
+
+    <!-- ONCOLOGY: AI-GUIDED PANCREATIC PROTEOMICS -->
+    <article class="news-card topic-oncology" data-topic="oncology" id="story-pancreatic">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-oncology">Oncology</span>
+          <span class="date">July 28, 2026</span>
+        </div>
+        <h3>AI-guided imaging found cancer-linked changes in pancreatic cells that still looked normal under the microscope</h3>
+        <p class="summary">A research team spanning MD Anderson and the Novo Nordisk Foundation Center for Protein Research mapped the molecular changes that happen years before pancreatic cancer forms — one of the deadliest cancers, usually caught too late for surgery to help. An AI model trained to read microscope images automatically classified tissue into normal ducts, early pre-cancerous changes, and more advanced precursor lesions, across samples from both cancer-free organ donors and pancreatic cancer patients.</p>
+        <p class="summary">That AI classification told the researchers exactly which tiny clusters of cells — as few as 100 — to physically cut out with a laser for ultra-sensitive mass spectrometry, which measured over 8,500 proteins in each sample. The result: cancer-associated changes in stress response, immune activity, metabolism, and mitochondrial function showed up in duct cells that looked completely normal under the microscope, before any visible precancerous change had occurred.</p>
+        <div class="why"><strong>Why it matters:</strong> This is a discovery atlas, not a diagnostic test — it identifies candidate biomarkers rather than something a doctor can order today. But it makes a concrete case that molecular changes precede what pathologists can currently see, which is exactly the gap earlier-detection tools would need to close for a cancer this lethal.</div>
+        <p class="sources">Sources: <a href="https://www.aacr.org/blog/2026/07/28/editors-picks-july-2026-ai-powered-pancreatic-proteomics-sex-based-immune-differences-and-more/">AACR</a> · <a href="https://aacrjournals.org/cancerdiscovery/article/16/7/1323/786251">Cancer Discovery</a></p>
+      </div>
+    </article>
+
+    <!-- REALITY CHECK: AI DRUGS IN THE CLINIC -->
+    <article class="news-card topic-reality" data-topic="reality" id="story-reality">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-reality">Reality check</span>
+          <span class="date">July 17, 2026</span>
+        </div>
+        <h3>How are AI-designed drugs actually doing in human trials? A genuinely mixed scorecard</h3>
+        <p class="summary">Insilico Medicine's rentosertib — whose target was identified by an AI biology model before AI generative chemistry designed the molecule — moved into a 52-week <a href="../wiki/index.html#phase-trials">Phase 3</a> trial for a lung-scarring disease called idiopathic pulmonary fibrosis, after a small Phase 2 study showed it improved lung function. It's one of the furthest-advanced AI-originated drug candidates in the world, though it still hasn't proven itself in the larger trial. Insilico also has a second AI-flagged candidate, for ulcerative colitis, now in Phase 2.</p>
+        <p class="summary">Recursion Pharmaceuticals offers a more mixed picture: after disappointing results forced it to prune two other AI-derived programs earlier this year, its drug REC-4881 — whose mechanism AI flagged as promising — produced a 43% median reduction in colorectal polyp burden in an early trial for a rare hereditary condition, with the effect holding up for weeks after patients stopped taking it. Meanwhile Verge Genomics's AI-identified ALS drug candidate failed to advance past its first human trial.</p>
+        <div class="why"><strong>Why it matters:</strong> AI-discovered drugs tend to do somewhat better than average in Phase 1 safety trials, but that edge doesn't clearly survive into the larger trials that actually prove a drug works — and no AI-originated drug has yet won regulatory approval. The honest read: AI is generating real, testable leads faster, but turning a lead into an approved medicine still runs into the same biology and trial risk it always has.</div>
+        <p class="sources">Sources: <a href="https://www.biopharmadive.com/news/ai-drug-discovery-insilico-recursion-verge/825367/">BioPharma Dive</a> · <a href="https://www.prnewswire.com/news-releases/insilico-initiates-phase-iii-clinical-trial-for-rentosertib-its-ai-empowered-tnik-inhibitor-for-idiopathic-pulmonary-fibrosis-302819553.html">Insilico Medicine</a></p>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="callout" style="margin-top:36px;">
+    <strong>How this digest is made:</strong> stories are gathered from trusted biotech and AI sources, summarized in plain English, and fact-checked against the primary source before publishing. Each links out so you can go deeper. <a href="../about.html">More on the process →</a>
+  </div>
+
+  <div style="margin-top:16px; text-align:center;">
+    <a class="btn" href="https://twitter.com/intent/tweet?text=This%20week%20in%20Biotech%20%2B%20AI%20%28August%203%2C%202026%29%20%E2%80%94%20Cultured%20Machine&url=https%3A%2F%2Fhi-kay.github.io%2Fcultured-machine%2Fnews%2F2026-08-03.html" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      Share on X
+    </a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© <span id="year"></span> Cultured Machine · Biotech learns to compute.</div>
+    <div><a href="../about.html">About</a> · <a href="../explainers/alphafold.html">Explainers</a> · <a href="../index.html">Home</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* Topic filter */
+(function(){
+  const filter = document.getElementById('topicFilter');
+  const chips = [...filter.querySelectorAll('.topic-chip')];
+  const cards = [...document.querySelectorAll('#stories .news-card')];
+  filter.addEventListener('click', e => {
+    const chip = e.target.closest('.topic-chip');
+    if (!chip) return;
+    chips.forEach(c => c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'));
+    const topic = chip.dataset.topic;
+    cards.forEach(card => {
+      const show = (topic === 'all') || (card.dataset.topic === topic);
+      card.classList.toggle('hidden', !show);
+    });
+  });
+})();
+</script>
+</body>
+</html>
