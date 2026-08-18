@@ -41,10 +41,12 @@ Start each issue with a short "The week in three lines" block above the stories:
 - Current glossary entries and their anchor IDs:
   - `admet` — ADMET
   - `ai-agent` — AI agent
+  - `cdr` — CDR (complementarity-determining region)
   - `checkpoint-inhibitor` — Checkpoint inhibitor
   - `de-novo-protein-design` — De novo protein design
   - `dna-methylation` — DNA methylation
   - `foundation-model` — Foundation model
+  - `genome-language-model` — Genome language model
   - `glp-1` — GLP-1
   - `ind` — IND application
   - `kappa-opioid-receptor` — Kappa opioid receptor

@@ -54,7 +54,7 @@
     <div class="nav-links">
       <a href="../index.html">Home</a>
       <a href="../explainers/index.html">Explainers</a>
-      <a href="../news/2026-08-15.html">News</a>
+      <a href="../news/2026-08-17.html">News</a>
       <a href="../news/index.html">Archive</a>
       <a href="index.html" aria-current="page">Glossary</a>
       <a href="../about.html">About</a>
@@ -70,10 +70,12 @@
   <div class="glossary-index">
     <a href="#admet">ADMET</a>
     <a href="#ai-agent">AI agent</a>
+    <a href="#cdr">CDR</a>
     <a href="#checkpoint-inhibitor">Checkpoint inhibitor</a>
     <a href="#de-novo-protein-design">De novo protein design</a>
     <a href="#dna-methylation">DNA methylation</a>
     <a href="#foundation-model">Foundation model</a>
+    <a href="#genome-language-model">Genome language model</a>
     <a href="#glp-1">GLP-1</a>
     <a href="#ind">IND application</a>
     <a href="#kappa-opioid-receptor">Kappa opioid receptor</a>
@@ -103,6 +105,12 @@
       <p>An AI agent is a system built on a large language model but given the ability to take multi-step actions on its own — searching databases, running code, calling other software tools — rather than just answering a single question in a chat window. Where a chatbot produces one response to one prompt, an agent can plan a sequence of steps toward a goal, check its own intermediate results, and decide what to do next. In biomedical research, this can mean reading the literature on a question, choosing a relevant dataset, writing and running analysis code, and summarising findings — an entire research workflow rather than a single answer. Agents inherit both the strengths and the limitations of the underlying language model, so their outputs still need expert review.</p>
     </div>
 
+    <div class="glossary-term" id="cdr">
+      <div class="term-label">Immunology</div>
+      <h3>CDR — complementarity-determining region</h3>
+      <p>An antibody is shaped like a Y, and the tips of its two upper arms are what actually touch a disease target. Each tip contains six small, highly variable loops called complementarity-determining regions, or CDRs — three from each of the antibody's two protein chains. Nearly all of the information that determines which target an antibody recognises, and how tightly it grips it, is concentrated in these six loops; the rest of the antibody is largely a structural scaffold. Because CDRs also vary the most from one antibody to the next, they are the hardest part of an antibody for AI models to learn to predict — which is why some research groups now train protein language models to focus specifically on the CDRs rather than treating every part of the antibody as equally important.</p>
+    </div>
+
     <div class="glossary-term" id="checkpoint-inhibitor">
       <div class="term-label">Cancer immunology</div>
       <h3>Checkpoint inhibitor</h3>
@@ -125,6 +133,12 @@
       <div class="term-label">Artificial intelligence</div>
       <h3>Foundation model</h3>
       <p>A foundation model is a large AI model trained on a huge, broad dataset so that it learns general patterns, which can then be reused or fine-tuned for many specific tasks rather than being built from scratch each time. The term became common with large language models like the one behind ChatGPT, which are trained on enormous amounts of text and then adapted to translation, summarising, coding, and more. In biology, foundation models are trained on data such as protein sequences, DNA, or — as in this issue — brain gene-activity readouts, and then applied to tasks like predicting a protein's structure, a gene's function, or how a disease will progress. The appeal is that one well-trained model can replace many narrow, single-purpose tools.</p>
+    </div>
+
+    <div class="glossary-term" id="genome-language-model">
+      <div class="term-label">Artificial intelligence</div>
+      <h3>Genome language model</h3>
+      <p>A genome language model is an AI system trained on large numbers of real DNA sequences, the way a <a href="#protein-language-model">protein language model</a> is trained on protein sequences or a text model like the one behind ChatGPT is trained on sentences. By learning which combinations of DNA "letters" tend to appear together in real, functioning genomes, the model picks up statistical rules for what makes a stretch of DNA capable of coding for a working gene, protein, or even an entire small genome such as a virus's. Once trained, it can be used to predict the effect of a mutation, or — as with Evo 1 and Evo 2, the models used to design new bacteriophage genomes — to generate entirely new DNA sequences that plausibly encode working biology, which then has to be synthesised and tested in the lab to confirm it actually works.</p>
     </div>
 
     <div class="glossary-term" id="glp-1">

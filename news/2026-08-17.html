@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This week in Biotech + AI — August 17, 2026 — Cultured Machine</title>
+<meta name="description" content="Curated, plain-English news at the intersection of biotech and AI: Stanford and the Arc Institute use AI to design 16 working bacteriophage genomes that never existed in nature, a Boston University model beats larger antibody AI at predicting binding strength, a single AI model reads routine biopsy slides to flag a cancer-driving mutation across 32 tumor types, Aureka gives away an antibody AI model that beats AlphaFold 3 while raising $100 million, and a major journal Perspective says AI drug discovery still hasn't proven its clinical impact — each with why it matters and a link to the source.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="../index.html">
+      <span class="logo">CM</span>
+      <span>Cultured Machine <span class="tagline">· biology learns to compute</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../explainers/index.html">Explainers</a>
+      <a href="2026-08-17.html" aria-current="page">News</a>
+      <a href="index.html">Archive</a>
+      <a href="../wiki/index.html">Glossary</a>
+      <a href="../about.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="eyebrow">Weekly digest</div>
+  <h1>This week in Biotech + AI</h1>
+  <p class="meta">Week of August 17, 2026 · 5 stories · ~7 min read</p>
+  <p class="lead">The stories worth your attention right now — each in plain English, with why it matters and a link to the source. Filter by topic below.</p>
+
+  <div class="callout">
+    <strong>The week in three lines:</strong>
+    <ul style="margin:10px 0 0; padding-left:20px;">
+      <li><a href="#story-phage">Stanford and the Arc Institute used AI to write 16 working virus genomes that had never existed in nature.</a></li>
+      <li><a href="#story-aureka">Aureka gave away an antibody AI model that beats AlphaFold 3 — then raised $100 million anyway.</a></li>
+      <li><a href="#story-ai-reality-check">A major journal review says AI drug discovery still hasn't proven it helps patients.</a></li>
+    </ul>
+  </div>
+
+  <div class="topic-filter" id="topicFilter">
+    <button class="topic-chip all" data-topic="all" aria-pressed="true"><span class="dot"></span>All</button>
+    <button class="topic-chip chip-foundation" data-topic="foundation" aria-pressed="false"><span class="dot"></span>Foundation models</button>
+    <button class="topic-chip chip-protein" data-topic="protein" aria-pressed="false"><span class="dot"></span>Protein design</button>
+    <button class="topic-chip chip-oncology" data-topic="oncology" aria-pressed="false"><span class="dot"></span>Oncology</button>
+    <button class="topic-chip chip-funding" data-topic="funding" aria-pressed="false"><span class="dot"></span>Funding</button>
+    <button class="topic-chip chip-reality" data-topic="reality" aria-pressed="false"><span class="dot"></span>Reality check</button>
+  </div>
+
+  <div id="stories">
+
+    <!-- LEAD STORY: AI-DESIGNED BACTERIOPHAGES -->
+    <article class="news-card lead topic-foundation" data-topic="foundation" id="story-phage">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-foundation">Foundation models</span>
+          <span class="date">August 6, 2026</span>
+        </div>
+        <h3>AI designed 16 working viruses that had never existed in nature</h3>
+        <p class="summary">Researchers at Stanford and the Arc Institute used two AI systems trained on genetic sequences, called Evo 1 and Evo 2, to write out entirely new bacteriophage genomes from scratch — and 16 of them turned out to be fully functional viruses, capable of infecting and killing bacteria on their own. Bacteriophages infect bacteria, not humans, animals, or plants, and scientists have long explored them as an alternative to antibiotics; the trouble is that bacteria evolve resistance to any single phage just as they do to drugs.</p>
+        <p class="summary">The AI does the work through <a href="../wiki/index.html#genome-language-model">genome language models</a>, trained the way a <a href="../wiki/index.html#protein-language-model">protein language model</a> learns what a natural protein looks like, but on roughly 2 million real bacteriophage genomes instead. The team generated about 700,000 candidate genomes, synthesized 285 of them, and found 16 produced viable phages that had never existed anywhere before — some killed bacteria faster than the natural virus they were modeled on, and combinations of the AI-designed phages could still kill bacteria that had evolved resistance to a natural phage.</p>
+        <div class="why"><strong>Why it matters:</strong> This is wet-lab-validated biology, not just a computational prediction, and points toward phage therapies that could be redesigned as fast as bacteria evolve around them. But writing a viable viral genome from scratch is also a biosecurity concern: the team deliberately left out genetic material from viruses that infect humans, animals, or plants to limit risk, and outside biosecurity researchers have said oversight of this technology has not kept pace with what it can now do.</div>
+        <p class="sources">Sources: <a href="https://www.science.org/doi/10.1126/science.aec2657">Science (DOI)</a> · <a href="https://news.stanford.edu/stories/2026/08/evo-2-ai-tool-e-coli-killer-bacteriophages">Stanford Report</a></p>
+      </div>
+    </article>
+
+    <!-- PROTEIN: BU ANTIBODY CDR LANGUAGE MODEL -->
+    <article class="news-card topic-protein" data-topic="protein" id="story-antibody-cdr">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-protein">Protein design</span>
+          <span class="date">August 13, 2026</span>
+        </div>
+        <h3>A smaller, more focused AI model beat bigger ones at predicting how antibodies bind</h3>
+        <p class="summary">Boston University researchers built an AI model designed specifically for antibodies, rather than a general protein model, and it matched or beat much larger antibody AI models at predicting how tightly a candidate antibody grips its target. Antibody drugs work by binding tightly to a disease target, but only a tiny fraction of the millions of possible sequences do that well, so predicting binding strength before making anything in the lab is one of the biggest bottlenecks in antibody drug development.</p>
+        <p class="summary">The AI does the work through a <a href="../wiki/index.html#protein-language-model">protein language model</a> trained specifically on antibody sequences, with a twist: instead of hiding random amino acids across the whole molecule the way general protein models train, the researchers concentrated the model's training on the <a href="../wiki/index.html#cdr">complementarity-determining regions (CDRs)</a> — the six small loops that actually touch the target and determine what an antibody recognizes. Trained on 1.6 million paired antibody sequences, the resulting 600-million-parameter model improved binding-strength predictions by as much as 27% over larger, general-purpose antibody models, while needing far less computing power.</p>
+        <div class="why"><strong>Why it matters:</strong> The model was validated on antibodies against six different targets and needs to prove itself on many more before it can reliably guide which of millions of candidate antibodies get made and tested in the lab — but it's a concrete example of a smaller, biology-informed model beating brute-force scale, a pattern also seen in general-purpose language AI.</div>
+        <p class="sources">Sources: <a href="https://doi.org/10.1038/s44488-026-00010-2">Communications AI and Computing (DOI)</a> · <a href="https://www.bu.edu/hic/2026/08/13/teaching-ai-the-biology-of-antibodies-speeds-drug-discovery/">Boston University</a></p>
+      </div>
+    </article>
+
+    <!-- ONCOLOGY: AJP TP53 PATHOLOGY AI -->
+    <article class="news-card topic-oncology" data-topic="oncology" id="story-tp53-pathology">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-oncology">Oncology</span>
+          <span class="date">August 13, 2026</span>
+        </div>
+        <h3>One AI model reads a routine biopsy slide and flags a cancer's genetic mutations</h3>
+        <p class="summary">Researchers built an AI model that looks at a routine microscope image of a tumor biopsy — the kind pathologists already examine for every cancer diagnosis — and from that image alone predicts the cancer's subtype, whether the cancer-driving gene <em>TP53</em> is mutated, and how the patient's survival is likely to trend, across 32 different types of solid tumors. <em>TP53</em> is one of the most commonly disrupted genes across human cancers and its status affects how aggressively a tumor grows and resists treatment, but testing for it usually requires a separate molecular test that is costly or unavailable in many clinics.</p>
+        <p class="summary">The AI does the work through a vision transformer trained on more than 11,000 tumor cases from the public Pan-Cancer Atlas, learning to spot patterns in the slide image that correlate with each tumor's underlying mutation and gene-activity data — patterns too subtle for a pathologist to read by eye. In an independent test of 1,729 slides, the model correctly flagged <em>TP53</em> mutation status about 77% of the time across all 32 tumor types.</p>
+        <div class="why"><strong>Why it matters:</strong> The authors are explicit that this is meant to complement, not replace, molecular testing — a screening or triage tool for clinics where genomic testing is expensive or inaccessible, not a standalone diagnostic — and it still needs prospective validation in real clinical workflows before it changes how any patient is treated.</div>
+        <p class="sources">Sources: <a href="https://ajp.amjpathol.org/article/S0002-9440(26)00166-5/fulltext">The American Journal of Pathology (DOI)</a> · <a href="https://www.elsevier.com/about/press-releases/novel-ai-model-accurately-detects-key-gene-mutations-and-predicts-biomarkers-across-32-cancer-types">Elsevier</a></p>
+      </div>
+    </article>
+
+    <!-- FUNDING: AUREKA / OPENDDE -->
+    <article class="news-card topic-funding" data-topic="funding" id="story-aureka">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-funding">Funding</span>
+          <span class="date">August 10, 2026</span>
+        </div>
+        <h3>A startup gave away an antibody AI model that beats AlphaFold 3 — then raised $100 million anyway</h3>
+        <p class="summary">Aureka Biotechnologies closed a $100 million funding round and, around the same time, released its antibody-design AI model for free under a license that lets anyone, including competitors, use it commercially. In independent tests, the model, called OpenDDE, correctly predicted how an antibody binds its target about 76% of the time on a standard benchmark, compared with roughly 48% for Google DeepMind and Isomorphic Labs' AlphaFold 3 on the same test — though AlphaFold 3 still does better on a different task, predicting how small-molecule drugs bind proteins.</p>
+        <p class="summary">The AI does the work through a deep-learning architecture similar to AlphaFold 3's, scaled up and trained in part on Aureka's own lab-generated protein data. Giving the model away is a deliberate bet that the real advantage lies elsewhere — in Aureka's automated wet lab, which feeds fresh experimental results back into the model, not in the software itself.</p>
+        <div class="why"><strong>Why it matters:</strong> An open, independently benchmarked model that beats a major reference tool on a specific task is a genuine data point for how fast this field moves. But Aureka's own case for its business rests on a proprietary lab loop that outside observers cannot yet verify, and the model still trails on other important drug-design tasks.</div>
+        <p class="sources">Sources: <a href="http://www.prnewswire.com/news-releases/aureka-biotechnologies-raises-us100-million-series-b-to-build-a-biological-world-model-for-drug-discovery-302847165.html">PR Newswire (press release)</a> · <a href="https://www.techtimes.com/articles/323933/20260811/aureka-open-sourced-antibody-ai-that-beats-alphafold-3-closes-100m-drug-discovery-round.htm">Tech Times</a></p>
+      </div>
+    </article>
+
+    <!-- REALITY CHECK: NATURE REVIEWS DRUG DISCOVERY PERSPECTIVE -->
+    <article class="news-card topic-reality" data-topic="reality" id="story-ai-reality-check">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-reality">Reality check</span>
+          <span class="date">August 7, 2026</span>
+        </div>
+        <h3>A major review says AI drug discovery still hasn't proven it helps patients</h3>
+        <p class="summary">A Perspective in <em>Nature Reviews Drug Discovery</em> concluded that despite a decade of AI methods being developed, applied, and benchmarked in drug discovery, the evidence that any of it has translated into clinically relevant impact is, in the authors' words, "disappointingly limited." The authors aren't disputing that AI can predict a protein's shape or screen candidate molecules faster; the question they raise is whether any of that has yet changed which medicines reach patients, or how quickly.</p>
+        <p class="summary">Their critique cuts across the field: AI drug-discovery models, they argue, are too often built and tested to hit a technical benchmark rather than to improve a real clinical decision, are hard to validate on messy real-world biological data, and frequently start from underspecified problems that don't map cleanly onto how drugs actually get discovered — "technology push" outpacing "science pull."</p>
+        <div class="why"><strong>Why it matters:</strong> This isn't a dismissal of the field — the authors offer recommendations, including that benchmarking studies should judge AI tools by whether they improve decision-making, not just prediction accuracy — but it's a pointed reminder, from inside the scientific literature rather than a critic on the sidelines, that better benchmarks and bigger funding rounds are not the same thing as better medicines.</div>
+        <p class="sources">Sources: <a href="https://www.nature.com/articles/s41573-026-01496-2">Nature Reviews Drug Discovery</a></p>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="callout" style="margin-top:36px;">
+    <strong>How this digest is made:</strong> stories are gathered from trusted biotech and AI sources, summarized in plain English, and fact-checked against the primary source before publishing. Each links out so you can go deeper. <a href="../about.html">More on the process →</a>
+  </div>
+
+  <div style="margin-top:16px; text-align:center;">
+    <a class="btn" href="https://twitter.com/intent/tweet?text=This%20week%20in%20Biotech%20%2B%20AI%20%28August%2017%2C%202026%29%20%E2%80%94%20Cultured%20Machine&url=https%3A%2F%2Fhi-kay.github.io%2Fcultured-machine%2Fnews%2F2026-08-17.html" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      Share on X
+    </a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© <span id="year"></span> Cultured Machine · Biotech learns to compute.</div>
+    <div><a href="../about.html">About</a> · <a href="../explainers/alphafold.html">Explainers</a> · <a href="../index.html">Home</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* Topic filter */
+(function(){
+  const filter = document.getElementById('topicFilter');
+  const chips = [...filter.querySelectorAll('.topic-chip')];
+  const cards = [...document.querySelectorAll('#stories .news-card')];
+  filter.addEventListener('click', e => {
+    const chip = e.target.closest('.topic-chip');
+    if (!chip) return;
+    chips.forEach(c => c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'));
+    const topic = chip.dataset.topic;
+    cards.forEach(card => {
+      const show = (topic === 'all') || (card.dataset.topic === topic);
+      card.classList.toggle('hidden', !show);
+    });
+  });
+})();
+</script>
+</body>
+</html>
