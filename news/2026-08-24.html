@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This week in Biotech + AI — August 24, 2026 — Cultured Machine</title>
+<meta name="description" content="Curated, plain-English news at the intersection of biotech and AI: Nobel laureate David Baker's GenBio AI unveils a 'world model' that simulates an entire living cell, an AI model designs new cell-surface display tags that beat nature's own, UC San Diego researchers use machine learning to decode the DNA sequence that switches human genes on, a startup argues AI drug discovery's real bottleneck is missing human tissue data, and the FDA opens public comment on regulating generative AI medical devices — each with why it matters and a link to the source.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="../index.html">
+      <span class="logo">CM</span>
+      <span>Cultured Machine <span class="tagline">· biology learns to compute</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../explainers/index.html">Explainers</a>
+      <a href="2026-08-24.html" aria-current="page">News</a>
+      <a href="index.html">Archive</a>
+      <a href="../wiki/index.html">Glossary</a>
+      <a href="../about.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="eyebrow">Weekly digest</div>
+  <h1>This week in Biotech + AI</h1>
+  <p class="meta">Week of August 24, 2026 · 5 stories · ~7 min read</p>
+  <p class="lead">The stories worth your attention right now — each in plain English, with why it matters and a link to the source. Filter by topic below.</p>
+
+  <div class="callout">
+    <strong>The week in three lines:</strong>
+    <ul style="margin:10px 0 0; padding-left:20px;">
+      <li><a href="#story-aido-cell">GenBio AI, co-founded by Nobel laureate David Baker, built an AI "world model" that simulates an entire living cell.</a></li>
+      <li><a href="#story-vivodyne">A startup says AI drug discovery is stuck for lack of real human tissue data, not weak models.</a></li>
+      <li><a href="#story-fda-genai">The FDA opened public comment on how to regulate generative AI-enabled medical devices.</a></li>
+    </ul>
+  </div>
+
+  <div class="topic-filter" id="topicFilter">
+    <button class="topic-chip all" data-topic="all" aria-pressed="true"><span class="dot"></span>All</button>
+    <button class="topic-chip chip-foundation" data-topic="foundation" aria-pressed="false"><span class="dot"></span>Foundation models</button>
+    <button class="topic-chip chip-protein" data-topic="protein" aria-pressed="false"><span class="dot"></span>Protein design</button>
+    <button class="topic-chip chip-discovery" data-topic="discovery" aria-pressed="false"><span class="dot"></span>Discovery</button>
+    <button class="topic-chip chip-reality" data-topic="reality" aria-pressed="false"><span class="dot"></span>Reality check</button>
+    <button class="topic-chip chip-regulation" data-topic="regulation" aria-pressed="false"><span class="dot"></span>Regulation</button>
+  </div>
+
+  <div id="stories">
+
+    <!-- LEAD STORY: GENBIO AI AIDO CELL WORLD MODEL -->
+    <article class="news-card lead topic-foundation" data-topic="foundation" id="story-aido-cell">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-foundation">Foundation models</span>
+          <span class="date">August 18, 2026</span>
+        </div>
+        <h3>A Nobel laureate's startup built an AI that simulates an entire living cell, not just one protein</h3>
+        <p class="summary">Palo Alto startup GenBio AI, co-founded by Nobel chemistry laureate David Baker, unveiled AIDO Cell, a system it calls a <a href="../wiki/index.html#world-model">world model</a> that simulates how a living human cell changes in response to an experiment — a gene knockout, a drug — rather than just predicting the shape of one protein. Where <a href="../explainers/alphafold.html">AlphaFold</a> predicts what a single protein looks like, Baker described the difference as predicting one house's blueprint versus simulating how an entire city works: earlier AI biology tools were each built around a single measurement type, so stitching their outputs together still missed how DNA, RNA, proteins, and cell shape all move together inside one cell.</p>
+        <p class="summary">The AI does the work by holding a persistent internal representation of a cell's state that can be perturbed — with a genetic change or a small molecule — and then queried across many different readouts, from gene activity to protein structure to cell shape, all decoded from that same evolving state. Tested on a new 31-metric benchmark spanning five task families, AIDO Cell reached state-of-the-art results on 24 of 31 metrics, matching or beating specialized single-purpose models, including AlphaFold 3 and Google DeepMind's AlphaGenome, on most of their own tasks despite covering far more ground itself. In one demonstration, the model reproduced how the leukemia drug imatinib works across several levels of cell biology, then generated new candidate molecules that mimicked its effect using different chemistry.</p>
+        <div class="why"><strong>Why it matters:</strong> This is an early preview limited to two well-studied human cell lines, and GenBio's own benchmark numbers have not yet been independently verified — the company itself says the field needs a shared, blind benchmark, similar to the CASP competition that validated AlphaFold, before a cell simulation's predictions can be trusted the way a protein structure now can. Wet-lab validation of the model's novel predictions is still underway.</div>
+        <p class="sources">Sources: <a href="https://genbio.ai/aido-cell-simulator/">GenBio AI</a> · <a href="https://www.statnews.com/2026/08/18/david-baker-genbio-ai-new-virtual-model-unveiled-aido-cell/">STAT News</a></p>
+      </div>
+    </article>
+
+    <!-- PROTEIN: DEEPSCAN CELL SURFACE DISPLAY AI -->
+    <article class="news-card topic-protein" data-topic="protein" id="story-deepscan">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-protein">Protein design</span>
+          <span class="date">August 12, 2026</span>
+        </div>
+        <h3>AI designs new molecular tags that beat nature at putting proteins on a cell's surface</h3>
+        <p class="summary">Researchers built DeepSCan, a set of AI models that predict and design "cell surface display" sequences — short genetic tags that determine whether a protein gets transported to the outside of a cell — and used it to create seven new tags that match or beat the best naturally occurring ones. Placing an antigen or protein on a cell's exterior is central to vaccines, engineered immune-cell therapies such as CAR-T (immune cells re-engineered to hunt a specific target), and lab biosensors, but scientists have mostly picked these tags by trial and error, since there was no reliable way to predict how well a given sequence would work.</p>
+        <p class="summary">The AI does the work by learning from a large experimental dataset: the team measured how strongly each of about 310 different tag sequences pushed a test protein to the cell surface across more than 570 engineered constructs, then trained DeepSCan to score any candidate sequence's likely potency rather than just classify it as working or not. Guided by the model, the researchers computationally generated 3,700 new candidate tags, tested about 120 of them in the lab, and found seven that matched or exceeded the strongest natural tags — with the effect holding across multiple cell types and boosting the response of CAR-T cells against a target antigen in a functional test.</p>
+        <div class="why"><strong>Why it matters:</strong> The designed tags were validated across several lab cell types and one immune-cell functional assay, but the authors are explicit that further testing is needed in the specific cells used to manufacture therapies, and in living organisms, before these become part of an approved vaccine or cell therapy.</div>
+        <p class="sources">Sources: <a href="https://doi.org/10.1038/s41587-026-03144-x">Nature Biotechnology (DOI)</a> · <a href="https://bioengineer.org/scientists-discover-and-design-potent-cell-surface-display-elements/">Bioengineer.org</a></p>
+      </div>
+    </article>
+
+    <!-- DISCOVERY: UCSD AI DECODES DNA INITIATOR -->
+    <article class="news-card topic-discovery" data-topic="discovery" id="story-dna-initiator">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-discovery">Discovery</span>
+          <span class="date">August 21, 2026</span>
+        </div>
+        <h3>AI decoded the DNA sequence that tells human genes when to switch on</h3>
+        <p class="summary">Researchers at UC San Diego used machine learning to decode the DNA signature of the "initiator," the specific sequence that marks where a gene's instructions begin to be read out and converted into a working product, and found it present in roughly 60% of human genes. Correctly turning genes on and off is essential for healthy development, and pinning down exactly which DNA sequences control that switch, gene by gene, has been a long-standing puzzle in molecular biology — errors here are linked to diseases including cancer.</p>
+        <p class="summary">The AI does the work by learning from scale: the team used high-throughput DNA sequencing to measure the gene-activating strength of about 500,000 different versions of the initiator sequence, then trained a machine learning model on that half-million-point dataset to recognize the underlying DNA pattern shared by working initiators — a pattern too subtle and variable to spot by eye or simple sequence comparison. With that model, the researchers scanned the human genome and confirmed the initiator's signature turns up in about 60% of genes.</p>
+        <div class="why"><strong>Why it matters:</strong> This is a basic-science result, not a treatment. Its near-term value is letting researchers scan for initiator-region mutations that might disrupt gene activation and contribute to disease, and potentially design synthetic gene "on switches" for research tools — the lead researcher called it a small but important piece of a much larger gene-expression code that AI has yet to fully decode.</div>
+        <p class="sources">Sources: <a href="https://genesdev.cshlp.org/content/early/2026/07/31/gad.353623.125.abstract">Genes &amp; Development</a> · <a href="https://today.ucsd.edu/story/researchers-use-ai-to-decode-key-dna-sequence-in-gene-activation">UC San Diego Today</a></p>
+      </div>
+    </article>
+
+    <!-- REALITY CHECK: VIVODYNE -->
+    <article class="news-card topic-reality" data-topic="reality" id="story-vivodyne">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-reality">Reality check</span>
+          <span class="date">August 19, 2026</span>
+        </div>
+        <h3>A startup says AI drug discovery's real bottleneck isn't the AI — it's the data</h3>
+        <p class="summary">Vivodyne, a startup that grows living human tissue in robotic labs, argues AI drug-discovery models have stalled not because the models themselves are weak, but because they have mostly been trained on animal data, single cells, or isolated proteins rather than living human tissue — and it just opened what it calls the world's largest "human data center" to close that gap. The ambition of AI curing cancer has been voiced by figures from Anthropic's Dario Amodei to OpenAI's Sam Altman to Google DeepMind's Demis Hassabis, but results so far are modest: Nobel-winning AlphaFold has yet to produce an approved drug, and about 90% of drugs that succeed in animal testing still fail to win human approval.</p>
+        <p class="summary">Vivodyne's robotic "HIVE" labs grow around 20 kinds of human tissue, then autonomously dose and monitor them, generating the kind of cause-and-effect data — what happens when a specific tissue is exposed to a specific treatment — that AI training sets have generally lacked. The company told TechCrunch its liver tissue shows 94% predictive concordance with human toxicity data, its airway tissue matches real human tissue behavior 96% of the time, and its bone marrow model reached 100% concordance across 20 chemotherapy drugs; these figures are the company's own and have not been independently published or peer-reviewed.</p>
+        <div class="why"><strong>Why it matters:</strong> It's a sober, if self-interested, corrective to "AI will cure cancer" rhetoric: without data that captures how living human biology actually responds to a treatment, models can learn correlations but not the cause-and-effect relationships needed to reliably predict what a new drug will do in a person. Vivodyne's own claims of broad, generalizable improvement remain to be independently verified.</div>
+        <p class="sources">Sources: <a href="https://techcrunch.com/2026/08/19/ai-isnt-close-to-curing-cancer-this-startup-says-it-knows-what-it-will-take/">TechCrunch</a> · <a href="https://www.vivodyne.com/">Vivodyne</a></p>
+      </div>
+    </article>
+
+    <!-- REGULATION: FDA GENAI MEDICAL DEVICES -->
+    <article class="news-card topic-regulation" data-topic="regulation" id="story-fda-genai">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-regulation">Regulation</span>
+          <span class="date">August 18, 2026</span>
+        </div>
+        <h3>The FDA opens public comment on how to regulate AI that generates medical content</h3>
+        <p class="summary">The FDA published a discussion paper asking the public how it should regulate "generative AI"-enabled medical devices — software that creates new text, images, or recommendations rather than simply classifying or predicting from a fixed set of categories — and opened a public comment period running through October 19, 2026. Earlier AI-enabled medical devices mostly performed narrow, well-defined tasks, like flagging a mole as suspicious; generative AI tools can produce open-ended output, such as drafting a radiology report, in ways the FDA's existing review process wasn't built to evaluate.</p>
+        <p class="summary">The paper proposes a two-part framework for sizing up how risky a given generative AI tool is, plus a "competency assessment" model for reviewing these devices — loosely modeled on how a medical resident is trained and evaluated in stages before practicing independently — paired with ongoing monitoring after a device reaches the market. It also raises specific open questions about how to handle foundation models and "agentic" AI systems capable of taking multi-step actions on their own.</p>
+        <div class="why"><strong>Why it matters:</strong> This is a request for feedback, not a finalized rule — no new requirements take effect from this paper alone. But it signals the FDA is trying to get ahead of a wave of generative AI tools already appearing in clinics, and how it eventually settles these definitions will shape what generative AI medical products can legally reach patients, and how quickly.</div>
+        <p class="sources">Sources: <a href="https://www.fda.gov/news-events/press-announcements/fda-seeks-public-feedback-inform-regulatory-approach-generative-ai-enabled-medical-devices">FDA</a> · <a href="https://www.fda.gov/medical-devices/digital-health-center-excellence/considerations-regulation-generative-ai-enabled-medical-devices-discussion-paper-and-request">FDA Discussion Paper</a></p>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="callout" style="margin-top:36px;">
+    <strong>How this digest is made:</strong> stories are gathered from trusted biotech and AI sources, summarized in plain English, and fact-checked against the primary source before publishing. Each links out so you can go deeper. <a href="../about.html">More on the process →</a>
+  </div>
+
+  <div style="margin-top:16px; text-align:center;">
+    <a class="btn" href="https://twitter.com/intent/tweet?text=This%20week%20in%20Biotech%20%2B%20AI%20%28August%2024%2C%202026%29%20%E2%80%94%20Cultured%20Machine&url=https%3A%2F%2Fhi-kay.github.io%2Fcultured-machine%2Fnews%2F2026-08-24.html" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      Share on X
+    </a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© <span id="year"></span> Cultured Machine · Biotech learns to compute.</div>
+    <div><a href="../about.html">About</a> · <a href="../explainers/alphafold.html">Explainers</a> · <a href="../index.html">Home</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* Topic filter */
+(function(){
+  const filter = document.getElementById('topicFilter');
+  const chips = [...filter.querySelectorAll('.topic-chip')];
+  const cards = [...document.querySelectorAll('#stories .news-card')];
+  filter.addEventListener('click', e => {
+    const chip = e.target.closest('.topic-chip');
+    if (!chip) return;
+    chips.forEach(c => c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'));
+    const topic = chip.dataset.topic;
+    cards.forEach(card => {
+      const show = (topic === 'all') || (card.dataset.topic === topic);
+      card.classList.toggle('hidden', !show);
+    });
+  });
+})();
+</script>
+</body>
+</html>

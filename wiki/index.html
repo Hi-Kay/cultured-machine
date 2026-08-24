@@ -54,7 +54,7 @@
     <div class="nav-links">
       <a href="../index.html">Home</a>
       <a href="../explainers/index.html">Explainers</a>
-      <a href="../news/2026-08-17.html">News</a>
+      <a href="../news/2026-08-24.html">News</a>
       <a href="../news/index.html">Archive</a>
       <a href="index.html" aria-current="page">Glossary</a>
       <a href="../about.html">About</a>
@@ -89,6 +89,7 @@
     <a href="#receptor-antagonist">Receptor antagonist</a>
     <a href="#transcription-factor">Transcription factor</a>
     <a href="#transcriptome">Transcriptome</a>
+    <a href="#world-model">World model</a>
   </div>
 
   <div id="glossary-entries">
@@ -217,6 +218,12 @@
       <div class="term-label">Molecular biology</div>
       <h3>Transcriptome</h3>
       <p>The transcriptome is the full set of RNA messages a cell (or a tissue sample) is producing at a given moment — in effect, a snapshot of which genes are switched on and how strongly. If the genome is the fixed instruction manual, the transcriptome is the list of instructions actually being read right now, and it differs between a healthy cell and a diseased one, or between a tumour that will respond to a drug and one that will not. Scientists measure it by sequencing the RNA in a sample (a technique called RNA-seq), producing a rich numerical fingerprint of cell state. Because that fingerprint is high-dimensional and hard to interpret by eye, it is a natural input for AI models, which can learn to link transcriptome patterns to outcomes such as how a patient will respond to immunotherapy.</p>
+    </div>
+
+    <div class="glossary-term" id="world-model">
+      <div class="term-label">Artificial intelligence</div>
+      <h3>World model</h3>
+      <p>A world model is an AI system trained to predict how a complex system's internal state changes in response to an action, rather than simply mapping one fixed input to one output. Most AI models used in biology so far — a <a href="#protein-language-model">protein language model</a> predicting a mutation's effect, a <a href="#foundation-model">foundation model</a> classifying a cell type — answer one question at a time. A world model instead holds a persistent, evolving representation of the system itself: in biology, that means a virtual cell whose state a researcher can perturb (knock out a gene, apply a drug), then query across many different readouts — gene activity, protein shape, cell appearance — all decoded from that same shared state, and perturb again from there. This lets multiple interventions be chained together and their combined effects traced, closer to how a real multi-step lab experiment unfolds than a single one-shot prediction. The term is borrowed from robotics and game-playing AI, where world models let a system simulate "what happens if I do X" before acting in the real world.</p>
     </div>
 
   </div>

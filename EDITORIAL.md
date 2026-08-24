@@ -60,6 +60,7 @@ Start each issue with a short "The week in three lines" block above the stories:
   - `receptor-antagonist` — Receptor antagonist
   - `transcription-factor` — Transcription factor
   - `transcriptome` — Transcriptome
+  - `world-model` — World model
 
 ## Explainer cross-links
 
