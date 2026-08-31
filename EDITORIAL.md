@@ -63,6 +63,13 @@ Start each issue with a short "The week in three lines" block above the stories:
   - `transcriptome` — Transcriptome
   - `world-model` — World model
 
+## Glossary preview tooltips
+
+- Every glossary link (`../wiki/index.html#term-id`) gets a hover/tap preview via `js/glossary-tooltip.js` — a small popover with the term and a one-sentence definition, so readers don't have to leave the page. Desktop: hover or keyboard focus. Touch: tap opens it with a "Read full entry →" link; tap elsewhere closes it.
+- **When adding a new glossary term to `wiki/index.html`, also add a matching one-line entry to the `GLOSSARY` object at the top of `js/glossary-tooltip.js`** — same `id`, a short Term label, and a single plain-English sentence (not the full glossary paragraph). The tooltip silently does nothing for an id it doesn't recognize, so a missed entry won't break the page, but the preview just won't show.
+- Every new issue file (`news/YYYY-MM-DD.html`) needs `<script src="../js/glossary-tooltip.js" defer></script>` added right after the page's existing inline `<script>...</script>` block, before `</body>`. Copy this from the most recent issue.
+- The tooltip script is shared site-wide (one file, `/js/glossary-tooltip.js`) — do not duplicate its glossary data inline in a page.
+
 ## Explainer cross-links
 
 The site has standalone explainers in `/explainers/`. When a story leans on a concept an explainer already covers, link the phrase to that explainer (in addition to any glossary link) — it deepens the digest and drives readers to the explainers.

@@ -238,6 +238,46 @@ figcaption { font-size: .88rem; color: var(--ink-soft); text-align: center; marg
 .chip-regulation[aria-pressed="true"] { background: var(--t-regulation); }
 .chip-reality[aria-pressed="true"]    { background: var(--t-reality); }
 
+/* ---------- Glossary preview tooltip ---------- */
+.glossary-term-link {
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+  cursor: help;
+}
+.glossary-popover {
+  position: absolute;
+  z-index: 200;
+  max-width: 280px;
+  background: var(--ink);
+  color: #fff;
+  padding: 12px 14px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  font-size: .85rem;
+  line-height: 1.45;
+}
+.glossary-popover::after {
+  content: "";
+  position: absolute;
+  left: var(--arrow-left, 50%);
+  transform: translateX(-50%);
+  bottom: -6px;
+  width: 12px; height: 12px;
+  background: var(--ink);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+.glossary-popover.below::after {
+  bottom: auto; top: -6px;
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+}
+.glossary-popover-title { font-weight: 700; margin-bottom: 4px; color: #fff; }
+.glossary-popover-body { color: rgba(255,255,255,.85); }
+.glossary-popover-more {
+  display: inline-block; margin-top: 8px; font-size: .8rem;
+  font-weight: 600; color: var(--accent-soft); text-decoration: none;
+}
+.glossary-popover-more:hover { color: #fff; text-decoration: underline; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 640px) {
   .card-grid { grid-template-columns: 1fr; }
