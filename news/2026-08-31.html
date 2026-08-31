@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This week in Biotech + AI — August 31, 2026 — Cultured Machine</title>
+<meta name="description" content="Curated, plain-English news at the intersection of biotech and AI: Merck and Moderna's personalized cancer vaccine — designed by an algorithm — succeeds in a landmark Phase 3 melanoma trial, Anthropic's Claude designs protein binders that beat human experts in blinded lab tests, MIT biologists build a framework for designing proteins with no natural equivalent, a blinded global benchmark tests whether AI-designed antibodies actually work, and a startup claims a 100-fold jump in drug-screening hit rates — each with why it matters and a link to the source.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="../index.html">
+      <span class="logo">CM</span>
+      <span>Cultured Machine <span class="tagline">· biology learns to compute</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../explainers/index.html">Explainers</a>
+      <a href="2026-08-31.html" aria-current="page">News</a>
+      <a href="index.html">Archive</a>
+      <a href="../wiki/index.html">Glossary</a>
+      <a href="../about.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="eyebrow">Weekly digest</div>
+  <h1>This week in Biotech + AI</h1>
+  <p class="meta">Week of August 31, 2026 · 5 stories · ~7 min read</p>
+  <p class="lead">The stories worth your attention right now — each in plain English, with why it matters and a link to the source. Filter by topic below.</p>
+
+  <div class="callout">
+    <strong>The week in three lines:</strong>
+    <ul style="margin:10px 0 0; padding-left:20px;">
+      <li><a href="#story-intismeran">Merck and Moderna's algorithm-designed cancer vaccine succeeded in a landmark Phase 3 melanoma trial.</a></li>
+      <li><a href="#story-claude-protein">Anthropic's Claude designed protein binders that beat human experts in blinded lab tests.</a></li>
+      <li><a href="#story-aintibody">A blinded global benchmark shows AI-designed antibodies work — but not consistently.</a></li>
+    </ul>
+  </div>
+
+  <div class="topic-filter" id="topicFilter">
+    <button class="topic-chip all" data-topic="all" aria-pressed="true"><span class="dot"></span>All</button>
+    <button class="topic-chip chip-oncology" data-topic="oncology" aria-pressed="false"><span class="dot"></span>Oncology</button>
+    <button class="topic-chip chip-foundation" data-topic="foundation" aria-pressed="false"><span class="dot"></span>Foundation models</button>
+    <button class="topic-chip chip-protein" data-topic="protein" aria-pressed="false"><span class="dot"></span>Protein design</button>
+    <button class="topic-chip chip-reality" data-topic="reality" aria-pressed="false"><span class="dot"></span>Reality check</button>
+    <button class="topic-chip chip-discovery" data-topic="discovery" aria-pressed="false"><span class="dot"></span>Discovery</button>
+  </div>
+
+  <div id="stories">
+
+    <!-- LEAD STORY: MERCK/MODERNA CANCER VACCINE -->
+    <article class="news-card lead topic-oncology" data-topic="oncology" id="story-intismeran">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-oncology">Oncology</span>
+          <span class="date">August 19, 2026</span>
+        </div>
+        <h3>Merck and Moderna's cancer vaccine — designed by an algorithm — clears a landmark trial</h3>
+        <p class="summary">Merck and Moderna announced that their personalized cancer vaccine, intismeran autogene, met its main goals in a Phase 3 trial, delaying the return of melanoma and slowing its spread after surgery when added to Merck's immunotherapy Keytruda, a <a href="../wiki/index.html#checkpoint-inhibitor">checkpoint inhibitor</a>. Independent data monitors called the interim result "statistically significant and clinically meaningful," and it is the first randomized Phase 3 trial to succeed for this class of vaccine after decades of disappointing attempts. The trial enrolled 1,137 people with completely resected stage IIB–IV melanoma, two-thirds of whom received the vaccine alongside Keytruda.</p>
+        <p class="summary">The AI does the work in how the vaccine itself is built: doctors sequence a patient's removed tumor, and a proprietary algorithm scans its mutations to predict which ones are most likely to produce <a href="../wiki/index.html#neoantigen">neoantigens</a> the immune system will recognize, then generates the exact <a href="../wiki/index.html#mrna">mRNA</a> sequence — coding for up to 34 of these targets — that becomes the injected vaccine. If it is eventually approved, this would be the first medicine whose genetic instructions were determined by a computer rather than by a chemist choosing a structure.</p>
+        <div class="why"><strong>Why it matters:</strong> The companies have not yet released detailed data — that is expected at an upcoming medical meeting — and this is an interim analysis with a full <a href="../wiki/index.html#phase-trials">Phase 3</a> readout still to come. The vaccine is also being tested against lung, kidney, and bladder cancer, but a melanoma win does not guarantee those "hot," more immune-active tumors will respond the same way, or that regulators will ultimately approve it.</div>
+        <p class="sources">Sources: <a href="https://www.biopharmadive.com/news/moderna-merck-cancer-vaccine-landmark-result-melanoma/828238/">BioPharma Dive</a> · <a href="https://www.merck.com/news/merck-and-moderna-announce-phase-3-interpath-001-trial-of-intismeran-autogene-plus-keytruda-met-endpoints-of-recurrence-free-survival-rfs-and-distant-metastasis-free-survival-dmfs-in-patient/">Merck</a></p>
+      </div>
+    </article>
+
+    <!-- FOUNDATION: ANTHROPIC CLAUDE PROTEIN DESIGN -->
+    <article class="news-card topic-foundation" data-topic="foundation" id="story-claude-protein">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-foundation">Foundation models</span>
+          <span class="date">August 18, 2026</span>
+        </div>
+        <h3>Anthropic's Claude designed working protein drugs — and beat human experts on some</h3>
+        <p class="summary">Anthropic reported that its Claude models designed working <a href="../wiki/index.html#de-novo-protein-design">de novo</a> "minibinders" — small proteins engineered to latch onto a disease target — against 14 of 15 test targets, with 22–35% of individual designs actually binding, compared with the 10–15% typical of human-led protein design campaigns. Designing a new binder from scratch has historically taken a specialist protein engineer weeks to months per target; Claude ran an entire 15-target campaign largely on its own over 24–48 hour sessions, with human involvement limited to approving network and compute access.</p>
+        <p class="summary">The AI does the work by orchestrating existing specialist protein-design and structure-prediction software — choosing where on a target to bind, generating thousands of candidate structures and sequences, running rounds of computational optimization, and screening for candidates likely to fold correctly and bind tightly — then handing the strongest designs to outside labs for physical testing. Independent evaluators Adaptyv Bio and Twist Bioscience built and tested the designs in the wet lab; on TNFα, a target multiple expert groups have struggled with, Claude produced binders that worked across human, monkey, and mouse versions of the protein, and on RBX1 it reached a 40% hit rate against a 3.7% average among entrants in a public design competition, with a <a href="../wiki/index.html#binding-affinity">binding affinity</a> that beat the competition's own winning entry.</p>
+        <div class="why"><strong>Why it matters:</strong> This is Anthropic's own study, not yet independently replicated or peer-reviewed, and a minibinder is not itself a drug — turning one into an approved medicine still requires the antibody- or small-molecule engineering, safety testing, and clinical trials that come after. Anthropic also flags this work as dual-use: the same autonomous design capability could in principle be misused, which is why protein design remains restricted in its more broadly available models.</div>
+        <p class="sources">Sources: <a href="https://www.anthropic.com/research/Claude-accelerates-protein-design">Anthropic</a> · <a href="https://www.genomeweb.com/informatics/anthropics-claude-ai-platform-designs-effective-binders-test-protein-design-capability">GenomeWeb</a></p>
+      </div>
+    </article>
+
+    <!-- PROTEIN: MIT POTTSMPNN -->
+    <article class="news-card topic-protein" data-topic="protein" id="story-pottsmpnn">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-protein">Protein design</span>
+          <span class="date">August 27, 2026</span>
+        </div>
+        <h3>A new AI framework designs proteins that don't look like anything nature ever made</h3>
+        <p class="summary">MIT biologists built PottsMPNN, a machine-learning framework that generates protein sequences for a target 3D shape without leaning on how closely those sequences resemble ones evolution actually produced — a habit the field's dominant tool has had since 2022. Most protein-design pipelines pick a shape first, then ask a model to propose sequences of amino acids that will fold into it; until now, models have mostly been graded on how well they reproduce a natural sequence for that shape, even though many different sequences can fold into the same structure and evolution's pick is not necessarily the best one for a newly designed protein.</p>
+        <p class="summary">The AI does the work by incorporating the physical rules that govern protein stability directly into the model, rather than just pattern-matching to known sequences: it accounts for how each amino acid interacts with its neighbors, and it was trained on families of evolutionarily related sequences to learn that many different amino-acid chains can adopt one shared structure. The result is a model that can propose workable sequences for entirely novel shapes that have no natural counterpart to copy, and that better predicts how a given mutation will affect a protein's stability.</p>
+        <div class="why"><strong>Why it matters:</strong> This is a methods paper, not a specific drug or therapy, and the authors say it still needs task-specific fine-tuning to reach its full potential. The lead author was candid about the dual-use tension in the field: designing any protein researchers want, he said, "enables us to do a potentially scary amount of biological engineering."</div>
+        <p class="sources">Sources: <a href="https://news.mit.edu/2026/looking-beyond-natural-sequences-0827">MIT News</a></p>
+      </div>
+    </article>
+
+    <!-- REALITY CHECK: AINTIBODY CHALLENGE -->
+    <article class="news-card topic-reality" data-topic="reality" id="story-aintibody">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-reality">Reality check</span>
+          <span class="date">August 26, 2026</span>
+        </div>
+        <h3>A blinded global test asked whether AI can really design antibodies. The answer: sometimes.</h3>
+        <p class="summary">Results from AIntibody, an international blinded benchmark published in Nature Biotechnology, show that AI platforms can design working antibodies that pass real laboratory testing — but that success on one task didn't reliably predict success on another. More than 160 teams from academia, biotech startups, and large pharmaceutical and tech companies submitted over 500 AI-generated antibody designs; unlike most published benchmarks, which simply check a model against historical data, this challenge required teams to design brand-new antibody sequences that were then independently synthesized and measured in the lab for binding strength and drug-like manufacturability.</p>
+        <p class="summary">The AI does the work by proposing antibody sequences computationally — in one winning entry from Aureka Biotechnologies, a fine-tuned model improved an antibody's <a href="../wiki/index.html#binding-affinity">binding affinity</a> roughly 2,000-fold over its starting point, measured independently at 94.7 picomolar — and a UTHealth Houston team fine-tuned a <a href="../wiki/index.html#protein-language-model">protein language model</a> on experimental data to finish among the top five entries in its track. But challenge organizers reported that several groups hit strong, sub-100-picomolar results on individual tasks without those results carrying over to other targets.</p>
+        <div class="why"><strong>Why it matters:</strong> This is the kind of rigorous, blinded, third-party test the field has needed and mostly lacked — real evidence that AI antibody design works some of the time, under specific conditions, rather than a general capability ready to replace lab screening. Organizer Andrew Bradbury said the goal was exactly this: an objective benchmark to judge AI's real effectiveness rather than take vendors' word for it.</div>
+        <p class="sources">Sources: <a href="https://www.newswise.com/articles/uthealth-houston-researchers-advance-antibody-ai">Newswise / UTHealth Houston</a> · <a href="https://www.nature.com/articles/s41587-026-03238-6">Nature Biotechnology</a></p>
+      </div>
+    </article>
+
+    <!-- DISCOVERY: DEEP ORIGIN VIRTUAL SCREENING -->
+    <article class="news-card topic-discovery" data-topic="discovery" id="story-deeporigin">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-discovery">Discovery</span>
+          <span class="date">August 17, 2026</span>
+        </div>
+        <h3>A startup says its AI found new drug candidates 100 times more often than usual</h3>
+        <p class="summary">Deep Origin, a drug-discovery software company, says a new virtual screening system it built found chemically new drug candidates against a difficult cancer-immunotherapy target at nearly a 31% hit rate — about 100 times higher than the rate typical of conventional machine-learning virtual screening — and backed the claim with physical lab testing across four separate disease targets. Virtual screening is the practice of using software to sort through vast numbers of candidate molecules computationally before ever making one in a lab, and its long-standing weak point has been that predictions often don't hold up once a molecule is actually tested.</p>
+        <p class="summary">The AI does the work through two paired systems: DODock, which combines a generative diffusion model with a traditional physics-based energy calculation to estimate how a candidate molecule fits a target, and DOScore, which estimates how strongly that molecule would actually bind. Deep Origin says that under test conditions designed to prevent the model from simply memorizing known answers, DODock correctly predicted molecule poses 80% of the time on a benchmark built from unfamiliar target biology, versus 4–28% for comparable AI structure-prediction models — and the molecules it flagged as hits, later confirmed in the lab against four targets including two cancer- and inflammation-linked proteins, were chemically distinct from known drugs rather than minor tweaks on them.</p>
+        <div class="why"><strong>Why it matters:</strong> These are the company's own figures from its own preprint, not yet independently replicated by an outside lab, and virtual-screening claims in this field have a track record of not generalizing beyond the specific targets tested. The prospective, in-lab validation across four separate targets is more convincing than a purely computational claim, but it's still one company grading its own homework until someone else runs the same test.</div>
+        <p class="sources">Sources: <a href="https://www.hpcwire.com/2026/08/17/deep-origin-claims-breakthrough-in-ai-drug-discovery-platform/">HPCwire</a> · <a href="https://www.globenewswire.com/news-release/2026/08/05/3339125/0/en/Deep-Origin-Introduces-Novel-Virtual-Screening-Architecture-Achieves-100-fold-Hit-Rate-Jump-on-Challenging-Target.html">Deep Origin (GlobeNewswire)</a></p>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="callout" style="margin-top:36px;">
+    <strong>How this digest is made:</strong> stories are gathered from trusted biotech and AI sources, summarized in plain English, and fact-checked against the primary source before publishing. Each links out so you can go deeper. <a href="../about.html">More on the process →</a>
+  </div>
+
+  <div style="margin-top:16px; text-align:center;">
+    <a class="btn" href="https://twitter.com/intent/tweet?text=This%20week%20in%20Biotech%20%2B%20AI%20%28August%2031%2C%202026%29%20%E2%80%94%20Cultured%20Machine&url=https%3A%2F%2Fhi-kay.github.io%2Fcultured-machine%2Fnews%2F2026-08-31.html" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      Share on X
+    </a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© <span id="year"></span> Cultured Machine · Biotech learns to compute.</div>
+    <div><a href="../about.html">About</a> · <a href="../explainers/alphafold.html">Explainers</a> · <a href="../index.html">Home</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* Topic filter */
+(function(){
+  const filter = document.getElementById('topicFilter');
+  const chips = [...filter.querySelectorAll('.topic-chip')];
+  const cards = [...document.querySelectorAll('#stories .news-card')];
+  filter.addEventListener('click', e => {
+    const chip = e.target.closest('.topic-chip');
+    if (!chip) return;
+    chips.forEach(c => c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'));
+    const topic = chip.dataset.topic;
+    cards.forEach(card => {
+      const show = (topic === 'all') || (card.dataset.topic === topic);
+      card.classList.toggle('hidden', !show);
+    });
+  });
+})();
+</script>
+</body>
+</html>
