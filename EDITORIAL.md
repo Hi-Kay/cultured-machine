@@ -63,6 +63,13 @@ Start each issue with a short "The week in three lines" block above the stories:
   - `transcriptome` — Transcriptome
   - `world-model` — World model
 
+## Per-story share buttons
+
+- Every story card has a small share icon in its `.topbar` (after the date span), powered by `js/share-story.js`: `<button class="story-share" data-share-text="..." aria-label="Share this story" title="Share this story">` + the X-logo SVG (copy the exact `<svg>` markup from an existing button). Clicking it opens an X share intent with that text plus a link back to that story's own anchor on the page — no per-button URL encoding needed, the shared script builds it from the button's nearest ancestor `id`.
+- Every `<article class="news-card ...">` needs a unique `id="story-..."` for this to work (also required for the "week in three lines" TL;DR links). Add one when writing a new story.
+- Draft the `data-share-text` as a single, punchy, standalone sentence — not just the headline verbatim — that would make sense as a tweet on its own, in the same plain/skeptical voice as the rest of the site, ending with " — Cultured Machine". Keep it well under 250 characters (X shortens the URL automatically). Do not include a URL in the text itself; the script appends the link.
+- The whole-digest "Share on X" button at the bottom of the page is separate and unchanged — keep authoring that one as before (see "Share button" below).
+
 ## Glossary preview tooltips
 
 - Every glossary link (`../wiki/index.html#term-id`) gets a hover/tap preview via `js/glossary-tooltip.js` — a small popover with the term and a one-sentence definition, so readers don't have to leave the page. Desktop: hover or keyboard focus. Touch: tap opens it with a "Read full entry →" link; tap elsewhere closes it.

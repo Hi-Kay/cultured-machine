@@ -44,13 +44,13 @@
   <div id="stories">
 
     <!-- LEAD STORY -->
-    <article class="news-card lead topic-protein" data-topic="protein">
+    <article class="news-card lead topic-protein" id="story-germinal" data-topic="protein">
       <div class="rail"></div>
       <div class="body">
         <div class="topbar">
           <span class="topic-tag tag-protein">Protein design</span>
           <span class="date">June 23, 2026</span>
-        </div>
+        <button class="story-share" data-share-text="An open AI tool designs antibodies to order — aimed at a chosen spot on a target protein — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
         <h3>An open AI tool designs antibodies to order — aimed at a chosen spot on a target protein</h3>
         <p class="summary">Antibodies are the immune system's guided missiles: proteins that latch onto one specific target, and the basis of many of today's best-selling drugs. Finding a good one usually means immunising animals or screening enormous libraries and testing many thousands of candidates. A team at the Arc Institute and Stanford has released <strong>Germinal</strong>, an open-source system that instead designs small antibodies <a href="../wiki/index.html#de-novo-protein-design">from scratch</a> to bind a chosen spot — an <em>epitope</em> — on a target protein, and reports getting working binders after testing only 43–101 designs per target.</p>
         <p class="summary">The AI does the design directly. Germinal pairs a protein-structure predictor (a version of AlphaFold that models how two proteins fit together) with a <a href="../wiki/index.html#protein-language-model">protein language model</a> trained on real antibody sequences, and uses the two together to draw the antibody's binding loops so they both fold into the intended shape and look like a natural antibody. In tests against four different proteins — including the cancer target PD-L1 — it produced binders that stuck in the nanomolar range, a standard measure of binding strength.</p>
@@ -60,13 +60,13 @@
     </article>
 
     <!-- ONCOLOGY -->
-    <article class="news-card topic-oncology" data-topic="oncology">
+    <article class="news-card topic-oncology" id="story-compass" data-topic="oncology">
       <div class="rail"></div>
       <div class="body">
         <div class="topbar">
           <span class="topic-tag tag-oncology">Oncology</span>
           <span class="date">July 3, 2026</span>
-        </div>
+        <button class="story-share" data-share-text="An AI model reads a tumour&#x27;s gene activity to predict who will respond to immunotherapy — and shows its reasoning — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
         <h3>An AI model reads a tumour's gene activity to predict who will respond to immunotherapy — and shows its reasoning</h3>
         <p class="summary"><a href="../wiki/index.html#checkpoint-inhibitor">Checkpoint inhibitors</a> like Keytruda have transformed cancer care, but they only help some patients, and doctors have no reliable way to know in advance who will benefit. Researchers have built COMPASS, described in <em>Nature Medicine</em>, a <a href="../wiki/index.html#foundation-model">foundation model</a> that reads the pattern of gene activity — the <a href="../wiki/index.html#transcriptome">transcriptome</a> — in a tumour sample and predicts whether that patient is likely to respond to checkpoint-inhibitor therapy. It was trained on more than 10,000 tumours across 33 cancer types, and across 16 patient groups spanning seven cancers it predicted response more accurately than 22 existing methods, improving accuracy by about 8.5% on average. Unusually, it is built to be interpretable: rather than a black-box score, it routes each prediction through 44 biologically meaningful "immune concepts," so a clinician can see which features of the tumour's immune environment drove the answer.</p>
         <div class="why"><strong>Why it matters:</strong> A tool that flags likely responders could spare patients months of an expensive therapy that will not help them, and point others toward it sooner. The caveats are real: this was tested on existing datasets, not in a trial where it actually guided treatment, and whole-tumour gene-activity readouts are not yet a routine clinical test in most hospitals.</div>
@@ -75,13 +75,13 @@
     </article>
 
     <!-- FOUNDATION MODELS -->
-    <article class="news-card topic-foundation" data-topic="foundation">
+    <article class="news-card topic-foundation" id="story-claude-science" data-topic="foundation">
       <div class="rail"></div>
       <div class="body">
         <div class="topbar">
           <span class="topic-tag tag-foundation">Foundation models</span>
           <span class="date">June 30, 2026</span>
-        </div>
+        <button class="story-share" data-share-text="Anthropic launches an AI &quot;workbench&quot; for scientists, joining Google and OpenAI in the race to run drug research — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
         <h3>Anthropic launches an AI "workbench" for scientists, joining Google and OpenAI in the race to run drug research</h3>
         <p class="summary">Anthropic released <strong>Claude Science</strong>, a research tool built on its existing Claude AI models that connects to more than 60 scientific databases spanning genomics, proteomics, and chemistry, and can carry out multi-step computational-biology and drug-discovery tasks from a short, high-level instruction — much as AI coding assistants do for software. Early users include Novo Nordisk and the Allen Institute. Notably, it is not a new AI model but a workflow layer wrapped around existing ones; the bet is that packaging AI into scientists' daily tools, rather than raw model power alone, is what will move research forward.</p>
         <div class="why"><strong>Why it matters:</strong> This is a product launch, not a demonstrated scientific result — what it can actually speed up remains to be shown. It matters because it places all three leading AI labs (Anthropic, Google DeepMind, and OpenAI) directly into pharmaceutical research at once. The market noticed: shares of Schrödinger, a specialist maker of computational drug-discovery software, fell as much as 8.3% on the news — a sign investors see general-purpose AI tools encroaching on specialist territory.</div>
@@ -90,13 +90,13 @@
     </article>
 
     <!-- FUNDING -->
-    <article class="news-card topic-funding" data-topic="funding">
+    <article class="news-card topic-funding" id="story-insilico-sk" data-topic="funding">
       <div class="rail"></div>
       <div class="body">
         <div class="topbar">
           <span class="topic-tag tag-funding">Funding</span>
           <span class="date">June 22, 2026</span>
-        </div>
+        <button class="story-share" data-share-text="An AI drug-design company signs a deal worth up to $2.5 billion for brain and immune drugs — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
         <h3>An AI drug-design company signs a deal worth up to $2.5 billion for brain and immune drugs</h3>
         <p class="summary">Insilico Medicine, which uses AI to design new drug molecules, signed a partnership with South Korea's SK Biopharmaceuticals to discover treatments for neuroimmune conditions — diseases in which the immune system attacks the nervous system. Insilico's Pharma.AI software will design candidate molecules, screening vast numbers of possibilities before any lab work, and SK will run the later clinical development and commercialisation. Insilico receives about $18 million up front, with the rest — up to $2.5 billion — tied to hitting development and commercial milestones.</p>
         <div class="why"><strong>Why it matters:</strong> The headline figure is mostly "biobucks": money that only arrives if the drugs actually work, which for AI-designed medicines is still unproven — no AI-designed drug has yet been approved. What the deal signals is that large drugmakers increasingly treat AI design platforms as worth betting on early. Insilico's most advanced drug, for a lung-scarring disease, is currently in mid-stage <a href="../wiki/index.html#phase-trials">Phase 2</a> trials.</div>
@@ -105,13 +105,13 @@
     </article>
 
     <!-- REALITY CHECK -->
-    <article class="news-card topic-reality" data-topic="reality">
+    <article class="news-card topic-reality" id="story-clinical-chatbots" data-topic="reality">
       <div class="rail"></div>
       <div class="body">
         <div class="topbar">
           <span class="topic-tag tag-reality">Reality check</span>
           <span class="date">June 12, 2026</span>
-        </div>
+        <button class="story-share" data-share-text="General-purpose chatbots beat specialised &quot;clinical AI&quot; tools on real doctors&#x27; questions — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
         <h3>General-purpose chatbots beat specialised "clinical AI" tools on real doctors' questions</h3>
         <p class="summary">An independent study in <em>Nature Medicine</em> pitted two widely marketed clinical AI tools — OpenEvidence and UpToDate Expert AI, built specifically to answer physicians' medical questions — against three general-purpose chatbots (OpenAI's GPT-5.2, Google's Gemini 3.1 Pro, and Anthropic's Claude Opus 4.6). Across tests of medical knowledge, agreement with expert answers, and real questions asked by practising doctors, the general models outperformed the purpose-built clinical tools on every measure. The specialised tools did no better than Google's automatic AI search summary.</p>
         <div class="why"><strong>Why it matters:</strong> The specialised tools are sold as purpose-built for medicine and lean on clinical credibility, yet the general models that beat them went through no medical-specific approval process. The study exposes a gap: buyers and regulators have little visibility into how these proprietary clinical tools work or whether their positioning is justified. The authors are careful to note that winning a benchmark is not the same as safe use at the bedside — none of these systems, general or specialised, has been shown to improve patient outcomes in actual practice.</div>
@@ -161,5 +161,6 @@ document.getElementById('year').textContent = new Date().getFullYear();
 })();
 </script>
 <script src="../js/glossary-tooltip.js" defer></script>
+<script src="../js/share-story.js" defer></script>
 </body>
 </html>

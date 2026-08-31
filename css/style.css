@@ -199,6 +199,15 @@ figcaption { font-size: .88rem; color: var(--ink-soft); text-align: center; marg
   padding: 3px 9px; border-radius: 6px; color: #fff;
 }
 .news-card .date { font-size: .8rem; color: var(--ink-soft); }
+.story-share {
+  margin-left: auto; flex: none;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 26px; height: 26px; padding: 0;
+  border: 1px solid var(--line); border-radius: 999px;
+  background: var(--surface); color: var(--ink-soft);
+  cursor: pointer; transition: all .12s ease;
+}
+.story-share:hover { color: var(--accent); border-color: var(--accent); }
 .news-card h3 { margin: 2px 0 8px; font-size: 1.3rem; line-height: 1.25; }
 .news-card .summary { color: var(--ink); margin: 0 0 12px; }
 .news-card .why {
