@@ -34,6 +34,7 @@
     "receptor-antagonist": ["Receptor antagonist", "A drug that binds a cell receptor and blocks it from being activated, effectively switching that receptor off."],
     "transcription-factor": ["Transcription factor", "A protein that controls which genes in a cell are switched on or off, and so which “identity” a cell takes on."],
     "transcriptome": ["Transcriptome", "The full set of genes a cell is actively using at a given moment — a snapshot of its state that AI models can learn to interpret."],
+    "tslp": ["TSLP", "A signaling protein released by airway cells that sits near the top of the inflammatory chain behind asthma; blocking it early can dial down several downstream immune pathways at once."],
     "world-model": ["World model", "An AI system that holds an evolving internal simulation of a system's state — like a virtual cell — that can be perturbed and queried repeatedly, rather than answering one question at a time."]
   };
 
