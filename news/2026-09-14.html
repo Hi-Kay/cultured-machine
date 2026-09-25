@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This week in Biotech + AI — September 14, 2026 — Cultured Machine</title>
+<meta name="description" content="Curated, plain-English news at the intersection of biotech and AI: Insilico Medicine's AI-designed lung drug shows signs of reversing patients' biological age, a UC Berkeley genome-language model flags disease-linked DNA variants far more efficiently than its rivals, Apple unveils an AI model that designs a protein's sequence and shape together, ARPA-H commits $62.7M to build FDA-authorized AI agents for heart failure care, and researchers patch a known blind spot in AlphaFold's protein predictions — each with why it matters and a link to the source.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="../index.html">
+      <span class="logo">CM</span>
+      <span>Cultured Machine <span class="tagline">· biology learns to compute</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../explainers/index.html">Explainers</a>
+      <a href="2026-09-14.html" aria-current="page">News</a>
+      <a href="index.html">Archive</a>
+      <a href="../wiki/index.html">Glossary</a>
+      <a href="../about.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="eyebrow">Weekly digest</div>
+  <h1>This week in Biotech + AI</h1>
+  <p class="meta">Week of September 14, 2026 · 5 stories · ~7 min read</p>
+  <p class="lead">The stories worth your attention right now — each in plain English, with why it matters and a link to the source. Filter by topic below.</p>
+
+  <div class="callout">
+    <strong>The week in three lines:</strong>
+    <ul style="margin:10px 0 0; padding-left:20px;">
+      <li><a href="#story-rentosertib">Insilico's AI-designed lung drug showed signs of reversing patients' biological age by 3–6 years.</a></li>
+      <li><a href="#story-gpn-star">A UC Berkeley genome-language model flags disease-linked DNA variants far more efficiently than rivals.</a></li>
+      <li><a href="#story-af3-red">Researchers patched a well-known blind spot in AlphaFold's protein-shape predictions.</a></li>
+    </ul>
+  </div>
+
+  <div class="topic-filter" id="topicFilter">
+    <button class="topic-chip all" data-topic="all" aria-pressed="true"><span class="dot"></span>All</button>
+    <button class="topic-chip chip-discovery" data-topic="discovery" aria-pressed="false"><span class="dot"></span>Discovery</button>
+    <button class="topic-chip chip-foundation" data-topic="foundation" aria-pressed="false"><span class="dot"></span>Foundation models</button>
+    <button class="topic-chip chip-protein" data-topic="protein" aria-pressed="false"><span class="dot"></span>Protein design</button>
+    <button class="topic-chip chip-regulation" data-topic="regulation" aria-pressed="false"><span class="dot"></span>Regulation</button>
+    <button class="topic-chip chip-reality" data-topic="reality" aria-pressed="false"><span class="dot"></span>Reality check</button>
+  </div>
+
+  <div id="stories">
+
+    <!-- LEAD: INSILICO RENTOSERTIB BIOLOGICAL AGE REVERSAL -->
+    <article class="news-card lead topic-discovery" data-topic="discovery" id="story-rentosertib">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-discovery">Discovery</span>
+          <span class="date">September 7, 2026</span>
+        <button class="story-share" data-share-text="Insilico's rentosertib is the first drug with both an AI-discovered target and an AI-designed molecule to show a biological age reversal signal in patients — six independent aging clocks agree. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>Insilico's AI-designed lung drug shows signs of reversing patients' biological age</h3>
+        <p class="summary">Insilico Medicine published a new analysis of its <a href="../wiki/index.html#phase-trials">Phase 2a</a> trial of rentosertib, a drug for the scarring lung disease idiopathic pulmonary fibrosis (IPF), showing that treated patients looked biologically younger afterward according to six independently built "aging clock" models applied to blood protein data from the trial's 42 participants. All six clocks — despite using different methods and training data — agreed that patients on the drug's most effective dose showed roughly 3 to 4 years of reversed biological age at the four-week mark, with one clock showing up to 6 years.</p>
+        <p class="summary">The AI does the work at both ends of the drug's creation: Insilico's target-discovery platform first identified TNIK, an enzyme not previously linked to this disease, as a target tied to several biological hallmarks of aging as well as lung fibrosis, and its generative chemistry platform, Chemistry42, then designed the small-molecule drug rentosertib to block it. That makes rentosertib the first drug candidate, according to Insilico, built around both an AI-discovered target and an AI-designed molecule to reach this kind of clinical evaluation, rather than a repurposed existing drug like metformin or rapamycin.</p>
+        <div class="why"><strong>Why it matters:</strong> This is a 42-patient sub-analysis of an earlier safety and efficacy trial, not a study designed from the outset to measure aging — and even a supportive outside voice, Nobel laureate Michael Levitt, noted that the trial "cannot yet separate slower aging from a treated lung," and that the real test would be a trial in healthy volunteers with no lung disease at all. Rentosertib itself has since advanced to Phase 3 testing for IPF, but that trial is evaluating lung function, not aging.</div>
+        <p class="sources">Sources: <a href="https://insilico.com/news/rnt0709261-rentosertib-proteomic-aging-clocks">Insilico Medicine</a> · <a href="https://www.nature.com/articles/s41587-026-03286-y">Nature Biotechnology</a></p>
+      </div>
+    </article>
+
+    <!-- FOUNDATION: GPN-STAR GENOME LANGUAGE MODEL -->
+    <article class="news-card topic-foundation" data-topic="foundation" id="story-gpn-star">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-foundation">Foundation models</span>
+          <span class="date">September 9, 2026</span>
+        <button class="story-share" data-share-text="A new AI model reads DNA by comparing it across species, not just piling on more genomes — and it beats far larger models at flagging genetic variants that matter. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>New AI model reads DNA's "junk" to flag the genetic variants that actually matter</h3>
+        <p class="summary">Researchers at UC Berkeley built GPN-Star, a <a href="../wiki/index.html#genome-language-model">genome language model</a> that predicts which genetic variants are likely to affect health — including variants in the roughly 98% of the human genome that doesn't code for any protein — more accurately than competing models many times its size, while needing only a fraction of the computing power to train. The team has released genome-wide predictions from the model so other researchers can use them to prioritize which of the countless untested variants in the genome are worth studying further.</p>
+        <p class="summary">The AI does the work by comparing genomes across species rather than swallowing as many individual genomes as possible: instead of training on unaligned DNA from over 100,000 species the way the much larger Evo 2 model does, GPN-Star trains on whole-genome alignments that line up the human genome against those of other primates, mammals, or vertebrates, directly highlighting which stretches of DNA have stayed the same over evolutionary time and which have drifted. That pre-digested comparison lets the model learn the "grammar" of the genome in days on a handful of processors, rather than the months and roughly 2,000 GPUs Evo 2 required — and the researchers found that models trained on different evolutionary timescales were better at different tasks, with primate-specific data proving best for predicting the impact of variants tied to complex traits like schizophrenia risk.</p>
+        <div class="why"><strong>Why it matters:</strong> GPN-Star is a research and prioritization tool, not a diagnostic — it flags which variants are worth testing in the lab, but scientists still cannot experimentally test every variant in the genome, so its predictions substitute statistical likelihood for direct proof until each flagged variant is validated individually.</div>
+        <p class="sources">Sources: <a href="https://news.berkeley.edu/2026/09/09/new-ai-model-for-dna-learns-from-evolution-to-unlock-secrets-of-the-human-genome/">UC Berkeley</a> · <a href="https://www.nature.com/articles/s41586-026-11005-5">Nature</a></p>
+      </div>
+    </article>
+
+    <!-- PROTEIN: APPLE SIMPLEDESIGN -->
+    <article class="news-card topic-protein" data-topic="protein" id="story-simpledesign">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-protein">Protein design</span>
+          <span class="date">September 11, 2026</span>
+        <button class="story-share" data-share-text="Apple's SimpleDesign generates a protein's sequence and shape in one step instead of two — but none of its designs have touched a lab bench yet. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>Apple researchers unveil an AI model that designs a protein's sequence and shape together</h3>
+        <p class="summary">Apple's machine learning research group published SimpleDesign, an AI model for <a href="../wiki/index.html#de-novo-protein-design">de novo protein design</a> that generates a protein's amino-acid sequence and its three-dimensional structure at the same time, in one continuous process, rather than the multi-stage pipeline most protein-design AI tools rely on. On standard benchmarks, the model performed competitively with more complex existing tools despite its simpler design.</p>
+        <p class="summary">The AI does the work by learning directly from more than 2 million real, paired examples of protein sequences and their matching 3D structures, rather than first compressing those structures into an intermediate "tokenized" representation the way many rival models do. During training, the researchers corrupted both the sequence and the structure of each example by varying amounts — sometimes hiding most of the sequence while leaving the structure intact (forcing the model to practice <a href="../explainers/alphafold.html">structure prediction</a>), sometimes the reverse (forcing it to practice generating a sequence that would fold into a given shape) — teaching the same model to handle both problems, and the combination of both, in a single step.</p>
+        <div class="why"><strong>Why it matters:</strong> SimpleDesign's results are purely computational — the researchers have not made any of its generated proteins in a lab to confirm they actually fold, function, or behave safely, and many computationally promising protein designs fail exactly that test. Strong benchmark scores are a necessary first filter, not evidence that a designed protein will work in a real biological system.</div>
+        <p class="sources">Sources: <a href="https://machinelearning.apple.com/research/simpledesign-protein-codesign">Apple Machine Learning Research</a> · <a href="https://9to5mac.com/2026/09/11/apple-researchers-unveil-simpledesign-a-new-ai-model-for-protein-design/">9to5Mac</a></p>
+      </div>
+    </article>
+
+    <!-- REGULATION: ARPA-H ADVOCATE -->
+    <article class="news-card topic-regulation" data-topic="regulation" id="story-advocate">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-regulation">Regulation</span>
+          <span class="date">September 9, 2026</span>
+        <button class="story-share" data-share-text="A US health agency just put $62.7M behind AI agents that would adjust heart failure patients' medications on their own — and has to invent how the FDA even evaluates that. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>US health agency commits $62.7 million to build FDA-authorized AI agents for heart failure care</h3>
+        <p class="summary">ARPA-H, the US government's health research agency, announced its first contract awards under ADVOCATE, a four-year, $62.7 million program to build an <a href="../wiki/index.html#ai-agent">AI agent</a> that supports people with heart failure in between doctor visits. Companies Tempus AI, UpDoc, and Atman Health will build the patient-facing system, while teams at Stanford, Duke University, and Kaiser Permanente will build a safety-monitoring layer and test real-world deployment across health systems, including 21 Kaiser medical centers.</p>
+        <p class="summary">The AI does the work as an autonomous agent, not a chatbot: it is meant to connect to a patient's medical records, provide diet and physical-therapy guidance, adjust prescriptions, and decide on its own when a case needs to be escalated to a human clinician — around the clock, in a disease area where nearly half of US counties have no cardiologist at all. A separate supervisory AI system, led by Stanford, will monitor the patient-facing agents after deployment specifically to catch unsafe recommendations or behavior that falls outside what the system was trained to handle.</p>
+        <div class="why"><strong>Why it matters:</strong> No patient has used this system yet — the lead team must first submit it to the FDA for authorization within two years, and the program exists partly because regulators do not yet have an established framework for evaluating an AI system that can independently adjust medication for a life-threatening condition. If it works, ARPA-H estimates $28 billion in annual savings from avoided hospitalizations for heart failure alone; if the FDA authorization process stalls, so does everything built on top of it.</div>
+        <p class="sources">Sources: <a href="https://arpa-h.gov/news-and-events/arpa-h-revolutionize-cardiovascular-disease-management-clinical-agentic-ai">ARPA-H</a> · <a href="https://www.medtechdive.com/news/arpa-h-to-award-627m-for-ai-in-cardiovascular-care/830185/">MedTech Dive</a></p>
+      </div>
+    </article>
+
+    <!-- REALITY CHECK: AF3-ReD -->
+    <article class="news-card topic-reality" data-topic="reality" id="story-af3-red">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-reality">Reality check</span>
+          <span class="date">September 1, 2026</span>
+        <button class="story-share" data-share-text="AlphaFold usually predicts just one shape for a protein that actually flexes between several. Japanese researchers built a workaround — and it's a reminder of how narrow "solved" can be. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>Researchers patch a known blind spot in AlphaFold's protein predictions</h3>
+        <p class="summary"><a href="../explainers/alphafold.html">AlphaFold</a>, the Nobel Prize-winning AI that predicts a protein's 3D shape from its sequence, has a well-documented limitation: many proteins flex between several different shapes to do their jobs, but AlphaFold usually predicts only one of them. Researchers at Japan's Institute for Molecular Science built a workaround, called AF3-ReD, that pushes AlphaFold3 to explore those other shapes instead of settling on the single most likely one.</p>
+        <p class="summary">The AI does the work through a targeted change to how AlphaFold3 generates structures: it builds a shape by starting from random noise and gradually refining it toward the most probable — effectively the lowest-energy — structure, which is why it tends to land on the same single conformation every time. The researchers added a "repulsive" penalty that pushes each new prediction attempt away from structures the model has already generated, forcing it to explore a wider range of plausible shapes. Tested on a protein subunit that is known to switch between an "open" and "closed" shape depending on whether a fuel molecule is bound to it, standard AlphaFold3 predicted only the open shape even when it should have switched; AF3-ReD captured both shapes, plus states in between.</p>
+        <div class="why"><strong>Why it matters:</strong> This is a sampling technique validated on a handful of test proteins, not a fundamental upgrade to what AlphaFold understands about protein movement — it widens the range of shapes the model will consider but does not tell researchers which shape is correct under specific real-world conditions, so results still need confirmation through simulation or lab-based structural methods. It's also a useful, concrete illustration of how narrow "solved" can be for even the most celebrated AI tool in biology.</div>
+        <p class="sources">Sources: <a href="https://www.ims.ac.jp/en/news/2026/09/0901.html">Institute for Molecular Science</a></p>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="callout" style="margin-top:36px;">
+    <strong>How this digest is made:</strong> stories are gathered from trusted biotech and AI sources, summarized in plain English, and fact-checked against the primary source before publishing. Each links out so you can go deeper. <a href="../about.html">More on the process →</a>
+  </div>
+
+  <div style="margin-top:16px; text-align:center;">
+    <a class="btn" href="https://twitter.com/intent/tweet?text=This%20week%20in%20Biotech%20%2B%20AI%20%28September%2014%2C%202026%29%20%E2%80%94%20Cultured%20Machine&url=https%3A%2F%2Fhi-kay.github.io%2Fcultured-machine%2Fnews%2F2026-09-14.html" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      Share on X
+    </a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© <span id="year"></span> Cultured Machine · Biotech learns to compute.</div>
+    <div><a href="../about.html">About</a> · <a href="../explainers/alphafold.html">Explainers</a> · <a href="../index.html">Home</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* Topic filter */
+(function(){
+  const filter = document.getElementById('topicFilter');
+  const chips = [...filter.querySelectorAll('.topic-chip')];
+  const cards = [...document.querySelectorAll('#stories .news-card')];
+  filter.addEventListener('click', e => {
+    const chip = e.target.closest('.topic-chip');
+    if (!chip) return;
+    chips.forEach(c => c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'));
+    const topic = chip.dataset.topic;
+    cards.forEach(card => {
+      const show = (topic === 'all') || (card.dataset.topic === topic);
+      card.classList.toggle('hidden', !show);
+    });
+  });
+})();
+</script>
+<script src="../js/glossary-tooltip.js" defer></script>
+<script src="../js/share-story.js" defer></script>
+</body>
+</html>

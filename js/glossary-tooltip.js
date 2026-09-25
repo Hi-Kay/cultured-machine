@@ -14,6 +14,7 @@
   var GLOSSARY = {
     "admet": ["ADMET", "The five properties — Absorption, Distribution, Metabolism, Excretion, Toxicity — that determine whether a drug behaves safely in the body, not just whether it hits its target."],
     "ai-agent": ["AI agent", "An AI system built on a language model but able to take multi-step actions on its own — searching, running code, calling other tools — rather than answering one question at a time."],
+    "antibody-drug-conjugate": ["Antibody-drug conjugate (ADC)", "A cancer drug that uses an antibody to deliver a toxic chemotherapy payload directly to tumor cells, sparing healthy tissue."],
     "binding-affinity": ["Binding affinity", "How tightly two molecules stick together, usually reported as a dissociation constant (KD); the smaller the number, the tighter the grip."],
     "cdr": ["CDR (complementarity-determining region)", "The small loops at the tip of an antibody that actually touch its target — nearly all of an antibody's specificity lives here."],
     "checkpoint-inhibitor": ["Checkpoint inhibitor", "A drug that releases one of the immune system's own “brakes,” freeing T-cells to attack cancer cells that would otherwise hide from them. Keytruda is the best-known example."],
@@ -32,6 +33,7 @@
     "placebo-response": ["Placebo response", "Genuine symptom improvement in trial participants given an inactive treatment, which makes proving a drug's real effect harder — especially in depression trials."],
     "protein-language-model": ["Protein language model", "An AI system trained on huge numbers of real protein sequences to learn what makes a sequence “look” natural and fold correctly, the way a text model learns language."],
     "receptor-antagonist": ["Receptor antagonist", "A drug that binds a cell receptor and blocks it from being activated, effectively switching that receptor off."],
+    "rna-splicing": ["RNA splicing", "The process that edits a genetic message into different combinations before it's turned into protein; cancers can splice genes abnormally, creating tumor-specific drug targets."],
     "transcription-factor": ["Transcription factor", "A protein that controls which genes in a cell are switched on or off, and so which “identity” a cell takes on."],
     "transcriptome": ["Transcriptome", "The full set of genes a cell is actively using at a given moment — a snapshot of its state that AI models can learn to interpret."],
     "tslp": ["TSLP", "A signaling protein released by airway cells that sits near the top of the inflammatory chain behind asthma; blocking it early can dial down several downstream immune pathways at once."],
