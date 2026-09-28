@@ -43,6 +43,7 @@ Start each issue with a short "The week in three lines" block above the stories:
   - `ai-agent` — AI agent
   - `antibody-drug-conjugate` — Antibody-drug conjugate (ADC)
   - `binding-affinity` — Binding affinity
+  - `bispecific-antibody` — Bispecific antibody
   - `cdr` — CDR (complementarity-determining region)
   - `checkpoint-inhibitor` — Checkpoint inhibitor
   - `de-novo-protein-design` — De novo protein design

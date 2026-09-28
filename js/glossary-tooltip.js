@@ -16,6 +16,7 @@
     "ai-agent": ["AI agent", "An AI system built on a language model but able to take multi-step actions on its own — searching, running code, calling other tools — rather than answering one question at a time."],
     "antibody-drug-conjugate": ["Antibody-drug conjugate (ADC)", "A cancer drug that uses an antibody to deliver a toxic chemotherapy payload directly to tumor cells, sparing healthy tissue."],
     "binding-affinity": ["Binding affinity", "How tightly two molecules stick together, usually reported as a dissociation constant (KD); the smaller the number, the tighter the grip."],
+    "bispecific-antibody": ["Bispecific antibody", "An engineered antibody built to grip two different targets at once — often a tumor protein with one arm and an immune cell with the other."],
     "cdr": ["CDR (complementarity-determining region)", "The small loops at the tip of an antibody that actually touch its target — nearly all of an antibody's specificity lives here."],
     "checkpoint-inhibitor": ["Checkpoint inhibitor", "A drug that releases one of the immune system's own “brakes,” freeing T-cells to attack cancer cells that would otherwise hide from them. Keytruda is the best-known example."],
     "de-novo-protein-design": ["De novo protein design", "Building a brand-new protein on a computer — choosing a sequence that folds into a shape and does a job no natural protein does — rather than tweaking an existing one."],

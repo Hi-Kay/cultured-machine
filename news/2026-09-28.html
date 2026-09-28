@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This week in Biotech + AI — September 28, 2026 — Cultured Machine</title>
+<meta name="description" content="Curated, plain-English news at the intersection of biotech and AI: Stanford builds a 'virtual biotech' where teams of AI agents run the drug discovery pipeline, Genentech pays Earendil up to $1.5 billion for AI-designed cancer antibodies, Google DeepMind's AlphaFold adds free 3D structures for over 2,800 viruses ahead of the next pandemic, small AI models built for aging research outperform ChatGPT and Gemini at reasoning about aging biology, and Basecamp Research raises $140M to build AI models that design medicines from DNA collected worldwide — each with why it matters and a link to the source.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="../index.html">
+      <span class="logo">CM</span>
+      <span>Cultured Machine <span class="tagline">· biology learns to compute</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../explainers/index.html">Explainers</a>
+      <a href="2026-09-28.html" aria-current="page">News</a>
+      <a href="index.html">Archive</a>
+      <a href="../wiki/index.html">Glossary</a>
+      <a href="../about.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="eyebrow">Weekly digest</div>
+  <h1>This week in Biotech + AI</h1>
+  <p class="meta">Week of September 28, 2026 · 5 stories · ~7 min read</p>
+  <p class="lead">The stories worth your attention right now — each in plain English, with why it matters and a link to the source. Filter by topic below.</p>
+
+  <div class="callout">
+    <strong>The week in three lines:</strong>
+    <ul style="margin:10px 0 0; padding-left:20px;">
+      <li><a href="#story-virtual-biotech">Stanford's "virtual biotech" uses teams of AI agents to run an entire drug discovery pipeline.</a></li>
+      <li><a href="#story-earendil">Genentech pays Earendil up to $1.5B to design cancer antibodies with generative AI.</a></li>
+      <li><a href="#story-alphafold-viral">AlphaFold adds free 3D structures for 2,800+ viruses ahead of the next pandemic.</a></li>
+    </ul>
+  </div>
+
+  <div class="topic-filter" id="topicFilter">
+    <button class="topic-chip all" data-topic="all" aria-pressed="true"><span class="dot"></span>All</button>
+    <button class="topic-chip chip-oncology" data-topic="oncology" aria-pressed="false"><span class="dot"></span>Oncology</button>
+    <button class="topic-chip chip-foundation" data-topic="foundation" aria-pressed="false"><span class="dot"></span>Foundation models</button>
+    <button class="topic-chip chip-discovery" data-topic="discovery" aria-pressed="false"><span class="dot"></span>Discovery</button>
+    <button class="topic-chip chip-funding" data-topic="funding" aria-pressed="false"><span class="dot"></span>Funding</button>
+  </div>
+
+  <div id="stories">
+
+    <!-- LEAD: STANFORD VIRTUAL BIOTECH -->
+    <article class="news-card lead topic-discovery" data-topic="discovery" id="story-virtual-biotech">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-discovery">Discovery</span>
+          <span class="date">September 17, 2026</span>
+        <button class="story-share" data-share-text="Stanford built a 'virtual biotech' where AI agents ran 37,075 clinical trial analyses in six hours — but it still can't run the actual lab tests. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>Stanford builds a "virtual biotech" where teams of AI agents run the drug discovery pipeline</h3>
+        <p class="summary">Stanford researchers built a multi-agent AI system that mimics an entire biotech company: a virtual chief scientific officer directs teams of specialized <a href="../wiki/index.html#ai-agent">AI agents</a> that identify drug targets, flag safety risks, choose a drug format, and review clinical trial data — the way separate human departments would. In one test, the system analyzed the outcomes of 37,075 real Phase 2 and Phase 3 clinical trials, assigning one AI agent to each trial, and finished in about six hours, a task that would take a human team far longer.</p>
+        <p class="summary">The AI does the work by pulling in public data, including the Open Targets database of gene-disease links, and reasoning over it the way a research team might discuss findings in a meeting, rather than running one fixed calculation. Across the clinical-trial analysis, drugs aimed at genes switched on in only a few cell types — rather than genes active throughout the body — were 48% more likely to reach the market, 40% more likely to advance from Phase 1 to Phase 2, and had 32% fewer serious side effects. In a separate case study on lung cancer, the system flagged the protein B7-H3 as a target because it turned up on tumor-supporting cells that were suppressing nearby immune activity, and recommended attacking it with an <a href="../wiki/index.html#antibody-drug-conjugate">antibody-drug conjugate</a> — the same strategy behind a real drug that had already received FDA breakthrough designation over a year earlier.</p>
+        <div class="why"><strong>Why it matters:</strong> This shows a virtual research team can retrieve and reason over huge public datasets fast and cheaply — the lung cancer case study reportedly ran for about $46 in computing fees — but here it reproduced a conclusion humans had already reached, not one it found ahead of them. Senior author James Zou was explicit about the limit: the system "can't speed up the rigorous lab testing and clinical trials required" before any AI-flagged idea becomes a medicine that reaches a patient.</div>
+        <p class="sources">Sources: <a href="https://med.stanford.edu/news/all-news/2026/09/virtual-biotech-company.html">Stanford Medicine</a> · <a href="https://www.biorxiv.org/content/10.64898/2026.02.23.707551v1">bioRxiv preprint</a></p>
+      </div>
+    </article>
+
+    <!-- ONCOLOGY: GENENTECH / EARENDIL -->
+    <article class="news-card topic-oncology" data-topic="oncology" id="story-earendil">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-oncology">Oncology</span>
+          <span class="date">September 24, 2026</span>
+        <button class="story-share" data-share-text="Genentech is paying up to $1.5 billion for antibodies Earendil hasn't designed yet — a bet on an AI platform, not a finished drug. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>Genentech pays up to $1.5 billion for Earendil's AI-designed cancer antibodies</h3>
+        <p class="summary">Genentech, part of Roche, signed a research collaboration with AI biotech Earendil Labs worth $55 million upfront and more than $1.5 billion in potential milestone payments, to discover new <a href="../wiki/index.html#bispecific-antibody">bispecific antibodies</a> for cancer. A bispecific antibody is a single engineered antibody built to grab two different targets at once — often a tumor protein with one arm and an immune cell with the other — a way to hit cancer's tendency to depend on more than one biological pathway at a time.</p>
+        <p class="summary">The AI does the work through Earendil's platform, which combines machine learning and generative <a href="../wiki/index.html#de-novo-protein-design">protein design</a> with high-throughput lab experiments to generate and score large numbers of candidate antibody sequences directly for function, manufacturability, and developability — properties traditional antibody discovery typically tests one candidate at a time. Earendil will lead discovery and early development under the deal; Genentech takes over once a candidate is ready for larger clinical trials and, eventually, sale.</p>
+        <div class="why"><strong>Why it matters:</strong> The specific cancer targets are undisclosed, and most of the $1.5 billion is tied to milestones years away that may never be paid — this is a research bet on Earendil's antibody-design engine, not a drug close to patients. It is the second major bispecific deal for Earendil this year, after a collaboration with Sanofi worth up to $2.5 billion in autoimmune disease, a sign that more than one large pharma company now sees AI-generated, multi-target antibodies as worth paying for well before any of them has reached a late-stage trial.</div>
+        <p class="sources">Sources: <a href="https://www.biospace.com/press-releases/earendil-labs-announces-research-collaboration-with-genentech-to-discover-and-develop-therapeutic-bispecific-antibodies-in-oncology">Earendil Labs (BioSpace)</a> · <a href="https://www.fiercebiotech.com/biotech/genentech-inks-15b-bispecific-pact-fast-rising-earendil">Fierce Biotech</a></p>
+      </div>
+    </article>
+
+    <!-- FOUNDATION: ALPHAFOLD VIRAL PROTEIN COMPLEXES -->
+    <article class="news-card topic-foundation" data-topic="foundation" id="story-alphafold-viral">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-foundation">Foundation models</span>
+          <span class="date">September 24, 2026</span>
+        <button class="story-share" data-share-text="AlphaFold now has free predicted 3D structures for over 2,800 viruses — 'foundational knowledge,' its own researchers say, not a finished tool. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>Google DeepMind's AlphaFold adds free 3D structures for over 2,800 viruses ahead of the next pandemic</h3>
+        <p class="summary">The AlphaFold Protein Structure Database, built by Google DeepMind and maintained with EMBL's European Bioinformatics Institute, added AI-predicted 3D structures for protein complexes from more than 2,800 viruses, prioritizing virus families known to infect people, from common cold viruses to mpox. The release is timed to a United Nations General Assembly meeting on pandemic preparedness and is meant to support the "100 Days Mission," a global goal of having a vaccine or treatment ready within 100 days of a new pandemic threat being identified.</p>
+        <p class="summary">The AI does the work through AlphaFold, which predicts how a virus's proteins fold and click together into working complexes directly from their genetic sequence, without a lab first having to grow and crystallize the actual protein — the traditional, much slower route to a 3D structure. That speed is what let the database add structures for thousands of viruses at once, all free for any researcher to download and search.</p>
+        <div class="why"><strong>Why it matters:</strong> EMBL researcher Joe Grove was careful to frame the release as "foundational knowledge," not a finished tool: the predicted structures don't show what happens when a virus mutates, don't model how a virus interacts with a human cell, and every one still needs lab confirmation before it can guide an actual vaccine or drug. The database's authors were also explicit that the release is meant to help scientists respond faster to real outbreaks, not to make it easier to engineer a dangerous virus.</div>
+        <p class="sources">Sources: <a href="https://www.embl.org/news/science-technology/alphafold-database-adds-viral-protein-complexes-to-support-pandemic-preparedness/">EMBL</a> · <a href="https://www.nature.com/articles/d41586-026-03022-1">Nature</a></p>
+      </div>
+    </article>
+
+    <!-- FOUNDATION: INSILICO LONGEVITYBENCH -->
+    <article class="news-card topic-foundation" data-topic="foundation" id="story-longevity-bench">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-foundation">Foundation models</span>
+          <span class="date">September 17, 2026</span>
+        <button class="story-share" data-share-text="A 9-billion-parameter AI model fine-tuned on aging data just outreasoned Gemini and GPT on aging biology — then flagged 328 candidate drug targets. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>Small AI models built for aging research outperform ChatGPT and Gemini at reasoning about aging biology</h3>
+        <p class="summary">A team led by Insilico Medicine, with the Buck Institute for Research on Aging, Harvard Medical School, and AI company Liquid AI, published a set of small, open-source AI models trained specifically on aging data — and showed they out-reasoned 18 much larger general-purpose AI systems, including Google's Gemini and OpenAI's models, on questions about aging biology. The team also built LongevityBench, the first open test of whether an AI model can genuinely reason about aging across five types of biological data, from genetics to routine bloodwork, rather than simply recite facts about it.</p>
+        <p class="summary">The AI does the work through Longevity-LLMs, compact models with as few as 0.6 billion parameters — a small fraction of the size of general-purpose chatbots — fine-tuned specifically on clinical and molecular aging datasets rather than trained broadly on the internet. Paired with an autonomous research agent called Longevity Claw, the models combed through gene-activity data and flagged 328 candidate targets for anti-aging drugs, a list enriched up to 5.6-fold for genes already known to be involved in aging, a sign the shortlist isn't random.</p>
+        <div class="why"><strong>Why it matters:</strong> That a 9-billion-parameter model fine-tuned on the right narrow data can outperform vastly larger general AI systems on a specialized scientific task is itself a notable result about how AI gets built for science, separate from any drug. But the 328 flagged targets are a computational shortlist from gene-enrichment analysis, not validated findings — each one still needs testing in cells or animals before it says anything about whether slowing human aging is possible, and the whole toolkit, benchmark included, is now open-source for outside groups to check the claim themselves.</div>
+        <p class="sources">Sources: <a href="https://insilico.com/news/cell170926en-ai-longevity-discovery-toolkit">Insilico Medicine</a></p>
+      </div>
+    </article>
+
+    <!-- FUNDING: BASECAMP RESEARCH -->
+    <article class="news-card topic-funding" data-topic="funding" id="story-basecamp">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-funding">Funding</span>
+          <span class="date">September 23, 2026</span>
+        <button class="story-share" data-share-text="Basecamp Research raised $140M to train AI on DNA gathered from every continent on Earth — its therapies are all still preclinical. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>Basecamp Research raises $140M to build AI models that design medicines from DNA collected worldwide</h3>
+        <p class="summary">AI biotech Basecamp Research raised a $140 million Series C, valuing the company near $1 billion, to keep training EDEN, its family of AI models for designing genetic medicines, and to advance its first therapies toward clinical testing. Unlike most drug-design AI, which trains mainly on human or lab-generated data, EDEN is trained on the company's "Trillion Gene Atlas" — genomic data gathered through biodiversity-sampling partnerships in more than 30 countries across all seven continents, built together with Nvidia, Anthropic, and two DNA-sequencing companies.</p>
+        <p class="summary">The AI does the work as a <a href="../wiki/index.html#genome-language-model">genome language model</a>: EDEN learns general statistical rules for how DNA functions across many forms of life, not just humans, then uses that knowledge to design new genetic payloads — cell therapies, gene therapies, enzymes, and peptides — directly from a description of a disease, rather than starting from an existing natural gene and modifying it. Basecamp pairs EDEN's designs with enzymes called large serine recombinases that insert the new genetic instructions at a precise spot inside a patient's own cells, aiming for therapies given as an injection rather than the lab-grown, reinfused cell therapies used today.</p>
+        <div class="why"><strong>Why it matters:</strong> Basecamp's six disclosed programs, including therapies for cancer, the metabolic disease PKU, and new antimicrobial peptides, are all still preclinical, meaning none has yet been tested in a person. The bet behind the round, backed by Nvidia and Anthropic's venture arm alongside biotech investors, is that an AI trained on the broadest possible sample of life's genetic diversity will generalize to therapeutic design better than one trained narrowly on human data — a hypothesis this funding buys time to test, not proof that it already has.</div>
+        <p class="sources">Sources: <a href="https://www.prnewswire.com/news-releases/basecamp-research-raises-140m-to-advance-ai-designed-therapeutics-302887620.html">Basecamp Research (PR Newswire)</a> · <a href="https://endpoints.news/ai-startup-basecamp-research-raises-140m-series-c-shares-pipeline/">Endpoints News</a></p>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="callout" style="margin-top:36px;">
+    <strong>How this digest is made:</strong> stories are gathered from trusted biotech and AI sources, summarized in plain English, and fact-checked against the primary source before publishing. Each links out so you can go deeper. <a href="../about.html">More on the process →</a>
+  </div>
+
+  <div style="margin-top:16px; text-align:center;">
+    <a class="btn" href="https://twitter.com/intent/tweet?text=This%20week%20in%20Biotech%20%2B%20AI%20%28September%2028%2C%202026%29%20%E2%80%94%20Cultured%20Machine&url=https%3A%2F%2Fhi-kay.github.io%2Fcultured-machine%2Fnews%2F2026-09-28.html" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      Share on X
+    </a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© <span id="year"></span> Cultured Machine · Biotech learns to compute.</div>
+    <div><a href="../about.html">About</a> · <a href="../explainers/alphafold.html">Explainers</a> · <a href="../index.html">Home</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* Topic filter */
+(function(){
+  const filter = document.getElementById('topicFilter');
+  const chips = [...filter.querySelectorAll('.topic-chip')];
+  const cards = [...document.querySelectorAll('#stories .news-card')];
+  filter.addEventListener('click', e => {
+    const chip = e.target.closest('.topic-chip');
+    if (!chip) return;
+    chips.forEach(c => c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'));
+    const topic = chip.dataset.topic;
+    cards.forEach(card => {
+      const show = (topic === 'all') || (card.dataset.topic === topic);
+      card.classList.toggle('hidden', !show);
+    });
+  });
+})();
+</script>
+<script src="../js/glossary-tooltip.js" defer></script>
+<script src="../js/share-story.js" defer></script>
+</body>
+</html>
