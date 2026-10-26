@@ -46,6 +46,7 @@ Start each issue with a short "The week in three lines" block above the stories:
   - `bispecific-antibody` — Bispecific antibody
   - `cdr` — CDR (complementarity-determining region)
   - `checkpoint-inhibitor` — Checkpoint inhibitor
+  - `crispr` — CRISPR
   - `de-novo-protein-design` — De novo protein design
   - `dna-methylation` — DNA methylation
   - `foundation-model` — Foundation model

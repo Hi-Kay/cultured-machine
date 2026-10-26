@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This week in Biotech + AI — October 26, 2026 — Cultured Machine</title>
+<meta name="description" content="Curated, plain-English news at the intersection of biotech and AI: OpenAI agents read a brain CRISPR atlas, OpenAI buys Orchestra Bio, Iambic prices its IPO, and Danaher and NVIDIA plan AI-driven labs.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="../index.html">
+      <span class="logo">CM</span>
+      <span>Cultured Machine <span class="tagline">· biology learns to compute</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../explainers/index.html">Explainers</a>
+      <a href="2026-10-26.html" aria-current="page">News</a>
+      <a href="index.html">Archive</a>
+      <a href="../wiki/index.html">Glossary</a>
+      <a href="../about.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="eyebrow">Weekly digest</div>
+  <h1>This week in Biotech + AI</h1>
+  <p class="meta">Week of October 26, 2026 · 4 stories · ~5 min read</p>
+  <p class="lead">The stories worth your attention right now — each in plain English, with why it matters and a link to the source. Filter by topic below.</p>
+
+  <div class="callout">
+    <strong>The week in three lines:</strong>
+    <ul style="margin:10px 0 0; padding-left:20px;">
+      <li><a href="#story-rosalind-brain">Nearly 2,000 AI agents read a brain gene-editing atlas in 32 minutes.</a></li>
+      <li><a href="#story-openai-orchestra">OpenAI buys Orchestra Bio to coordinate drug-development work with AI agents.</a></li>
+      <li><a href="#story-iambic-ipo-priced">AI drug company Iambic prices its IPO, raising about $150 million.</a></li>
+    </ul>
+  </div>
+
+  <div class="topic-filter" id="topicFilter">
+    <button class="topic-chip all" data-topic="all" aria-pressed="true"><span class="dot"></span>All</button>
+    <button class="topic-chip chip-discovery" data-topic="discovery" aria-pressed="false"><span class="dot"></span>Discovery</button>
+    <button class="topic-chip chip-funding" data-topic="funding" aria-pressed="false"><span class="dot"></span>Funding</button>
+  </div>
+
+  <div id="stories">
+
+    <article class="news-card lead topic-discovery" data-topic="discovery" id="story-rosalind-brain">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-discovery">Discovery</span>
+          <span class="date">October 21, 2026</span>
+        <button class="story-share" data-share-text="OpenAI, PerturbAI and Scripps ran nearly 2,000 AI agents on a brain gene-editing dataset and got ranked research leads in 32 minutes. Still unverified in the lab. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>OpenAI, PerturbAI and Scripps Research ran nearly 2,000 AI agents in parallel on a brain gene-editing dataset and report ranked research leads in 32 minutes</h3>
+        <p class="summary">OpenAI, the drug company PerturbAI and Scripps Research have used nearly 2,000 AI agents working at once to read a large gene-editing dataset from mouse brains, and they report that the agents produced ranked research leads in 32 minutes. The dataset is a <a href="../wiki/index.html#crispr">CRISPR</a> atlas: researchers disrupted genes one at a time in millions of brain cells and measured what changed in each cell. Making sense of such data normally means a scientist working through it gene by gene and checking the published literature for each one.</p>
+        <p class="summary">The AI does the reading. Each of 1,946 <a href="../wiki/index.html#ai-agent">AI agents</a>, running OpenAI's GPT-Rosalind model, took one gene disruption, examined the cell changes, searched the literature and proposed explanations. The reports were then combined to find connections and rank ideas for follow-up. In blinded review, 30 doctoral-level biologists broadly supported the agents' rankings, and the agents matched or refined 48 of the 55 findings from the original study that could be drawn from the data they were given.</p>
+        <div class="why"><strong>Why it matters:</strong> This is a preprint, a paper not yet peer reviewed, and a proof of concept; the leads are hypotheses that still need laboratory testing. One example: the agents flagged that disrupting DCTN1, a gene linked to neurodegeneration, raised the activity of cholesterol-production genes, and proposed that faulty cholesterol movement inside neurons may be the cause. Nobody has tested that. The 32 minutes is computing time; the comparison with "months to a year" for human experts is the authors' estimate from assumed times per gene and per paper, not a measured result. Scientists still decide which ideas to test.</div>
+        <p class="sources">Sources: <a href="https://www.rdworldonline.com/openai-deploys-nearly-2000-gpt-rosalind-agents-to-generate-biological-research-leads-in-32-minutes/">R&amp;D World</a> · <a href="https://www.biorxiv.org/content/10.64898/2026.10.15.759436v1">Preprint on bioRxiv</a> · <a href="https://openai.com/index/scaling-ai-research-for-complex-biological-data/">OpenAI</a></p>
+      </div>
+    </article>
+
+    <article class="news-card topic-funding" data-topic="funding" id="story-openai-orchestra">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-funding">Funding</span>
+          <span class="date">October 20, 2026</span>
+        <button class="story-share" data-share-text="OpenAI is buying Orchestra Bio, whose AI agents track and coordinate drug-development work. Price undisclosed; it is project management, not drug discovery. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>OpenAI is acquiring Orchestra Bio, whose AI agents track and coordinate drug-development work, and folding it into its Rosalind life-sciences tools</h3>
+        <p class="summary">OpenAI announced on October 20 that it is acquiring Orchestra Bio, a startup whose software coordinates the many studies and teams involved in developing a drug. OpenAI will combine Orchestra's team and technology with Rosalind, its set of AI tools for life-sciences research. The price was not disclosed.</p>
+        <p class="summary">The AI does coordination, not discovery. On Orchestra's platform, AI agents monitor and track studies, work out which activities and timelines a problem affects, and compare ways to respond; scientists and program leaders then make the decisions. Rosalind adds GPT-Rosalind, a model for reasoning about biology and chemistry questions, and Rosalind Workbench, which connects it to scientific tools and data.</p>
+        <div class="why"><strong>Why it matters:</strong> This is project management for drug development. OpenAI does not claim the agents will find or approve drugs. The price, the integration timeline and the handling of customer data are not public, and the benchmark gains OpenAI reports for its life-sciences models have not been independently verified. Whether agents are reliable and traceable enough for regulated drug work is the open question.</div>
+        <p class="sources">Sources: <a href="https://unite.ai/openai-acquires-orchestra-bio-to-expand-rosalind-life-sciences-tools">Unite.AI</a> (reports OpenAI's announcement) · <a href="https://openai.com/index/openai-to-acquire-orchestra-bio/">OpenAI announcement</a> (link as cited by Unite.AI)</p>
+      </div>
+    </article>
+
+    <article class="news-card topic-funding" data-topic="funding" id="story-iambic-ipo-priced">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-funding">Funding</span>
+          <span class="date">October 15, 2026</span>
+        <button class="story-share" data-share-text="AI drug company Iambic priced its IPO at $16 a share, raising about $150 million. Its lead drug is still in early human testing. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>AI drug company Iambic priced its public offering at $16 a share, raising about $150 million, while its lead drug is still in early human testing</h3>
+        <p class="summary">Iambic Therapeutics, an AI drug company, priced its initial public offering on October 15: 9,375,000 shares at $16 each, for gross proceeds of about $150 million, listed on Nasdaq as IAM. Last week's issue covered the filing. Iambic is a clinical-stage company, meaning its drugs are being tested in people.</p>
+        <p class="summary">The AI is the company's method. Iambic says it pairs its own AI models, named Enchant and NeuralPLexer, with automated chemistry and biology laboratories, so that each round of experiments feeds back into the models. It says this took its drug candidate IAM1363 into human testing in about two years. IAM1363 is an oral HER2 inhibitor, meant to reach the brain, now in <a href="../wiki/index.html#phase-trials">Phase 1</a>.</p>
+        <div class="why"><strong>Why it matters:</strong> The shares priced at the middle of the target range. Phase 1 trials mainly check safety, so no result so far shows that the AI platform produces better drugs than conventional methods; the speed to the clinic is the company's own claim. The IPO is a test of whether public investors will fund that claim before efficacy data exist.</div>
+        <p class="sources">Sources: <a href="https://www.biospace.com/press-releases/iambic-announces-pricing-of-initial-public-offering">Iambic pricing announcement (BioSpace)</a> · <a href="https://pharmaphorum.com/news/ai-drug-discovery-development-news-watch-october-2026">pharmaphorum</a></p>
+      </div>
+    </article>
+
+    <article class="news-card topic-discovery" data-topic="discovery" id="story-danaher-nvidia">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-discovery">Discovery</span>
+          <span class="date">October 16, 2026</span>
+        <button class="story-share" data-share-text="Lab-instrument maker Danaher and NVIDIA plan to build AI into lab equipment so experiments and models improve each other. No results or dates yet. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>Lab-equipment maker Danaher and NVIDIA plan to build AI into scientific instruments so that experiments and models improve each other</h3>
+        <p class="summary">Danaher, a large maker of laboratory instruments, and NVIDIA, the AI chip company, have announced a collaboration on what they call autonomous science. Danaher supplies instruments, automation and lab software; NVIDIA supplies computing hardware and AI models.</p>
+        <p class="summary">The aim is a loop in which experimental data improve AI models, and the models help design the next experiments. NVIDIA computing hardware would be built into the instruments to run models during experiments, using <a href="../wiki/index.html#foundation-model">foundation models</a> including NVIDIA's BioNeMo open models. The work begins with a select group of priority instruments. Separately, Danaher plans an AI-driven laboratory, combining AI and robotics, to develop custom antibodies.</p>
+        <div class="why"><strong>Why it matters:</strong> This is an announcement of intent. The report gives no launch dates, results, financial terms or plan for validating the systems, and the autonomous laboratory is planned, not operating. It matters mainly because lab data is what most biology AI models are short of, and instrument makers control how that data is collected.</div>
+        <p class="sources">Sources: <a href="https://www.genengnews.com/topics/artificial-intelligence/danaher-nvidia-combine-lab-instrumentation-and-ai-to-advance-autonomous-science/">GEN</a></p>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="callout" style="margin-top:36px;">
+    <strong>How this digest is made:</strong> stories are gathered from trusted biotech and AI sources, summarized in plain English, and fact-checked against the primary source before publishing. Each links out so you can go deeper. <a href="../about.html">More on the process →</a>
+  </div>
+
+  <div style="margin-top:16px; text-align:center;">
+    <a class="btn" href="https://twitter.com/intent/tweet?text=This%20week%20in%20Biotech%20%2B%20AI%20%28October%2026%2C%202026%29%20%E2%80%94%20Cultured%20Machine&url=https%3A%2F%2Fhi-kay.github.io%2Fcultured-machine%2Fnews%2F2026-10-26.html" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      Share on X
+    </a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© <span id="year"></span> Cultured Machine · Biotech learns to compute.</div>
+    <div><a href="../about.html">About</a> · <a href="../explainers/alphafold.html">Explainers</a> · <a href="../index.html">Home</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* Topic filter */
+(function(){
+  const filter = document.getElementById('topicFilter');
+  const chips = [...filter.querySelectorAll('.topic-chip')];
+  const cards = [...document.querySelectorAll('#stories .news-card')];
+  filter.addEventListener('click', e => {
+    const chip = e.target.closest('.topic-chip');
+    if (!chip) return;
+    chips.forEach(c => c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'));
+    const topic = chip.dataset.topic;
+    cards.forEach(card => {
+      const show = (topic === 'all') || (card.dataset.topic === topic);
+      card.classList.toggle('hidden', !show);
+    });
+  });
+})();
+</script>
+<script src="../js/glossary-tooltip.js" defer></script>
+<script src="../js/share-story.js" defer></script>
+</body>
+</html>

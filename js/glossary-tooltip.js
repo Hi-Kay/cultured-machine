@@ -19,6 +19,7 @@
     "bispecific-antibody": ["Bispecific antibody", "An engineered antibody built to grip two different targets at once — often a tumor protein with one arm and an immune cell with the other."],
     "cdr": ["CDR (complementarity-determining region)", "The small loops at the tip of an antibody that actually touch its target — nearly all of an antibody's specificity lives here."],
     "checkpoint-inhibitor": ["Checkpoint inhibitor", "A drug that releases one of the immune system's own “brakes,” freeing T-cells to attack cancer cells that would otherwise hide from them. Keytruda is the best-known example."],
+    "crispr": ["CRISPR", "A gene-editing technique that uses a guide molecule to take a cutting enzyme to a chosen spot in DNA; in research, used to disrupt genes one at a time and see what each does."],
     "de-novo-protein-design": ["De novo protein design", "Building a brand-new protein on a computer — choosing a sequence that folds into a shape and does a job no natural protein does — rather than tweaking an existing one."],
     "dna-methylation": ["DNA methylation", "A chemical tag attached to DNA that helps switch genes on or off without changing the underlying sequence; patterns of it are often disrupted in cancer."],
     "foundation-model": ["Foundation model", "A large AI model trained on a huge, broad dataset so it learns general patterns that can be reused or fine-tuned for many specific tasks."],
