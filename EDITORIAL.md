@@ -55,8 +55,10 @@ Start each issue with a short "The week in three lines" block above the stories:
   - `gpcr` — GPCR
   - `ind` — IND application
   - `kappa-opioid-receptor` — Kappa opioid receptor
+  - `lipid-nanoparticle` — Lipid nanoparticle (LNP)
   - `madrs` — MADRS scale
   - `mdd` — Major depressive disorder
+  - `miniprotein` — Miniprotein
   - `mrna` — mRNA
   - `neoantigen` — Neoantigen
   - `phase-trials` — Phase 1 / 2 / 3 trials
