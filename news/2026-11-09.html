@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This week in Biotech + AI — November 9, 2026 — Cultured Machine</title>
+<meta name="description" content="Curated, plain-English news at the intersection of biotech and AI: an AI model for childhood brain tumours, Claude helps solve a protein-shell structure, Westlake designs proteins from text, and new AI drug-discovery deals.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="../index.html">
+      <span class="logo">CM</span>
+      <span>Cultured Machine <span class="tagline">· biology learns to compute</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../explainers/index.html">Explainers</a>
+      <a href="2026-11-09.html" aria-current="page">News</a>
+      <a href="index.html">Archive</a>
+      <a href="../wiki/index.html">Glossary</a>
+      <a href="../about.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="eyebrow">Weekly digest</div>
+  <h1>This week in Biotech + AI</h1>
+  <p class="meta">Week of November 9, 2026 · 4 stories · ~5 min read</p>
+  <p class="lead">The stories worth your attention right now — each in plain English, with why it matters and a link to the source. Filter by topic below.</p>
+
+  <div class="callout">
+    <strong>The week in three lines:</strong>
+    <ul style="margin:10px 0 0; padding-left:20px;">
+      <li><a href="#story-mantis-brain-tumours">An AI model predicts childhood brain tumour survival and may spare some radiation.</a></li>
+      <li><a href="#story-anthropic-vault-particles">Anthropic’s Claude helps find and solve a protein-shell structure; it also made errors.</a></li>
+      <li><a href="#story-pinal-protein-text">Pinal designs proteins from plain-language text, but most designs still fail.</a></li>
+    </ul>
+  </div>
+
+  <div class="topic-filter" id="topicFilter">
+    <button class="topic-chip all" data-topic="all" aria-pressed="true"><span class="dot"></span>All</button>
+    <button class="topic-chip chip-oncology" data-topic="oncology" aria-pressed="false"><span class="dot"></span>Oncology</button>
+    <button class="topic-chip chip-discovery" data-topic="discovery" aria-pressed="false"><span class="dot"></span>Discovery</button>
+    <button class="topic-chip chip-protein" data-topic="protein" aria-pressed="false"><span class="dot"></span>Protein</button>
+    <button class="topic-chip chip-funding" data-topic="funding" aria-pressed="false"><span class="dot"></span>Funding</button>
+  </div>
+
+  <div id="stories">
+
+    <article class="news-card lead topic-oncology" data-topic="oncology" id="story-mantis-brain-tumours">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-oncology">Oncology</span>
+          <span class="date">November 3, 2026</span>
+        <button class="story-share" data-share-text="A Dana-Farber AI model predicts survival for children with two brain tumour types and suggests many could safely get lower radiation doses. Model predictions only, not tested in a trial. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>Dana-Farber researchers publish an AI model that estimates each child’s survival odds from a brain tumour, and suggests some children could receive less radiation</h3>
+        <p class="summary">Researchers led by Dana-Farber Cancer Institute reported on November 3 in <em>Nature Genetics</em> an AI model, called MANTIS, that predicts how likely an individual child with medulloblastoma or ependymoma, two childhood brain tumours, is to survive over time. Doctors currently place these children into broad risk groups. MANTIS aims to give a personal estimate instead.</p>
+        <p class="summary">The AI does the prediction. A neural network takes the tumour’s <a href="../wiki/index.html#dna-methylation">DNA methylation</a> profile, a test already used to help diagnose these tumours, plus copy-number changes, and learns from long-term patient follow-up. The ASCO Post reports a training and testing cohort of 2,786 patients and a concordance index (a score where 0.5 is chance and 1.0 is perfect) of up to 0.80, reported as better than current clinical indicators. The team then used the model to simulate lower radiation doses: it suggested that about 60% of children with average-risk medulloblastoma might do as well with a lower dose to the brain and spine, which the data linked to better thinking and learning outcomes.</p>
+        <div class="why"><strong>Why it matters:</strong> MANTIS is a research model and is not used in clinics. The 0.80 figure is a best case with a wide margin (±0.07), and the radiation finding comes from simulation on past patients, not from a trial that gave children lower doses. The press release gives no cohort details, and the ASCO Post does not say whether validation used outside data. Any change in treatment would first need prospective study.</div>
+        <p class="sources">Sources: <a href="https://www.eurekalert.org/news-releases/1150309">Dana-Farber news release (EurekAlert)</a> · <a href="https://ascopost.com/news/november-2026/pediatric-brain-tumors-prognostic-ai-model-guides-precision-therapy-choices/">The ASCO Post</a></p>
+      </div>
+    </article>
+
+    <article class="news-card topic-discovery" data-topic="discovery" id="story-anthropic-vault-particles">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-discovery">Discovery</span>
+          <span class="date">November 4, 2026</span>
+        <button class="story-share" data-share-text="Anthropic says Claude helped find bacterial relatives of vaults, mysterious protein shells, and solve one structure. It also made errors, one costing two weeks. Preprint. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>Anthropic reports that its Claude AI helped find bacterial versions of “vault” particles, hollow protein shells whose function is still unknown, and solve the structure of one</h3>
+        <p class="summary">Anthropic’s biology team said on November 4 that it used its Claude AI model, working with outside scientists, to find and characterise relatives of vaults, large hollow protein shells found in the cells of animals and other complex organisms. Vaults were discovered in 1986 and what they do is still unknown.</p>
+        <p class="summary">The AI did parts of the lab project as an <a href="../wiki/index.html#ai-agent">AI agent</a>. Claude searched a database of about 15 billion predicted proteins for vault relatives (found in 29 bacterial and four archaeal groups), designed DNA for producing them in <em>E. coli</em>, suggested a purification method that cut the time from about three days to about 90 minutes, and ran the software that turns <a href="../wiki/index.html#cryo-em">cryo-EM</a> images into a 3D structure. Of 44 candidates tested in a cell-free system, seven of 15 that were made as soluble protein formed vault-like particles, and cryo-EM confirmed four. The team solved one from a bacteriophage (a virus that infects bacteria): a shell of 96 protein copies, compared with 78 in a human vault.</p>
+        <div class="why"><strong>Why it matters:</strong> This is a company report with an accompanying preprint, not yet peer reviewed. Anthropic’s own account lists mistakes: one protocol included an additive that cost about two weeks, and Claude skipped a standard step and produced a flawed map. Cryo-EM processing also used hundreds of GPUs, more than many academic labs have. The vaults were made only in <em>E. coli</em>, and what they do in nature remains unknown. The result shows an AI model doing real laboratory-adjacent work with human oversight, not a new biological function.</div>
+        <p class="sources">Sources: <a href="https://www.anthropic.com/research/investigating-vault-particles-with-claude">Anthropic research post</a> · <a href="https://mindandmachineweekly.substack.com/p/mind-and-machine-weekly-8-november">Mind and Machine Weekly</a></p>
+      </div>
+    </article>
+
+    <article class="news-card topic-protein" data-topic="protein" id="story-pinal-protein-text">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-protein">Protein</span>
+          <span class="date">October 27, 2026</span>
+        <button class="story-share" data-share-text="Nature paper: an AI called Pinal designs proteins from a plain-language description. But reports say only 1 of 29 tested glowing-protein designs fluoresced. Most designs still fail. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>Westlake University researchers report in Nature an AI model, Pinal, that designs proteins from a plain-language description of what they should do</h3>
+        <p class="summary">Researchers at Westlake University in China published in <em>Nature</em> a protein-design model called Pinal. A user describes the job in plain language, such as breaking down PET plastic, and the model proposes a protein to do it.</p>
+        <p class="summary">The AI does the design in two steps. It is a <a href="../wiki/index.html#foundation-model">foundation model</a> with 16 billion parameters, trained on about 1.7 billion pairs of protein and text description, with structures predicted by <a href="../explainers/alphafold.html">AlphaFold</a>. One module turns the text into candidate protein shapes, and a second chooses the amino acids for each shape, a form of <a href="../wiki/index.html#de-novo-protein-design">de novo protein design</a>. The team tested four functions in the lab: a fluorescent protein, a plastic-degrading enzyme, an alcohol-processing enzyme and a metabolic helper protein. One designed helper protein raised the output of a carbon-dioxide-fixing pathway in <em>E. coli</em> by 1.7 times versus the natural protein.</p>
+        <div class="why"><strong>Why it matters:</strong> The results are modest and uneven. SingularityHub reports that for the glowing protein, 50,000 sequences were generated and 29 were tested, and only one fluoresced; for the helper protein, 5 of 20 candidates worked. Every design must still be built and tested, and the 1.7-fold gain is a single comparison in one pathway. The full paper is paywalled, so these details come from secondary reports of it.</div>
+        <p class="sources">Sources: <a href="https://bioengineer.org/ai-model-designs-working-proteins-from-plain-language-descriptions/">Scienmag (bioengineer.org)</a> · <a href="https://singularityhub.com/2026/11/02/scientists-can-now-ask-ai-to-design-proteins-using-plain-language/">SingularityHub</a> · <a href="https://doi.org/10.1038/s41586-026-11205-z">Nature paper (DOI)</a></p>
+      </div>
+    </article>
+
+    <article class="news-card topic-funding" data-topic="funding" id="story-biogeometry-funding">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-funding">Funding</span>
+          <span class="date">October 28, 2026</span>
+        <button class="story-share" data-share-text="Beijing AI drug company BioGeometry raised over $100 million for models that design antibodies and simulate cells. Headline performance figures are company-reported. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>Beijing’s BioGeometry raises more than $100 million for AI models that design drug molecules and simulate how cells respond to treatment</h3>
+        <p class="summary">BioGeometry, a Beijing company about four years old, announced on October 28 an extension of its Series A funding of $100 million, led by China Life Capital, bringing its total Series A past $100 million.</p>
+        <p class="summary">The company says it runs two AI models plus an agent. GeoFlow predicts the atomic structure of biological molecules and designs new ones, including antibodies, from scratch. GeoCell is a <a href="../wiki/index.html#virtual-cell">virtual cell</a> that predicts how cells respond to genes or drugs, to help choose targets and patients. An <a href="../wiki/index.html#ai-agent">AI agent</a> links both to an automated lab, so experimental results feed back into the models. The company says its third GeoFlow version averaged a 20% hit rate across more than 20 targets and found leads within three weeks, and that several <a href="../wiki/index.html#bispecific-antibody">bispecific antibody</a> programmes should reach an <a href="../wiki/index.html#ind">IND</a> filing in 2027.</p>
+        <div class="why"><strong>Why it matters:</strong> These figures come from the company, not independent testing. The report does not define “hit rate” or explain how it was measured, and the claim that an earlier version matched AlphaFold 3 gives no benchmark details. No clinical data is reported, and the 2027 filings are projections.</div>
+        <p class="sources">Sources: <a href="https://ventureburn.com/biogeometry-raises-100-million-ai-drug-design-models/">Ventureburn</a> · <a href="https://endpoints.news/beijing-based-biogeometry-gets-100m-for-ai-drug-rd/">Endpoints News</a> (headline only; paywalled)</p>
+      </div>
+    </article>
+
+    <article class="news-card topic-funding" data-topic="funding" id="story-chai-roche">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-funding">Funding</span>
+          <span class="date">November 6, 2026</span>
+        <button class="story-share" data-share-text="Roche will use Chai Discovery’s AI models, including Chai-3, in several drug discovery programs. No financial terms disclosed. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>Roche will use Chai Discovery’s AI models in several drug discovery programs</h3>
+        <p class="summary">Chai Discovery, a San Francisco company, announced on November 6 a collaboration in which Roche will use Chai’s AI models and platform in a number of its drug discovery programs. Chai says Roche follows Pfizer in June and GSK in October as partners this year.</p>
+        <p class="summary">The AI does the molecular design. Chai’s latest model, Chai-3, is described by the company as achieving high target success rates and <a href="../wiki/index.html#binding-affinity">binding affinity</a>, including to challenging targets, for protein-based drugs.</p>
+        <div class="why"><strong>Why it matters:</strong> The press release gives no financial terms, number of programs, therapeutic areas or timelines, and no benchmark figures for Chai-3. The performance claims are the company’s own. The deal shows pharma interest in the technology, not that any resulting drug works.</div>
+        <p class="sources">Sources: <a href="https://biospace.com/press-releases/chai-discovery-announces-collaboration-with-roche-in-ai-driven-drug-discovery">Chai Discovery press release (BioSpace)</a></p>
+      </div>
+    </article>
+
+    <article class="news-card topic-discovery" data-topic="discovery" id="story-etcelera-flagship">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-discovery">Discovery</span>
+          <span class="date">October 29, 2026</span>
+        <button class="story-share" data-share-text="Flagship merged three biotech companies into Etcelera to model cause and effect in disease with AI. No funding or data disclosed, and the claimed gain in success rates is unproven. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>Flagship Pioneering merges three of its biotech companies into one, Etcelera, to use AI to work out the causes of disease</h3>
+        <p class="summary">Flagship Pioneering, the venture firm that creates biotech companies, announced on October 29 that it has merged Cellarity, Etiome and Empress Therapeutics into a single company, Etcelera, based in Somerville, Massachusetts. It aims to find drug targets and small-molecule medicines with a better chance of clinical success.</p>
+        <p class="summary">The AI does the cause-and-effect analysis. Etiome contributes a machine-learning engine that combines several kinds of molecular measurement, single-cell data and electronic health records to track how disease changes over time. Empress contributes a platform linking genetic sequences to the small molecules cells make. Flagship says it combines these with its own AI to model causes in disease rather than correlations.</p>
+        <div class="why"><strong>Why it matters:</strong> No funding, investors or deal terms were disclosed. The claim of a greater probability of clinical success is the company’s and comes with no supporting data. The only clinical-stage drug mentioned, from Cellarity, is in early testing. This is a restructuring of existing companies, so nothing here shows the combined approach works.</div>
+        <p class="sources">Sources: <a href="https://pharmaphorum.com/news/flagship-joins-three-biotechs-together-form-etcelera">pharmaphorum</a> · <a href="https://endpoints.news/flagship-pioneering-merges-three-of-its-companies-for-ai-drug-discovery/">Endpoints News</a> (headline only; paywalled)</p>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="callout" style="margin-top:36px;">
+    <strong>How this digest is made:</strong> stories are gathered from trusted biotech and AI sources, summarized in plain English, and fact-checked against the primary source before publishing. Each links out so you can go deeper. <a href="../about.html">More on the process →</a>
+  </div>
+
+  <div style="margin-top:16px; text-align:center;">
+    <a class="btn" href="https://twitter.com/intent/tweet?text=This%20week%20in%20Biotech%20%2B%20AI%20%28November%209%2C%202026%29%20%E2%80%94%20Cultured%20Machine&url=https%3A%2F%2Fhi-kay.github.io%2Fcultured-machine%2Fnews%2F2026-11-09.html" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      Share on X
+    </a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© <span id="year"></span> Cultured Machine · Biotech learns to compute.</div>
+    <div><a href="../about.html">About</a> · <a href="../explainers/alphafold.html">Explainers</a> · <a href="../index.html">Home</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* Topic filter */
+(function(){
+  const filter = document.getElementById('topicFilter');
+  const chips = [...filter.querySelectorAll('.topic-chip')];
+  const cards = [...document.querySelectorAll('#stories .news-card')];
+  filter.addEventListener('click', e => {
+    const chip = e.target.closest('.topic-chip');
+    if (!chip) return;
+    chips.forEach(c => c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'));
+    const topic = chip.dataset.topic;
+    cards.forEach(card => {
+      const show = (topic === 'all') || (card.dataset.topic === topic);
+      card.classList.toggle('hidden', !show);
+    });
+  });
+})();
+</script>
+<script src="../js/glossary-tooltip.js" defer></script>
+<script src="../js/share-story.js" defer></script>
+</body>
+</html>

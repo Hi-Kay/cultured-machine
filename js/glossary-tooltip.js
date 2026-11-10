@@ -20,6 +20,7 @@
     "cdr": ["CDR (complementarity-determining region)", "The small loops at the tip of an antibody that actually touch its target — nearly all of an antibody's specificity lives here."],
     "checkpoint-inhibitor": ["Checkpoint inhibitor", "A drug that releases one of the immune system's own “brakes,” freeing T-cells to attack cancer cells that would otherwise hide from them. Keytruda is the best-known example."],
     "crispr": ["CRISPR", "A gene-editing technique that uses a guide molecule to take a cutting enzyme to a chosen spot in DNA; in research, used to disrupt genes one at a time and see what each does."],
+    "cryo-em": ["Cryo-EM", "A method that freezes samples and images thousands of single particles with an electron microscope, then combines the images by software into a 3D map of a molecule's shape."],
     "de-novo-protein-design": ["De novo protein design", "Building a brand-new protein on a computer — choosing a sequence that folds into a shape and does a job no natural protein does — rather than tweaking an existing one."],
     "dna-methylation": ["DNA methylation", "A chemical tag attached to DNA that helps switch genes on or off without changing the underlying sequence; patterns of it are often disrupted in cancer."],
     "foundation-model": ["Foundation model", "A large AI model trained on a huge, broad dataset so it learns general patterns that can be reused or fine-tuned for many specific tasks."],
@@ -43,6 +44,7 @@
     "transcription-factor": ["Transcription factor", "A protein that controls which genes in a cell are switched on or off, and so which “identity” a cell takes on."],
     "transcriptome": ["Transcriptome", "The full set of genes a cell is actively using at a given moment — a snapshot of its state that AI models can learn to interpret."],
     "tslp": ["TSLP", "A signaling protein released by airway cells that sits near the top of the inflammatory chain behind asthma; blocking it early can dial down several downstream immune pathways at once."],
+    "virtual-cell": ["Virtual cell", "A computer model trained on real cell measurements to predict how a cell responds to a change, such as a gene knockout or a drug, before the experiment is run."],
     "world-model": ["World model", "An AI system that holds an evolving internal simulation of a system's state — like a virtual cell — that can be perturbed and queried repeatedly, rather than answering one question at a time."]
   };
 
