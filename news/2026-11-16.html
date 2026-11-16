@@ -30,14 +30,14 @@
   <div class="eyebrow">Weekly digest</div>
   <h1>This week in Biotech + AI</h1>
   <p class="meta">Week of November 16, 2026 · 4 stories · ~4 min read</p>
-  <p class="lead">The stories worth your attention right now — each in plain English, with why it matters and a link to the source. Filter by topic below.</p>
+  <p class="lead">Four stories, each in a few plain sentences, with one line on why it matters and one on what the news does not prove.</p>
 
   <div class="callout">
     <strong>The week in three lines:</strong>
-    <ul style="margin:10px 0 0; padding-left:20px;">
-      <li><a href="#story-alphagenome-2">DeepMind’s AlphaGenome 2 predicts DNA effects by cell type; research use only.</a></li>
-      <li><a href="#story-argenx-unp">argenx pays up to $1.15 billion for a machine-learning peptide company.</a></li>
-      <li><a href="#story-sino-4rise">A new lab service aims to test AI-designed proteins faster; claims are the company’s.</a></li>
+    <ul class="tldr">
+      <li><a href="#story-alphagenome-2"><strong>DeepMind can now ask its DNA model one cell type at a time.</strong> Same gene change, different answer in a gut cell and a blood cell.</a></li>
+      <li><a href="#story-argenx-unp"><strong>A billion dollars for pills made of ring-shaped proteins.</strong> argenx is buying the machine learning that designs them.</a></li>
+      <li><a href="#story-sino-4rise"><strong>AI can draw a thousand proteins a day. Labs can't test them that fast.</strong> A new service is selling speed at that bottleneck.</a></li>
     </ul>
   </div>
 
@@ -60,7 +60,8 @@
         <h3>Google DeepMind releases AlphaGenome 2, an AI model that predicts how a change in DNA alters gene activity in a chosen type of cell</h3>
         <p class="summary">Google DeepMind said on November 11 that AlphaGenome 2 can predict how a DNA change affects gene activity in one specific cell type, and that it finds nearly twice as many changes that alter gene expression as the previous best model. Most genetic variants linked to disease lie outside genes, in <a href="../wiki/index.html#non-coding-variant">non-coding DNA</a> that switches genes on and off, and the effect of a switch depends on the cell.</p>
         <p class="summary">The AI does the prediction. The model reads a stretch of one million DNA letters plus one named cell type or state and predicts that cell’s gene activity, chromatin accessibility (how open the DNA is to being read) and, new in this version, <a href="../wiki/index.html#dna-methylation">DNA methylation</a>. DeepMind says it was trained on bulk and single-cell data from human and mouse samples, covering more than 100 million cells across 68 tissues. On a test set of 28 immune cell types, it identified causal variants 30% of the time versus 16% for the original model fine-tuned on the same single-cell data. In one example it singled out a known regulatory variant that overactivates the <em>ETS2</em> gene in gut immune cells in inflammatory bowel disease.</p>
-        <div class="why"><strong>Why it matters:</strong> This is a company announcement; the figures are DeepMind’s and the post gives no independent replication. The model is labelled research-only and has not been validated for clinical or diagnostic use. A better prediction of which variant matters is a step toward choosing drug targets, not a drug. It is available for non-commercial research through an API.</div>
+        <div class="why"><strong>Why it matters:</strong> Most disease-linked DNA changes sit in the switches between genes, and this is the first model that can say which cell the switch actually matters in.</div>
+        <p class="catch"><strong>The catch:</strong> DeepMind's own figures, with no outside replication, and the model is labelled research-only. Picking the right variant is a long way from having a drug.</p>
         <p class="sources">Sources: <a href="https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/">Google DeepMind blog</a></p>
       </div>
     </article>
@@ -75,7 +76,8 @@
         <h3>argenx agrees to buy Unnatural Products, a company that uses machine learning to design oral peptide drugs, for up to about $1.15 billion</h3>
         <p class="summary">The Dutch-Belgian drugmaker argenx announced on November 9 that it will acquire Unnatural Products, a California company working on <a href="../wiki/index.html#macrocyclic-peptide">macrocyclic peptides</a>: small ring-shaped protein fragments that could be made as pills rather than injections. argenx pays $550 million in cash upfront and up to $595 million more if development and regulatory milestones are met.</p>
         <p class="summary">The AI does part of the design work. In its filing, argenx says the platform combines parallel experimentation with machine learning, which in practice means the company makes and tests many ring-shaped candidates at once and uses the results to guide the next round of designs. The filing does not say how much of the design is done by the model.</p>
-        <div class="why"><strong>Why it matters:</strong> No performance data for the platform was released, and the $1.15 billion is a maximum that depends on unspecified milestones. The deal has not closed. Industry experts quoted by PharmTech note that oral peptides still struggle to get enough drug into the bloodstream. The purchase shows an established company paying for the approach, not that it yields working medicines.</div>
+        <div class="why"><strong>Why it matters:</strong> Protein drugs almost always have to be injected, so an established drugmaker is betting real money that AI design can turn some of them into pills.</div>
+        <p class="catch"><strong>The catch:</strong> The $1.15 billion is a ceiling tied to unnamed milestones, the deal has not closed, and no data on the platform was released. Oral peptides still struggle to get enough drug into the blood.</p>
         <p class="sources">Sources: <a href="https://www.sec.gov/Archives/edgar/data/0001697862/000110465926124060/tm2629301d2_ex99-1.htm">argenx filing (SEC Form 6-K)</a> · <a href="https://www.pharmtech.com/view/ai-guided-macrocycle-discovery-lands-at-argenx-in-1-15b-deal">PharmTech</a></p>
       </div>
     </article>
@@ -90,7 +92,8 @@
         <h3>French drugmaker Pierre Fabre partners with XtalPi to design new small-molecule cancer drug candidates with AI</h3>
         <p class="summary">Pierre Fabre, a French drug company, and XtalPi, a Chinese AI drug-discovery company, announced on November 9 a collaboration to design new small-molecule medicines, with cancer first and possibly skin disease and rare diseases later. The targets have not been named, but the partners describe them as historically hard to drug.</p>
         <p class="summary">The AI does the initial design. XtalPi uses its AI and robotics platform to design candidate molecules from scratch. Pierre Fabre then chooses the best compounds and runs clinical and commercial development. The agreement includes an upfront payment, milestone payments and a share of later revenue.</p>
-        <div class="why"><strong>Why it matters:</strong> The release gives no amounts, no targets and no results from the platform. It is an agreement to start work, and any resulting candidate would still need years of testing before it could reach patients.</div>
+        <div class="why"><strong>Why it matters:</strong> Another mid-size drugmaker is outsourcing the first step of drug discovery to a computer instead of building the capability in-house.</div>
+        <p class="catch"><strong>The catch:</strong> No amounts, no targets, no results from the platform. This is an agreement to start work; anything that comes out of it needs years of testing.</p>
         <p class="sources">Sources: <a href="https://www.prnewswire.com/news-releases/laboratoires-pierre-fabre-and-xtalpi-announce-an-ai-driven-collaboration-focused-on-drug-discovery-302932390.html">Joint press release (PR Newswire)</a></p>
       </div>
     </article>
@@ -105,7 +108,8 @@
         <h3>Sino Biological launches a lab service to test quickly whether AI-designed protein binders actually stick to their targets</h3>
         <p class="summary">Sino Biological, a protein-reagent company, announced on November 13 a service called 4RISE that checks, in the lab, whether proteins designed by AI bind the target they were designed for. AI design tools propose many candidates, but each one still has to be made and measured.</p>
         <p class="summary">The AI sits upstream: other tools design the binders, and this service supplies the measurements. The company says it makes proteins without living cells in about 3 hours and can return binding data in as little as 3 days, and that the results arrive in a format meant to be fed back into AI models.</p>
-        <div class="why"><strong>Why it matters:</strong> This is a promotional press release. The 3-hour and 3-day figures are best cases, the “above 99%” success rate is limited to “established workflows,” and no independent data is given. It shows where the bottleneck is: AI-generated designs are cheap, and lab confirmation is the slow step.</div>
+        <div class="why"><strong>Why it matters:</strong> Designing proteins is now the cheap part, and the slow step is checking in a lab whether they actually work.</div>
+        <p class="catch"><strong>The catch:</strong> This is a promotional press release. The 3-hour and 3-day figures are best cases, the "above 99%" success rate only covers "established workflows," and there is no independent data.</p>
         <p class="sources">Sources: <a href="https://www.prnewswire.com/news-releases/sino-biological-launches-4rise-high-throughput-wet-lab-services-to-accelerate-ai-driven-drug-discovery-302938741.html">Sino Biological press release (PR Newswire)</a></p>
       </div>
     </article>

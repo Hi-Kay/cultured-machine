@@ -287,9 +287,40 @@ figcaption { font-size: .88rem; color: var(--ink-soft); text-align: center; marg
 }
 .glossary-popover-more:hover { color: #fff; text-decoration: underline; }
 
+
+/* ---------- Explainer helpers ---------- */
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin: 24px 0; counter-reset: step; }
+.step {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 16px; position: relative; counter-increment: step;
+}
+.step::before {
+  content: counter(step); display: grid; place-items: center;
+  width: 26px; height: 26px; border-radius: 50%; margin-bottom: 8px;
+  background: var(--accent); color: #fff; font-weight: 800; font-size: .85rem;
+}
+.step .emoji { font-size: 1.6rem; line-height: 1; display: block; margin-bottom: 6px; }
+.step strong { display: block; margin-bottom: 4px; }
+.step p { margin: 0; font-size: .9rem; color: var(--ink-soft); }
+.big-idea {
+  font-size: 1.25rem; font-weight: 700; line-height: 1.4; letter-spacing: -.01em;
+  border-left: 4px solid var(--accent-2); padding: 4px 0 4px 16px; margin: 28px 0;
+}
+.next-read { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 28px 0 0; }
+.viz svg text { font-family: var(--font); }
+
+/* ---------- Digest: one-line "why it matters" + "the catch" ---------- */
+.news-card .why { border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; color: var(--ink); margin: 0 0 8px; }
+.news-card .catch { font-size: .9rem; color: var(--ink-soft); margin: 0 0 14px; padding: 0 14px; }
+.news-card .catch strong { color: var(--ink); }
+.tldr { list-style: none; margin: 10px 0 0; padding: 0; }
+.tldr li { margin: 6px 0; }
+.tldr a { color: var(--ink); }
+.tldr a strong { color: var(--accent); }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 640px) {
-  .card-grid { grid-template-columns: 1fr; }
+  .card-grid, .next-read { grid-template-columns: 1fr; }
   .hero h1 { font-size: 2rem; }
   h1 { font-size: 1.8rem; }
   .nav-links { gap: 14px; font-size: .9rem; }

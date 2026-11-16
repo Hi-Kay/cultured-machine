@@ -45,7 +45,7 @@
     <div class="nav-links">
       <a href="../index.html">Home</a>
       <a href="index.html" aria-current="page">Explainers</a>
-      <a href="../news/2026-09-28.html">News</a>
+      <a href="../news/2026-11-16.html">News</a>
       <a href="../news/index.html">Archive</a>
       <a href="../wiki/index.html">Glossary</a>
       <a href="../about.html">About</a>
@@ -58,10 +58,10 @@
   <h1>What is a protein language model?</h1>
   <p class="meta">~7 min read · Concepts: protein sequences, masked prediction, embeddings · Published July 2026</p>
 
-  <p class="lead">ChatGPT learned to write by predicting the next word, billions of times, until it absorbed the hidden rules of language. A protein language model does the same thing — but its "language" is the 20-letter alphabet of life. Feed it enough real proteins and, without ever being told any biology, it starts to grasp which sequences fold, function, and survive. Here's the intuition, no chemistry degree required.</p>
+  <p class="lead">ChatGPT learned to write by guessing the next word, billions of times. A protein language model plays the same game with a different alphabet: the 20 letters that all proteins are written in. Nobody teaches it any biology. It picks it up along the way.</p>
 
   <div class="callout">
-    <strong>The one-sentence version:</strong> a protein language model reads protein sequences the way a text model reads sentences, and by learning to fill in missing letters it quietly learns the rules of what makes a protein real.
+    <strong>The whole story in one sentence:</strong> Hide a letter in a protein, make the AI guess it, repeat billions of times, and it ends up knowing what a real protein looks like.
   </div>
 
   <h2>1. Proteins are written in a 20-letter alphabet</h2>
@@ -91,20 +91,20 @@
   <p>Notice what's happening: the model isn't looking anything up. From the surrounding letters alone it forms an opinion about which amino acid belongs — and often it's confident about a small group with similar chemistry, because in a real protein those positions are picky.</p>
 
   <h2>3. What the model learns without being told</h2>
-  <p>To get good at filling in blanks, the model has to internalise things no one programmed into it:</p>
+  <p>To get good at this guessing game, the model has to pick up things nobody told it:</p>
   <ul>
     <li><strong>Chemistry.</strong> Some positions must stay oily (buried in the protein's core, away from water); others must stay charged (out on the surface). The model learns which is which.</li>
     <li><strong>Grammar of folding.</strong> Certain letter patterns form spirals (helices) or strands; the model learns these recurring "phrases."</li>
     <li><strong>What's forbidden.</strong> Most random changes would break the protein. The model learns which swaps a real protein would never tolerate.</li>
   </ul>
-  <p>Along the way it builds an internal summary of each protein — a list of numbers called an <strong>embedding</strong> — that captures its gist, the way a text model captures the meaning of a sentence. Proteins with similar jobs end up with similar embeddings, even if their letters look quite different. That numerical fingerprint is what makes the model useful for the tasks below.</p>
+  <p>Along the way it gives every protein a kind of fingerprint: a list of numbers called an <strong>embedding</strong>. Proteins with similar jobs get similar fingerprints, even when their letters look quite different. That fingerprint is what makes the model so useful.</p>
 
   <div class="callout">
     <strong>Structure models vs. language models:</strong> <a href="alphafold.html">AlphaFold</a> answers "what 3D shape does this sequence fold into?" A protein language model answers "does this sequence look like something evolution would actually make?" One knows what <em>fits</em> in space; the other knows what looks <em>natural</em>. The most powerful tools today use both together.
   </div>
 
   <h2>4. What you can actually do with it</h2>
-  <p>Once a model knows what "natural" looks like, several useful things fall out for free.</p>
+  <p>Once a model knows what "natural" looks like, you get three useful tools almost for free.</p>
   <p><strong>Judge a mutation.</strong> Change one letter in a protein and ask the model: does this still look like a real protein, or something evolution would reject? A confident "that looks wrong" is a strong hint that the mutation is damaging — which helps flag disease-causing variants in a person's DNA, no lab experiment required.</p>
 
   <div class="viz" id="mutViz">
@@ -129,19 +129,23 @@
   </div>
 
   <h2>5. Where it falls short</h2>
-  <p>A protein language model only knows what it has read. Proteins from families with few known relatives — including many fast-changing immune and viral proteins — are harder, because the model has seen fewer examples of "normal." It judges what looks natural, but "natural-looking" is not the same as "does the specific job you want": a sequence can look perfectly plausible and still be useless for your target. And like any model trained on the past, it inherits the gaps and biases of the databases it learned from. As with AlphaFold, a prediction is a well-educated hypothesis — the lab still has the final say.</p>
+  <ul>
+    <li><strong>It only knows what it has read.</strong> Rare proteins, and fast-changing ones like many virus and immune proteins, are harder because it has seen fewer examples.</li>
+    <li><strong>Natural-looking is not the same as useful.</strong> A protein can look perfectly normal and still be useless for the job you want.</li>
+    <li><strong>It is a guess.</strong> A very educated one, but the lab still has the final word.</li>
+  </ul>
 
   <div class="callout">
-    <strong>The takeaway:</strong> a protein language model is autocomplete for biology. By doing nothing but guessing hidden letters across life's entire library, it absorbs the rules of what makes a protein real — and that quiet, general understanding is now a building block inside drug discovery, genetics, and protein design. Related: <a href="../wiki/index.html#foundation-model">foundation models</a>, <a href="../wiki/index.html#protein-language-model">protein language model (glossary)</a>.
+    <strong>Why it matters:</strong> One model that simply learned to guess hidden letters can now flag harmful mutations, suggest new proteins, and find proteins by what they do. Related: <a href="../wiki/index.html#foundation-model">foundation models</a>, <a href="../wiki/index.html#protein-language-model">protein language model (glossary)</a>.
   </div>
 
-  <p class="meta" style="margin-top:32px;">Next explainer on the roadmap: how AI designs a new antibody, step by step. Spotted an error or have a suggestion? This explainer is open source — corrections welcome.</p>
+  <p class="meta" style="margin-top:32px;">Next read: <a href="ai-protein-design.html">how AI invents a protein that never existed</a>. Spotted an error or have a suggestion? This explainer is open source — corrections welcome.</p>
 </main>
 
 <footer class="site-footer">
   <div class="footer-inner">
     <div>© <span id="year"></span> Cultured Machine · Biotech learns to compute.</div>
-    <div><a href="alphafold.html">AlphaFold explainer</a> · <a href="../news/2026-09-28.html">News</a> · <a href="../index.html">Home</a></div>
+    <div><a href="alphafold.html">AlphaFold explainer</a> · <a href="../news/2026-11-16.html">News</a> · <a href="../index.html">Home</a></div>
   </div>
 </footer>
 

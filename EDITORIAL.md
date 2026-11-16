@@ -12,12 +12,23 @@ This is a **Biotech + AI** site. The AI angle is the reason a story belongs here
 
 ## Voice and language
 
+**The test for every sentence: would a smart 15-year-old understand it on the first read, and want to keep reading?** If not, rewrite it. This is the single most important rule on this page.
+
+- **Short sentences.** One idea each. If a sentence has two commas and a semicolon, it is two sentences.
+- **Everyday words over formal ones.** "uses" not "utilises", "shows" not "demonstrates", "about" not "approximately", "tiny" not "sub-micron". Never write "leverage", "robust", "novel", "paradigm", "facilitate", "underscores".
+- **Concrete over abstract.** Not "improved therapeutic outcomes" but "children needed less radiation". Not "a modality with enhanced tissue specificity" but "a capsule that reaches the liver instead of spreading everywhere".
+- **A comparison beats an adjective.** "small enough to slip between cells" tells the reader more than "small". One good comparison per story is plenty; do not stack them.
 - Plain English, but medically precise. Define jargon inline on first use; do not avoid technical terms, just explain them.
 - **Prefer the name a general reader would recognise over the technical one.** Use the brand a lay reader knows (e.g. "Keytruda") and skip the generic chemical name (e.g. "pembrolizumab") unless it is genuinely needed. Do not stack synonyms or list a drug's every alias — pick one name and move on. Internal code names (e.g. "mRNA-4157", "intismeran autogene") usually add clutter, not clarity; leave them out unless the story is about the name itself.
 - Lead with what the thing *is* and why it matters to a person before the trial details. Borrow the clearest framing from the source (analogies, simple contrasts) rather than restating dense clinical language.
 - **No slang or idiom.** Phrases like "eat real signals for breakfast", "level up", "game-changer" are not permitted. Avoid over-cute lines (e.g. "the $435 million question") — state the real open question plainly.
-- Tone: smart, plain, slightly skeptical. Never hype a result; never dismiss one unfairly. State what was shown and what was not.
-- Active voice preferred. Keep sentences short enough to parse on first read.
+- Tone: smart, plain, slightly skeptical, and genuinely interested. Never hype a result; never dismiss one unfairly. State what was shown and what was not. Dry is not the same as plain — the writing should sound like a clever friend explaining something over coffee, not like a regulatory filing.
+- Active voice, always. "The model predicts", not "predictions are made by the model".
+- Do not open a story with a date, a company's legal name, or a filing type. Open with the thing that happened.
+
+## The page lead
+
+The `<p class="lead">` under the title says what the reader is getting, in one plain sentence — e.g. "Four stories, each in a few plain sentences, with one line on why it matters and one on what the news does not prove." Update the story count each week. Do not reuse the old "The stories worth your attention right now…" line.
 
 ## Story structure (apply to every story)
 
@@ -26,13 +37,53 @@ Write each story in this order so the reader can stop early and still have the p
 1. **The news in one sentence.** Open the summary with a single plain sentence a non-expert could repeat at dinner — what happened and who did it. Do not open with background or trial mechanics.
 2. **Context** — the one or two things the reader needs to understand why this is not trivial.
 3. **The AI mechanism** — name explicitly where the computation does the work (see "Story selection" above). This is the reason the story is here; never let it be implied.
-4. **The honest caveat** goes in the "Why it matters" block: what was *not* shown, the stage it's really at, and what would have to be true for it to matter.
+4. **"Why it matters"** — see the next section. One sentence, no caveats.
+5. **"The catch"** — the honest caveat, in its own block right after.
 
 Keep summaries to 3–5 sentences. If a summary runs past six, it is doing too much — cut, don't cram.
 
-## Weekly TL;DR
+## "Why it matters" and "The catch" — two separate blocks
 
-Start each issue with a short "The week in three lines" block above the stories: three one-line bullets, each naming the single most important story in a topic, so a skimmer gets value in ten seconds. Keep each bullet under ~15 words and link it to the relevant story anchor on the page.
+These used to be one paragraph and it muddled both jobs. Split them. Every story gets both, in this order:
+
+```html
+<div class="why"><strong>Why it matters:</strong> ONE sentence.</div>
+<p class="catch"><strong>The catch:</strong> the honest limits.</p>
+```
+
+**"Why it matters" is exactly one sentence** — never two, never a list of caveats. It answers: *why should a reader who is not in this field care at all?* Reach for the human stake (a patient, a cost, a thing that was impossible last year), not a restatement of the headline.
+
+- Good: "Radiation to a child's brain costs them later thinking and learning ability, so knowing which children can safely get less of it is worth a great deal."
+- Good: "Designing proteins is now the cheap part, and the slow step is checking in a lab whether they actually work."
+- Bad (restates the news): "This is a company announcement; the figures are DeepMind's and the post gives no independent replication."
+- Bad (hedging, not a reason to care): "A better prediction of which variant matters is a step toward choosing drug targets, not a drug."
+
+If the honest answer is that it matters mainly as a signal about the field — money moving, pharma taking the approach seriously, a method replacing an old one — say that plainly. That is a legitimate reason to care.
+
+**"The catch"** carries everything the old block mixed in: what was not shown, whose figures these are, whether it is peer reviewed, what stage it is really at, what would have to be true for it to matter. Skeptical but fair — if something cuts in the result's favour (sequences released for others to check, an independent replication), say so here too. One to three sentences.
+
+## Weekly TL;DR — "The week in three lines"
+
+Three bullets above the stories, so a skimmer gets real value in ten seconds. This is the most-read block on the page; write it last, when you know what the issue actually says.
+
+Each bullet is **a bold hook plus a short second clause**, wrapped in one link to the story anchor:
+
+```html
+<ul class="tldr">
+  <li><a href="#story-id"><strong>The surprising bit, in plain words.</strong> The detail that earns it.</a></li>
+</ul>
+```
+
+- The bold part is the thing that would make someone look up — a surprise, a number, a reversal. Not the headline rewritten.
+- The second clause is the concrete detail: the number, the limit, the twist.
+- Keep each bullet under about 25 words in total.
+- Use `class="tldr"` (styled in `css/style.css`), not inline list styles.
+
+Good: **"AI can draw a thousand proteins a day. Labs can't test them that fast."** A new service is selling speed at that bottleneck.
+Good: **"You can now describe a protein in plain English and get a design back."** Of 29 built in a lab, one worked.
+Bad: "A new lab service aims to test AI-designed proteins faster; claims are the company's." — that is a headline with a disclaimer stapled on.
+
+Do not put the caveat in the TL;DR. It belongs in "The catch".
 
 ## Glossary links
 
@@ -94,6 +145,7 @@ The site has standalone explainers in `/explainers/`. When a story leans on a co
 
 - Protein folding / structure prediction / AlphaFold → `../explainers/alphafold.html`
 - Protein language models / ESM / "learns what a natural sequence looks like" / embeddings → `../explainers/protein-language-models.html`
+- De novo protein design / diffusion models for proteins / designed binders / miniproteins / "designed from scratch" → `../explainers/ai-protein-design.html`
 
 ## Terms suggested for future glossary additions
 
