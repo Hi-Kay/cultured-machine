@@ -38,7 +38,7 @@ one. Read a paragraph aloud: if it has one rhythm throughout, break it.
 
 **Never use these constructions:**
 - "Not only X, but also Y" / "It's not X, it's Y" / "not just X, it's Y"
-- Corrective framing nobody asked for: "should be treated as X rather than Y", "this does not by itself establish", "should not be confused with"
+- Corrective framing nobody asked for: "should be treated as X rather than Y", "it is less X than Y", "this does not by itself establish", "should not be confused with"
 - Trailing "-ing" clauses that assert importance: "..., highlighting the growing role of...", "..., underscoring the shift toward...", "..., reflecting broader trends in..."
 - Rule of three: "fast, cheap and accurate", "designed, tested and validated". Two items or four. Not three.
 - Copula dodging: "serves as", "stands as", "represents a", "marks a", "functions as". The word is "is".
@@ -109,14 +109,24 @@ The other version that works is **leading with the result**, when the result is 
 "MIT researchers stored a dried mRNA vaccine at 37°C for two months. When tested in mice, it still
 produced antibody responses comparable to fresh vaccine."
 
-## Rhythm: punchy is not the same as choppy
+## Rhythm: is the short sentence doing work?
 
-Varying sentence length does not mean writing in fragments. A run of three-word sentences is its own
-tic, and it reads as breathless rather than confident. The target is an even, unhurried voice that
-occasionally lands a short sentence for emphasis — not one that shouts every third line.
+Short sentences are good. A *habit* of short sentences is not. The two look identical if you edit by
+rule instead of by ear, and smoothing everything flat is as bad as chopping everything up. This
+guide got that wrong once and flattened several lines that were working, so the test is not length.
+The test is whether the short run is doing a job.
 
-- Too choppy: "So why not try every shape? Drag this. It is not a paradox. It is a clue."
-- Better: "So why not let a computer try every possible shape and keep the best one? Pull the slider below and watch what happens to the number."
+**Keep it when it is doing one of these:**
+- Mirroring the structure it describes. "Take a real protein. Cover one letter. Ask the model what is underneath." Three steps, three sentences.
+- Marking a pivot. A standalone question that the whole section turns on deserves its own line: "Does it fold back into the shape you drew?"
+- Landing a conclusion after a long build. "It is not a paradox. It is a clue."
+- Giving an instruction. "Drag the slider."
+
+**Cut it when it is just nervous energy** — three fragments in a row that could be one clear sentence,
+or a short sentence used for drama where nothing dramatic happened.
+
+The surrounding default is still an even, unhurried voice. Short sentences are the emphasis, not the
+baseline. If a whole paragraph is staccato, nothing in it is emphasised.
 
 ## Caveats inside sentences
 
