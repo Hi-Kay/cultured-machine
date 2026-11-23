@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This week in Biotech + AI — November 23, 2026 — Cultured Machine</title>
+<meta name="description" content="Curated, plain-English news at the intersection of biotech and AI: Isomorphic Labs raises $5 billion and signs a cancer deal with Merck, Boltz raises $110 million for open molecular-design models, an AI virtual scientist designs working RNA from plain English, Noetik trains cancer world models on Memorial Sloan Kettering data, and Genesis Molecular AI releases its potency training set.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="../index.html">
+      <span class="logo">CM</span>
+      <span>Cultured Machine <span class="tagline">· biology learns to compute</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../explainers/index.html">Explainers</a>
+      <a href="2026-11-23.html" aria-current="page">News</a>
+      <a href="index.html">Archive</a>
+      <a href="../wiki/index.html">Glossary</a>
+      <a href="../about.html">About</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="eyebrow">Weekly digest</div>
+  <h1>This week in Biotech + AI</h1>
+  <p class="meta">Week of November 23, 2026 · 5 stories · ~5 min read</p>
+  <p class="lead">Five stories, each in a few plain sentences, with one line on why it matters and one on what the news does not prove.</p>
+
+  <div class="callout">
+    <strong>The week in three lines:</strong>
+    <ul class="tldr">
+      <li><a href="#story-isomorphic-merck"><strong>A drug-design company raised $5 billion without ever dosing a patient.</strong> Two days later, Merck hired its software for a cancer target.</a></li>
+      <li><a href="#story-rhoagent"><strong>You can now describe an RNA molecule in plain English and get a working one back.</strong> One design cut its target six times faster than the expert version.</a></li>
+      <li><a href="#story-boltz"><strong>Free software for predicting how drugs grip proteins has been downloaded five million times.</strong> Its makers just raised $110 million.</a></li>
+    </ul>
+  </div>
+
+  <div class="topic-filter" id="topicFilter">
+    <button class="topic-chip all" data-topic="all" aria-pressed="true"><span class="dot"></span>All</button>
+    <button class="topic-chip chip-funding" data-topic="funding" aria-pressed="false"><span class="dot"></span>Funding</button>
+    <button class="topic-chip chip-discovery" data-topic="discovery" aria-pressed="false"><span class="dot"></span>Discovery</button>
+  </div>
+
+  <div id="stories">
+
+    <article class="news-card lead topic-funding" data-topic="funding" id="story-isomorphic-merck">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-funding">Funding</span>
+          <span class="date">November 17–19, 2026</span>
+        <button class="story-share" data-share-text="Isomorphic Labs raised $5 billion for drug-design software and signed a cancer deal with Merck two days later. It has still never put a drug into a patient. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>Isomorphic Labs raises $5 billion for its drug-design software, then signs a cancer deal with Merck two days later</h3>
+        <p class="summary">Isomorphic Labs, the London company spun out of Google DeepMind to design drugs by computer, said on November 17 that it had raised $5 billion. On November 19, Merck said it would use Isomorphic’s software to design small-molecule drugs against a cancer target it has not named. The round was co-led by Greenoaks and Sequoia Capital, with Alphabet investing again, and takes the company’s total funding past $7.7 billion.</p>
+        <p class="summary">The AI does the design. Isomorphic’s engine, IsoDDE, <a href="../explainers/alphafold.html">predicts the 3D shape</a> of a target protein, works out how a candidate molecule would sit in it, and estimates the <a href="../wiki/index.html#binding-affinity">binding affinity</a> — how tightly the two would hold together. In the Merck agreement, Isomorphic runs that computer work using some of Merck’s own lab data and hands over molecule designs; Merck does all the lab testing, the trials, the manufacturing and the selling. Isomorphic says the money will go to maturing IsoDDE, moving into new areas of biology, and building the infrastructure to run its own trials.</p>
+        <div class="why"><strong>Why it matters:</strong> A company that has never given its drugs to a patient just raised more money than many mid-size drugmakers are worth, on the strength of design software alone.</div>
+        <p class="catch"><strong>The catch:</strong> No Isomorphic drug has entered human testing. Demis Hassabis said in January that the first trials were expected by the end of 2026, and the funding announcement claims positive preclinical results in cancer and immune diseases without publishing any of the data. The Merck deal names no target and no amounts: Isomorphic gets an undisclosed upfront payment, then milestones and royalties if anything works.</p>
+        <p class="sources">Sources: <a href="https://www.bioindustry.org/resource/isomorphic-labs-announces-5-billion-series-c-funding.html">Isomorphic Labs funding announcement (via BIA)</a> · <a href="https://s2.q4cdn.com/584635680/files/doc_news/Merck-and-Isomorphic-Labs-Enter-Strategic-Research-Collaboration-2026.pdf">Merck press release (PDF)</a></p>
+      </div>
+    </article>
+
+    <article class="news-card topic-discovery" data-topic="discovery" id="story-rhoagent">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-discovery">Discovery</span>
+          <span class="date">November 20, 2026</span>
+        <button class="story-share" data-share-text="An AI system called RhoAgent takes a plain-English request for an RNA molecule and returns designs that worked in the lab, including a ribozyme six times faster than the expert version. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>An AI “virtual scientist” designs working RNA molecules from a plain-English description of the job</h3>
+        <p class="summary">A team reporting in <em>Nature Biotechnology</em> built a system, RhoAgent, that takes a written request for an RNA molecule and returns designs that worked when the researchers made them. RNA is not only a messenger: some RNA molecules cut other molecules, and some glow when they grip a target, which makes them useful as switches and sensors inside cells. Designing them from scratch has lagged years behind <a href="../explainers/ai-protein-design.html">protein design</a>.</p>
+        <p class="summary">The AI runs the whole loop. An <a href="../wiki/index.html#ai-agent">AI agent</a> built on an open language model turns the plain-English goal into a specification; a second model draws a 3D RNA shape and then picks the sequence of letters to match; the designs are then screened for clashes and checked against a structure predictor, and failures are sent back for another round. The published summary reports synthetic <a href="../wiki/index.html#ribozyme">ribozymes</a> that worked while sharing only 40–70% of their letters with the natural versions, one cutting RNA up to six times faster than a version trimmed by human experts, and glowing <a href="../wiki/index.html#aptamer">aptamer</a> scaffolds about 230% brighter.</p>
+        <div class="why"><strong>Why it matters:</strong> RNA tools are how a lot of modern biology gets measured and controlled, and until now they have been built mostly by hand.</div>
+        <p class="catch"><strong>The catch:</strong> The figures above come from the paper’s published summary rather than our own reading of the full paper. The authors say the system mainly executes precise instructions and gives unpredictable results from vague ones, that it models a single fixed shape rather than molecules that switch between shapes, and that it works best below about 200 RNA letters.</p>
+        <p class="sources">Sources: <a href="https://www.nature.com/articles/s41587-026-03362-3">Nature Biotechnology paper</a> · <a href="https://bioengineer.org/virtual-scientist-rhoagent-designs-functional-programmable-rnas-and-enhances-molecular-activity/">Research summary</a></p>
+      </div>
+    </article>
+
+    <article class="news-card topic-funding" data-topic="funding" id="story-boltz">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-funding">Funding</span>
+          <span class="date">November 18, 2026</span>
+        <button class="story-share" data-share-text="Boltz raised $110 million for molecular-design models it publishes free. It says they have been downloaded over 5 million times, on its own figures. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>Boltz raises $110 million for molecular-design models it gives away free, and says 100,000 scientists use them</h3>
+        <p class="summary">Boltz, a London company spun out of MIT, raised $110 million led by Bessemer Venture Partners. Its main product is not a drug but software: models that predict what a protein and a drug candidate look like locked together, estimate how strongly they hold, and <a href="../explainers/ai-protein-design.html">propose new molecules</a> built to grip a chosen target. The core models are published free; the company sells access to faster hosted versions and to models it keeps private.</p>
+        <p class="summary">The AI is the product. Boltz says its free models have been downloaded more than 5 million times and are used by more than 100,000 scientists, including at Pfizer, GSK, Takeda and Bristol Myers Squibb, and that they match <a href="../explainers/alphafold.html">AlphaFold 3</a> at predicting structures. The new money goes to computing power, data and hiring; the team is about 40 researchers.</p>
+        <div class="why"><strong>Why it matters:</strong> The kind of structure prediction that was a corporate advantage three years ago is now a free download, and the business has moved to selling speed and private models on top of it.</div>
+        <p class="catch"><strong>The catch:</strong> The download count, the user count and the comparison with AlphaFold 3 are all the company’s own figures, measured on its own benchmarks. Boltz disclosed no revenue, and no drug designed with its models has been shown to work in a patient.</p>
+        <p class="sources">Sources: <a href="https://bvp.com/news/boltz-building-towards-programmable-molecular-design">Bessemer Venture Partners</a> · <a href="https://tech.eu/2026/11/19/london-based-boltz-raises-110m-series-a/">Tech.eu</a></p>
+      </div>
+    </article>
+
+    <article class="news-card topic-discovery" data-topic="discovery" id="story-noetik-msk">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-discovery">Discovery</span>
+          <span class="date">November 18, 2026</span>
+        <button class="story-share" data-share-text="Memorial Sloan Kettering is handing Noetik tumour data from tens of thousands of patients to train AI models that predict who a cancer drug will help. No results yet. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>Memorial Sloan Kettering gives Noetik tumour data from tens of thousands of patients to train cancer models</h3>
+        <p class="summary">Noetik, a San Francisco company, will train its AI models on tumour data from Memorial Sloan Kettering Cancer Center covering tens of thousands of patients. The aim is to predict which patients a given cancer treatment will actually help — the question oncologists most often cannot answer in advance.</p>
+        <p class="summary">The AI learns from the data. Noetik’s OCTO models are <a href="../wiki/index.html#foundation-model">foundation models</a>: single large models trained on many tumour samples at once so they pick up general patterns, rather than one model per question. The companies describe the goal as a <a href="../wiki/index.html#world-model">world model</a> of cancer biology, meaning a model that can be asked what would happen if a tumour were treated a particular way. MSK supplies the pathology data for training; Noetik supplies the models.</p>
+        <div class="why"><strong>Why it matters:</strong> Most cancer drugs help only a minority of the patients who take them, and nobody can reliably say in advance which minority.</div>
+        <p class="catch"><strong>The catch:</strong> This is an announcement of a collaboration, not a result. No financial terms, duration or prediction accuracy were disclosed, and the release notes that MSK itself holds a financial interest in Noetik.</p>
+        <p class="sources">Sources: <a href="https://www.biospace.com/press-releases/noetik-collaborates-with-leading-global-cancer-center-to-advance-the-next-generation-of-cancer-biology-world-models">Noetik press release (via BioSpace)</a></p>
+      </div>
+    </article>
+
+    <article class="news-card topic-discovery" data-topic="discovery" id="story-genesis-ruby">
+      <div class="rail"></div>
+      <div class="body">
+        <div class="topbar">
+          <span class="topic-tag tag-discovery">Discovery</span>
+          <span class="date">November 20, 2026</span>
+        <button class="story-share" data-share-text="Genesis Molecular AI says its new model predicts drug potency up to 1,000 times faster than rival methods — and published the training data, including 885 measurements two databases had filed under the wrong protein. — Cultured Machine" aria-label="Share this story" title="Share this story"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button></div>
+        <h3>Genesis Molecular AI claims much faster predictions of how strong a drug molecule will be, and publishes the data it trained on</h3>
+        <p class="summary">Genesis Molecular AI released a model, Ruby, that predicts potency — how much of a molecule it takes to shut down its target protein — and, with it, the training set behind it. The company says Ruby ranks candidates more accurately than the methods it tested against, including physics-based calculations, on four public benchmarks and on eight lab assays from its work with Incyte.</p>
+        <p class="summary">The AI skips a slow step. Earlier approaches build a 3D model of each molecule sitting in its target before scoring it. Ruby reuses the internal representations of the company’s structure-prediction model instead, which it says brings the cost down to 25 milliseconds per molecule at its fastest setting — 40 to more than 1,000 times faster than the other methods it compared. The released dataset, GenesisPotency-2026, is public literature data re-checked by hand; in one case 885 measurements of a protein’s inhibitors had been filed under an unrelated protein in two databases.</p>
+        <div class="why"><strong>Why it matters:</strong> Chemistry models are trained on public databases nobody had checked closely, so cleaning up the data may buy as much accuracy as a better model.</div>
+        <p class="catch"><strong>The catch:</strong> This is a company announcement, and its accuracy claims come with no numbers at all — no correlations, no error rates, no figures for the methods it beat. The technical report has not been peer reviewed, and the release does not say how large the dataset is.</p>
+        <p class="sources">Sources: <a href="https://www.globenewswire.com/news-release/2026/11/20/3407667/0/en/genesis-molecular-ai-announces-potency-prediction-breakthrough-with-ruby-releases-potency-training-dataset.html">Genesis Molecular AI press release</a></p>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="callout" style="margin-top:36px;">
+    <strong>How this digest is made:</strong> stories are gathered from trusted biotech and AI sources, summarized in plain English, and fact-checked against the primary source before publishing. Each links out so you can go deeper. <a href="../about.html">More on the process →</a>
+  </div>
+
+  <div style="margin-top:16px; text-align:center;">
+    <a class="btn" href="https://twitter.com/intent/tweet?text=This%20week%20in%20Biotech%20%2B%20AI%20%28November%2023%2C%202026%29%20%E2%80%94%20Cultured%20Machine&url=https%3A%2F%2Fhi-kay.github.io%2Fcultured-machine%2Fnews%2F2026-11-23.html" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      Share on X
+    </a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© <span id="year"></span> Cultured Machine · Biotech learns to compute.</div>
+    <div><a href="../about.html">About</a> · <a href="../explainers/alphafold.html">Explainers</a> · <a href="../index.html">Home</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* Topic filter */
+(function(){
+  const filter = document.getElementById('topicFilter');
+  const chips = [...filter.querySelectorAll('.topic-chip')];
+  const cards = [...document.querySelectorAll('#stories .news-card')];
+  filter.addEventListener('click', e => {
+    const chip = e.target.closest('.topic-chip');
+    if (!chip) return;
+    chips.forEach(c => c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'));
+    const topic = chip.dataset.topic;
+    cards.forEach(card => {
+      const show = (topic === 'all') || (card.dataset.topic === topic);
+      card.classList.toggle('hidden', !show);
+    });
+  });
+})();
+</script>
+<script src="../js/glossary-tooltip.js" defer></script>
+<script src="../js/share-story.js" defer></script>
+</body>
+</html>

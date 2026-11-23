@@ -93,11 +93,13 @@ Do not put the caveat in the TL;DR. It belongs in "The catch".
   - `admet` — ADMET
   - `ai-agent` — AI agent
   - `antibody-drug-conjugate` — Antibody-drug conjugate (ADC)
+  - `aptamer` — Aptamer
   - `binding-affinity` — Binding affinity
   - `bispecific-antibody` — Bispecific antibody
   - `cdr` — CDR (complementarity-determining region)
   - `checkpoint-inhibitor` — Checkpoint inhibitor
   - `crispr` — CRISPR
+  - `cryo-em` — Cryo-EM
   - `de-novo-protein-design` — De novo protein design
   - `dna-methylation` — DNA methylation
   - `foundation-model` — Foundation model
@@ -119,10 +121,12 @@ Do not put the caveat in the TL;DR. It belongs in "The catch".
   - `protac` — PROTAC
   - `protein-language-model` — Protein language model
   - `receptor-antagonist` — Receptor antagonist
+  - `ribozyme` — Ribozyme
   - `rna-splicing` — RNA splicing
   - `transcription-factor` — Transcription factor
   - `transcriptome` — Transcriptome
   - `tslp` — TSLP
+  - `virtual-cell` — Virtual cell
   - `world-model` — World model
 
 ## Per-story share buttons
