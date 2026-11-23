@@ -69,6 +69,19 @@ interesting true thing, said flat.
 If the headline needs a comma-plus-subordinate-clause to stay accurate, the accuracy belongs in
 the summary instead.
 
+## The dek
+
+Every story carries a one-line dek under the headline: `<p class="dek">`. Lowercase, no full stop,
+four to nine words, usually built on a gerund. It does not repeat the headline. It says what the
+story is *about* so a skimmer can skip the rest.
+
+- "Isomorphic raises $5 billion, then signs Merck two days later" → *money arriving well ahead of the medicine*
+- "A cancer hospital hands its tumour data to an AI startup" → *predicting who a treatment will actually help*
+- "Claude helped solve a protein structure, mistakes and all" → *an AI doing the unglamorous middle of a project*
+
+The headline carries the news. The dek carries the meaning. If the dek is just the headline in
+other words, cut it and write a better one.
+
 ## Openings
 
 **Never open a story with "Company X announced on [date] that..."** That is the press release's
@@ -82,6 +95,53 @@ Openings that work: a stake ("Children with brain tumours get sorted into broad 
 the group decides the treatment"), a contradiction ("No drug designed by Isomorphic Labs has ever
 been given to a patient"), or a plain fact with weight ("Vaults are hollow protein shells, spotted
 in animal cells back in 1986, and nobody knows what they are for").
+
+The most reliable version is the **world-fact opening**: state the thing about biology that creates
+the problem, then introduce the company solving it. The reader understands the stakes before any
+name appears.
+
+- "Every extra visit, blood test or procedure in a clinical trial asks something of its participants."
+- "A heart cell and a brain cell contain essentially the same DNA."
+- "Solid tumours can shut down the immune cells sent to destroy them."
+- "A gene editor is useful only if it reaches the cells that need it."
+
+The other version that works is **leading with the result**, when the result is strange enough:
+"MIT researchers stored a dried mRNA vaccine at 37°C for two months. When tested in mice, it still
+produced antibody responses comparable to fresh vaccine."
+
+## Rhythm: punchy is not the same as choppy
+
+Varying sentence length does not mean writing in fragments. A run of three-word sentences is its own
+tic, and it reads as breathless rather than confident. The target is an even, unhurried voice that
+occasionally lands a short sentence for emphasis — not one that shouts every third line.
+
+- Too choppy: "So why not try every shape? Drag this. It is not a paradox. It is a clue."
+- Better: "So why not let a computer try every possible shape and keep the best one? Pull the slider below and watch what happens to the number."
+
+## Caveats inside sentences
+
+Not every limitation needs its own block. A three-word qualifier inside a sentence often does the
+job better than a paragraph: "with encouraging company-reported animal results", "in mice", "in a
+test tube". Save "The catch" for the limitation that actually changes how the reader should read
+the story.
+
+When you do explain a limit, give the reason, not just the label: "Supplying the fragments let the
+researchers control what the test cells displayed. How well the designs work when tumours produce
+those fragments themselves remains an open question."
+
+## Connect to something the reader has done
+
+Where there is an honest parallel to ordinary experience, use it. It costs one sentence and buys
+real understanding.
+
+- "If you have ever chosen between two chatbot answers, you have supplied the kind of feedback used in direct preference optimization."
+- "You have probably seen an AI image generator turn a field of static into a photograph of a dog."
+
+## End on what it would mean
+
+Close a story on the consequence, stated concretely, rather than trailing off in hedges: "That could
+mean lower costs, fewer spoiled doses and easier distribution to places where reliable refrigeration
+is scarce." Not every story earns a closing turn. Most do.
 
 ## The page lead
 

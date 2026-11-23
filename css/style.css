@@ -218,6 +218,14 @@ figcaption { font-size: .88rem; color: var(--ink-soft); text-align: center; marg
 .news-card .sources { font-size: .85rem; color: var(--ink-soft); }
 .news-card .sources a { font-weight: 600; }
 
+
+/* story dek: lowercase one-liner under a headline, says what the story is about */
+.news-card .dek {
+  font-size: 1.02rem; color: var(--ink-soft); font-weight: 500;
+  margin: -4px 0 12px; line-height: 1.35;
+}
+.news-card.lead .dek { font-size: 1.12rem; }
+
 /* Lead (hero) story: bigger */
 .news-card.lead .body { padding: 28px; }
 .news-card.lead h3 { font-size: 1.6rem; }
