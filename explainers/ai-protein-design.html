@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>How AI invents a protein that never existed — Cultured Machine</title>
-<meta name="description" content="AI can now draw brand-new proteins on a computer, built to stick to a chosen target. A simple, visual explainer of how it works and where it still fails.">
+<meta name="description" content="Evolution has barely started. AI can now draw proteins that never existed, built to grip a chosen target. How it works, and why most designs still fail.">
 <link rel="stylesheet" href="../css/style.css">
 <style>
   .funnel { display: grid; gap: 10px; margin-top: 4px; }
@@ -37,23 +37,23 @@
 <main>
   <div class="eyebrow">Explainer</div>
   <h1>How AI invents a protein that never existed</h1>
-  <p class="meta">~5 min read · 2 things to play with · Published November 2026</p>
+  <p class="meta">~5 min read · 2 things to play with · Updated November 2026</p>
 
-  <p class="lead">For most of history, we could only use the proteins nature happened to make. Now a computer can draw a brand-new one, made to order, in an afternoon. Here is how that works, and why most of the drawings still end up in the bin.</p>
+  <p class="lead">Evolution has been writing proteins for four billion years and has barely started. Take a short one, a hundred beads long. The number of ways to spell it is a number with 130 digits. Every protein in every living thing on Earth is a rounding error against that.</p>
 
-  <div class="callout">
-    <strong>The whole story in one sentence:</strong> The AI dreams up a shape that fits the target, writes the recipe for it, checks its own work, and then the lab finds out if it was right.
-  </div>
+  <p>So the entire history of life on this planet has explored almost none of what is possible. Everything that could exist, and does not, is sitting out there unwritten.</p>
+  <p>People are now writing some of it.</p>
 
-  <h2>1. The goal: make a key for a lock</h2>
-  <p>Many medicines are proteins that <strong>stick to one exact thing</strong> in your body and nothing else. An antibody that grabs a virus. A blocker that plugs a receptor on a cancer cell.</p>
-  <p>Think of the target as a lock. The medicine is the key. The shape has to fit.</p>
-  <p>The old way to find a key was to search. Inject an animal and harvest the antibodies it makes, or test millions of random candidates and hope one fits. It works, but it is slow, and you get what you find, not what you want.</p>
-  <p class="big-idea">The new way: don't search for the key. Draw it.</p>
+  <h2>Make a key for a lock</h2>
+  <p>A lot of modern medicine is one protein grabbing hold of one other thing and refusing to let go. An antibody clamping onto a virus. A blocker plugging a receptor on a cancer cell so the signal telling it to grow never arrives.</p>
+  <p>The target is a lock. The medicine is a key. Shape decides everything.</p>
+  <p>For a century we found keys by searching. Inject a mouse, wait, harvest whatever antibodies it made. Or screen millions of random candidates and hope. It works — most biologic drugs on the market were found roughly this way — but you get what nature hands you, which is not necessarily what you asked for.</p>
 
-  <h2>2. Step one: dream up a shape</h2>
-  <p>You may have seen AI image generators turn a cloud of random dots into a picture of a cat. Protein design tools use the same trick, called <strong>diffusion</strong>.</p>
-  <p>The AI starts with beads scattered at random next to the target. Then it tidies them up, a little at a time, until they form a protein that hugs the target. Try it.</p>
+  <p class="big-idea">The new idea: stop searching for the key. Draw it.</p>
+
+  <h2>Step one: dream</h2>
+  <p>You have probably seen an AI image generator turn a field of static into a photograph of a dog. Protein designers borrowed the same machinery, called <strong>diffusion</strong>, and pointed it at molecules.</p>
+  <p>It starts with beads scattered at random beside the target. Then it tidies, a little at a time, until they have arranged themselves into something that grips. Press play.</p>
 
   <div class="viz">
     <h4>From noise to a new protein</h4>
@@ -67,31 +67,28 @@
     <p class="hint" id="diffMsg" style="margin:14px 0 0;">Pure noise. No protein yet.</p>
   </div>
 
-  <p>How does it know what a protein should look like? It practised. Researchers took thousands of real protein shapes, scrambled them with noise, and trained the AI to un-scramble them. After enough practice it can start from pure noise and still end up with something protein-like.</p>
-  <p>Press "New random start" a few times. Different noise gives a different design. That is useful: you can ask for ten thousand ideas and get ten thousand different ones.</p>
+  <p>How does it know what a protein is meant to look like? It practised. Researchers took thousands of real structures, wrecked them with noise, and trained the model to put them back together. Do that enough times and it can start from nothing but static and still land on something protein-shaped.</p>
+  <p>Press "new random start" a few times. Different static, different design. That turns out to be the useful part: you can ask for ten thousand ideas and get ten thousand genuinely different ones.</p>
 
-  <h2>3. Step two: write the recipe</h2>
-  <p>A shape on a screen is not a protein yet. A cell can only build a protein from a list of beads (<strong>amino acids</strong>) in the right order. So a second AI answers the question: <em>which string of beads will fold into this shape?</em></p>
-  <p>If you read the <a href="alphafold.html">AlphaFold explainer</a>, this is the same puzzle run backwards. AlphaFold goes from string to shape. This step goes from shape to string.</p>
+  <h2>Step two: write the recipe</h2>
+  <p>A shape on a screen is not a protein. A cell can only build from a list of beads in order, so a second model answers the reverse question: which string of amino acids would fold into this?</p>
+  <p>If you read <a href="alphafold.html">the AlphaFold explainer</a>, this is that puzzle running backwards. AlphaFold goes string to shape. This goes shape to string.</p>
 
-  <h2>4. Step three: check your own homework</h2>
-  <p>Now comes a neat trick. Take the new recipe and hand it to AlphaFold, without telling it what shape you wanted. Does it predict the same shape you drew?</p>
-  <ul>
-    <li><strong>Yes:</strong> good sign. Keep it.</li>
-    <li><strong>No:</strong> the recipe probably folds into something else. Throw it away.</li>
-  </ul>
-  <p>This filter is cheap, so teams run it on thousands of designs and keep only the best few.</p>
+  <h2>Step three: mark your own homework</h2>
+  <p>Now a rather elegant trick. Take the new recipe, hand it to AlphaFold, and say nothing about what you were aiming for.</p>
+  <p>Does it fold back into the shape you drew?</p>
+  <p>If yes, keep it. If no, the recipe probably folds into something else entirely and you throw it away. This costs almost nothing, so teams run it across thousands of designs and keep a handful.</p>
 
   <div class="steps">
-    <div class="step"><span class="emoji">🎨</span><strong>Dream</strong><p>Turn noise into a shape that fits the target.</p></div>
-    <div class="step"><span class="emoji">📝</span><strong>Write</strong><p>Find the string of beads that folds into that shape.</p></div>
+    <div class="step"><span class="emoji">🎨</span><strong>Dream</strong><p>Turn static into a shape that fits the target.</p></div>
+    <div class="step"><span class="emoji">📝</span><strong>Write</strong><p>Find the beads that fold into that shape.</p></div>
     <div class="step"><span class="emoji">🔍</span><strong>Check</strong><p>Fold it again on the computer. Does it match?</p></div>
-    <div class="step"><span class="emoji">🧪</span><strong>Test</strong><p>Make it in the lab and see if it really sticks.</p></div>
+    <div class="step"><span class="emoji">🧪</span><strong>Test</strong><p>Make it for real and see if it sticks.</p></div>
   </div>
 
-  <h2>5. Step four: the lab has the last word</h2>
-  <p>Everything so far happened on a computer. Now someone has to make the protein for real and measure whether it sticks. This is the slow, expensive part, and it is where most designs fail.</p>
-  <p>Here is a real example from <a href="../news/2026-11-09.html#story-pinal-protein-text">a recent digest</a>. A model called Pinal was asked to design a protein that glows.</p>
+  <h2>Then reality turns up</h2>
+  <p>Everything so far happened on a screen, where things are cheap and nothing can go wrong. Somebody now has to grow the protein, purify it, and measure whether it actually grabs the target. This is slow, costs real money, and is where the attrition happens.</p>
+  <p>A model called Pinal was asked to design a protein that glows. Watch what survives.</p>
 
   <div class="viz">
     <h4>One real design run</h4>
@@ -104,19 +101,17 @@
     <div class="controls"><button class="btn primary" id="funnelBtn">Run it</button></div>
   </div>
 
-  <p>One winner out of 50,000 ideas sounds bad. But that one protein did not exist anywhere in nature, and somebody got it by typing a request. The odds depend on the job: in the same study, 5 out of 20 designs worked for a different task. Still, most designs fail.</p>
+  <p>One out of fifty thousand looks like a failure, and for a lot of purposes it is. But that one protein had never existed, anywhere, and somebody got it by typing a sentence. On easier jobs the odds are far better — in the same study, five of twenty designs worked for a different task. The honest summary is that this works, badly, and is improving quickly.</p>
 
   <div class="callout">
-    <strong>Why it matters:</strong> Instead of spending months searching nature for a protein that happens to fit, scientists can now order one made to measure and test it within weeks.
+    <strong>Why it matters:</strong> Instead of hunting through nature for a protein that happens to fit, you can now order one built to measure and find out within weeks whether it works.
   </div>
 
-  <h2>6. What it still can't do</h2>
-  <ul>
-    <li><strong>Sticking is not healing.</strong> A protein that grabs its target is a starting point. It still has to be safe, last long enough in the body, and actually help patients. That takes years of testing.</li>
-    <li><strong>The computer check is not proof.</strong> Plenty of designs look perfect on screen and do nothing in the lab.</li>
-    <li><strong>Moving targets are hard.</strong> Locks that wobble or change shape are much tougher to design a key for.</li>
-  </ul>
-  <p>The idea of designing proteins on a computer earned David Baker a share of the 2024 Nobel Prize in Chemistry, alongside the makers of AlphaFold.</p>
+  <h2>Where it still gets stuck</h2>
+  <p><strong>Sticking is not healing.</strong> A protein that grabs its target is a starting point, not a drug. It still has to survive in a body, reach the right place, avoid setting off the immune system, and help someone. Most candidates die somewhere in there.</p>
+  <p><strong>The computer check is not proof.</strong> Designs that look flawless on screen fail in a tube all the time, and nobody can reliably predict which.</p>
+  <p><strong>Moving targets are brutal.</strong> If the lock wobbles or changes shape depending on what it is doing, designing a key for it gets much harder.</p>
+  <p>David Baker shared the 2024 Nobel Prize in Chemistry for this line of work, alongside the two people who built AlphaFold. The prize was for proving the idea. Making it reliable is the part everyone is still working on.</p>
 
   <h2>Keep going</h2>
   <div class="next-read">
@@ -128,7 +123,7 @@
     <a class="card" href="alphafold.html">
       <span class="kicker">Start here</span>
       <h3>How AlphaFold predicts a protein's shape</h3>
-      <p>The breakthrough that made all of this possible.</p>
+      <p>The competition nobody could win, and the London lab that won it.</p>
     </a>
   </div>
 

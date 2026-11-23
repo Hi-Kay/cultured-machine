@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>How AlphaFold predicts a protein's shape — Cultured Machine</title>
-<meta name="description" content="Proteins are strings that fold into tiny machines. For 50 years nobody could predict the shape. Then an AI did. A simple, visual explainer.">
+<meta name="description" content="For 26 years nobody could win biology's hardest competition. Then a London AI lab entered. How AlphaFold cracked protein folding, explained simply.">
 <link rel="stylesheet" href="../css/style.css">
 <style>
   .align { overflow-x: auto; }
@@ -46,15 +46,18 @@
   <h1>How AlphaFold predicts a protein's shape</h1>
   <p class="meta">~5 min read · 3 things to play with · Updated November 2026</p>
 
-  <p class="lead">Your body runs on billions of tiny machines called proteins. Each one starts life as a floppy string, then folds itself into a shape. For 50 years, nobody could predict that shape. Then an AI did.</p>
+  <p class="lead">Every two years since 1994, a few hundred scientists enter a competition almost nobody can win. For 26 years, nobody did.</p>
 
-  <div class="callout">
-    <strong>The whole story in one sentence:</strong> AlphaFold looks at how a protein has changed across thousands of species, works out which parts must be touching, and builds the 3D shape from those clues.
-  </div>
+  <h2>The contest nobody could win</h2>
+  <p>The rules are brutal and simple. Somewhere in the world, a lab has just worked out the exact 3D shape of a protein nobody has ever mapped before. The organisers lock that answer in a drawer. Then they hand out the protein's recipe and say: tell us what it looks like.</p>
+  <p>It is called CASP, and a biologist named John Moult started it because the field had a credibility problem. Everyone claimed their prediction software worked. Nobody could prove it, because everyone tested on proteins whose answers were already published. Moult's fix was to make the answers secret.</p>
+  <p>The scores were humbling. By 2014, after twenty years of effort, they had stopped improving at all.</p>
+  <p>Then in 2020 a team from a London AI lab entered and scored 92 out of 100. That is the point where a prediction is about as good as measuring the thing in a laboratory. Moult, who had spent twenty-six years watching clever people fail at this, told <em>Nature</em>: "In some sense the problem is solved."</p>
+  <p>Here is what they had solved.</p>
 
-  <h2>1. A protein is a string that folds itself</h2>
-  <p>Think of a necklace with beads in 20 different colours. That is a protein. The beads are called <strong>amino acids</strong>, and your DNA is the instruction list that says which bead comes next.</p>
-  <p>But the necklace does not stay a necklace. As soon as it is made, it crumples into a very exact 3D shape, usually in less than a second. Press the button and watch.</p>
+  <h2>What they were guessing</h2>
+  <p>Picture a necklace with beads in twenty colours. That is a protein. The beads are <strong>amino acids</strong>, and your DNA is the list that says which bead comes next.</p>
+  <p>The necklace does not stay a necklace. The instant a cell builds it, the thing crumples in on itself and settles into one specific, intricate, reproducible shape. It does this in less than a second, every time, without being told how.</p>
 
   <div class="viz">
     <h4>From string to shape</h4>
@@ -66,12 +69,12 @@
     </div>
   </div>
 
-  <p><strong>The shape is the whole point.</strong> A key only opens a door because of its shape. A protein is the same. One shape carries oxygen in your blood. Another digests your lunch. Another is the spike a virus uses to break into your cells.</p>
-  <p>So if you want to understand a disease or design a medicine, you need the shape.</p>
+  <p>That shape is the entire point. A key opens a door because of its shape, and a protein works the same way. One shape carries oxygen around your blood. A different one is the spike the flu virus uses to break into your cells.</p>
+  <p>Reading the beads is easy. We have been able to do it cheaply for decades. Finding the shape meant months of laboratory work, sometimes years, for a single protein, which is why a PhD student could spend most of a degree on one.</p>
 
-  <h2>2. Why you can't just guess</h2>
-  <p>Reading the order of the beads is easy and cheap. Finding the shape used to mean months or years of lab work for a single protein.</p>
-  <p>Why not let a computer try every possible shape? Because there are far too many. Drag the slider and see how fast it gets out of hand.</p>
+  <h2>Why guessing is hard</h2>
+  <p>So why not let a computer try every possible shape and pick the best one?</p>
+  <p>Drag this.</p>
 
   <div class="viz" id="levinthal">
     <h4>How many ways can a chain fold?</h4>
@@ -90,11 +93,12 @@
     <p class="hint" id="levinthalTakeaway" style="margin:14px 0 0;"></p>
   </div>
 
-  <p>Real proteins are often hundreds of beads long. Checking every shape would take longer than the universe has existed. Yet the protein itself finds the right one almost instantly. Scientists call this puzzle <strong>Levinthal's paradox</strong>, and it is why brute force was never going to work.</p>
+  <p>A real protein runs to hundreds of beads. Checking every shape would take longer than the universe has been around, and the protein itself does it in a fraction of a second, which is either a miracle or a hint that brute force is the wrong idea. A biologist called Cyrus Levinthal pointed this out in 1969 and people have been calling it a paradox ever since.</p>
+  <p>It is not a paradox. It is a clue. The protein is not searching.</p>
 
-  <h2>3. The trick: evolution already left the answers lying around</h2>
-  <p>Here is the clever part. You have the same proteins as a mouse, a fish and even a bacterium. Not identical, but close. Over millions of years, each species collected its own small spelling changes.</p>
-  <p>Line up those versions and something odd shows up. Some beads <em>change together</em>. Below is a toy example. Can you spot the two positions that always change as a pair?</p>
+  <h2>The clue hiding in a fish</h2>
+  <p>You and a trout share a lot of proteins. Not identical ones — each species has been collecting its own small spelling changes for a few hundred million years — but close enough to line up side by side.</p>
+  <p>Do that for enough species and something strange shows up. Certain beads change <em>together</em>. Below is a simplified version. Two of the ten columns are in on a secret. See if you can find them before you press the button.</p>
 
   <div class="viz">
     <h4>One protein, six species</h4>
@@ -111,34 +115,35 @@
     <p class="hint" id="alignMsg" style="margin:14px 0 0;">Hint: look at columns 3 and 8.</p>
   </div>
 
-  <p>Why would two beads far apart on the string care about each other? Because in the folded shape <strong>they are touching</strong>. One carries a plus charge, the other a minus, and they hold on to each other like two magnets. If one flips, the other has to flip too, or the protein falls apart.</p>
-
+  <p>Column 3 and column 8 sit five beads apart on the string, so why would they care about each other?</p>
+  <p>Because once the thing is folded, they are touching. One carries a positive charge and the other a negative one, and they hold on to each other like two magnets. Evolution will happily flip one of them — but only if the other flips too. Any animal that got one mutation without the other had a broken protein and did not pass it on.</p>
   <div class="viz">
     <h4>Far apart on the string, neighbours in the fold</h4>
     <p class="hint">The same ten beads, with 3 and 8 coloured in.</p>
     <svg viewBox="0 0 600 210" style="width:100%; height:auto;" id="foldSvg2" role="img" aria-label="Beads 3 and 8 are far apart on the chain but touch after folding"></svg>
     <div class="controls">
       <button class="btn primary" id="foldBtn2">Fold it</button>
-      <span class="hint" id="foldMsg2" style="margin:0;">Beads 3 and 8 are five beads apart.</span>
+      <span class="hint" id="foldMsg2" style="margin:0;">Five beads apart, and nothing in common.</span>
     </div>
   </div>
 
-  <p class="big-idea">Beads that change together sit together. Find enough of these pairs and you have a map of the shape.</p>
+  <p>Which means that every pair of beads that touch in the final shape has been leaving a trail in the fossil record of DNA for a billion years, waiting for somebody to notice.</p>
 
-  <h2>4. What AlphaFold actually does</h2>
-  <p>AlphaFold, built by Google DeepMind, turns that idea into a recipe with three steps.</p>
+  <p class="big-idea">Beads that change together sit together. Collect enough pairs and you have a map of the shape.</p>
+
+  <h2>Putting it together</h2>
+  <p>AlphaFold, built at Google DeepMind, turns that into a three-step recipe.</p>
 
   <div class="steps">
-    <div class="step"><span class="emoji">📚</span><strong>Collect the family album</strong><p>Find versions of your protein in thousands of other species and line them up.</p></div>
+    <div class="step"><span class="emoji">📚</span><strong>Collect the family album</strong><p>Find your protein in thousands of other species and line them all up.</p></div>
     <div class="step"><span class="emoji">🧲</span><strong>Spot the pairs</strong><p>Work out which beads change together. Those are probably touching.</p></div>
-    <div class="step"><span class="emoji">🧩</span><strong>Build and polish</strong><p>Assemble a 3D shape that fits all the clues, then refine it again and again.</p></div>
+    <div class="step"><span class="emoji">🧩</span><strong>Build and polish</strong><p>Assemble a shape that fits every clue, then refine it over and over.</p></div>
   </div>
 
-  <p>The engine doing this is a neural network. It is the same family of AI that powers chatbots, but trained on the protein shapes scientists had already measured in the lab. It learned what real proteins look like, so it can make a very good guess for a new one.</p>
-  <p>It is a bit like a 3D jigsaw where evolution has quietly told you which pieces share an edge.</p>
+  <p>The engine is a neural network, the same family of AI behind chatbots, trained on every protein shape labs had already measured. So it is not reasoning from physics. It has simply seen enough real proteins to know what one looks like, the way you can tell a real face from a drawing of one without being able to explain how.</p>
 
-  <h2>5. How big a deal was it?</h2>
-  <p>In 2020, AlphaFold's predictions came close to the accuracy of lab experiments for many proteins, in minutes instead of months. Two years later the team published predicted shapes for nearly every protein known to science, free for anyone.</p>
+  <h2>What happened next</h2>
+  <p>DeepMind could have sold it. Instead, in 2022, they ran the model over almost every protein known to science and put the results on the internet for anyone.</p>
 
   <div class="viz">
     <h4>50 years of lab work vs. one AI</h4>
@@ -150,26 +155,24 @@
     <p class="hint" style="margin:14px 0 0; text-align:center;">Yes, the dot on the left is the lab square. Not all predictions are equally reliable: about a third are rated highly accurate.</p>
   </div>
 
-  <p>In 2024, AlphaFold's creators Demis Hassabis and John Jumper shared the Nobel Prize in Chemistry for it.</p>
+  <p>A problem that had been open since 1972, when Christian Anfinsen stood up at the Nobel ceremony and argued that a protein's shape must be written somewhere in its sequence, had turned into a free lookup. In 2024 the Nobel committee came back around and gave the chemistry prize to Demis Hassabis and John Jumper for it.</p>
 
   <div class="callout">
-    <strong>Why it matters:</strong> Scientists who want to design a medicine or understand a disease can now look up a protein's shape in seconds instead of spending years measuring it.
+    <strong>Why it matters:</strong> Anyone designing a medicine or chasing down a genetic disease can now pull up a protein's shape in seconds instead of spending years measuring it.
   </div>
 
-  <h2>6. What it still can't do</h2>
-  <ul>
-    <li><strong>Proteins move. AlphaFold gives you a photo, not a film.</strong> Many proteins bend and snap between shapes as they work. Predicting that movement is still hard.</li>
-    <li><strong>It needs the family album.</strong> Proteins with few relatives, or ones that change very fast like some virus and immune proteins, give it fewer clues.</li>
-    <li><strong>A prediction is still a prediction.</strong> For anything important, the lab has the final word.</li>
-  </ul>
-  <p>The newer AlphaFold 3 (2024) fixed one big gap: it can predict a protein together with the thing it grabs, such as a drug or a piece of DNA.</p>
+  <h2>Where it still gets stuck</h2>
+  <p><strong>Proteins move.</strong> AlphaFold hands you a photograph. Plenty of proteins do their job by flexing, snapping shut, springing open — and predicting that film is still largely unsolved.</p>
+  <p><strong>It needs the family album.</strong> A protein with few known relatives gives it fewer clues, which is awkward, because the fastest-changing proteins include the viral and immune ones we most want to understand.</p>
+  <p><strong>It is still a guess.</strong> A very good one. The lab still gets the last word.</p>
+  <p>AlphaFold 3, released in 2024, closed one of the bigger gaps: it can now predict a protein together with whatever it grabs hold of, including a drug molecule or a strand of DNA.</p>
 
   <h2>Keep going</h2>
   <div class="next-read">
     <a class="card" href="ai-protein-design.html">
       <span class="kicker">Next</span>
       <h3>How AI invents a protein that never existed</h3>
-      <p>AlphaFold reads shapes. The next step is drawing new ones.</p>
+      <p>Reading shapes was step one. Now they are drawing new ones.</p>
     </a>
     <a class="card" href="protein-language-models.html">
       <span class="kicker">Related</span>
@@ -178,7 +181,7 @@
     </a>
   </div>
 
-  <p class="meta" style="margin-top:32px;">Spotted an error or have a suggestion? This explainer is open source. Corrections welcome.</p>
+  <p class="meta" style="margin-top:32px;">Sources: <a href="https://www.nature.com/articles/d41586-020-03348-4">Nature on CASP14</a> · <a href="https://alphafold.ebi.ac.uk/">AlphaFold database</a>. Spotted an error? This explainer is open source, corrections welcome.</p>
 </main>
 
 <footer class="site-footer">
@@ -261,8 +264,8 @@ wireFold('foldSvg1','foldBtn1','foldMsg1', null,
   'Right now it is just a floppy string. It can’t do anything yet.',
   'Now it has a shape, and the shape gives it a job.');
 wireFold('foldSvg2','foldBtn2','foldMsg2', {2:'#7c5cff', 7:'#d97706'},
-  'Beads 3 and 8 are five beads apart.',
-  'Now 3 and 8 are right next to each other. That is why they change together.');
+  'Five beads apart, and nothing in common.',
+  'And there they are, pressed together. That is why they change as a pair.');
 
 /* ---- Slider: how many shapes ---- */
 (function(){

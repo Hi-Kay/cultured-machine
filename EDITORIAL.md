@@ -26,6 +26,63 @@ This is a **Biotech + AI** site. The AI angle is the reason a story belongs here
 - Active voice, always. "The model predicts", not "predictions are made by the model".
 - Do not open a story with a date, a company's legal name, or a filing type. Open with the thing that happened.
 
+## Do not sound like a machine wrote it
+
+This is the rule people notice before any other. Wikipedia keeps a field guide to
+[signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing); the
+items below are the ones that keep showing up here.
+
+**Vary sentence length on purpose.** The single loudest tell is prose where every sentence
+runs 8 to 20 words. Real writing lurches. Put a four-word sentence next to a thirty-five-word
+one. Read a paragraph aloud: if it has one rhythm throughout, break it.
+
+**Never use these constructions:**
+- "Not only X, but also Y" / "It's not X, it's Y" / "not just X, it's Y"
+- Corrective framing nobody asked for: "should be treated as X rather than Y", "this does not by itself establish", "should not be confused with"
+- Trailing "-ing" clauses that assert importance: "..., highlighting the growing role of...", "..., underscoring the shift toward...", "..., reflecting broader trends in..."
+- Rule of three: "fast, cheap and accurate", "designed, tested and validated". Two items or four. Not three.
+- Copula dodging: "serves as", "stands as", "represents a", "marks a", "functions as". The word is "is".
+
+**Never use these words:** crucial, pivotal, vital, key (as an adjective), underscore, highlight
+(as a verb), showcase, delve, intricate, meticulous, robust, leverage, foster, enhance, emphasise,
+landscape (figurative), tapestry, testament, vibrant, profound, groundbreaking, renowned, seamless,
+multifaceted, quietly (as in "quietly became"), steady, dependable, universally.
+
+**Never write these sentences:** "It is worth noting that...", "It is important to note...",
+"In summary", "In conclusion", "Overall". If it is worth noting, note it.
+
+**No repeated scaffolding across pages.** If every article opens with the same labelled box or
+closes with the same three-bullet limitations list, the template becomes the tell, however good
+each piece is on its own. Vary the furniture.
+
+## Headlines
+
+Six to eleven words. Declarative. One clause.
+
+A headline is not the first sentence of the story with the air let out. It is the single most
+interesting true thing, said flat.
+
+- Good: "Anthropic buys a one-person biotech, and shows its first results"
+- Good: "A lab service for checking whether designed proteins actually stick"
+- Bad: "Google DeepMind releases AlphaGenome 2, an AI model that predicts how a change in DNA alters gene activity in a chosen type of cell"
+
+If the headline needs a comma-plus-subordinate-clause to stay accurate, the accuracy belongs in
+the summary instead.
+
+## Openings
+
+**Never open a story with "Company X announced on [date] that..."** That is the press release's
+voice, not ours, and it buries the news under paperwork. Lead with the thing that would make
+someone look up, then put the who and the when in the second sentence where they belong.
+
+- Bad: "Sino Biological, a protein-reagent company, announced on November 13 a service called 4RISE that checks, in the lab, whether proteins designed by AI bind the target they were designed for."
+- Good: "Designing a protein is now the cheap part. On November 13 Sino Biological, a protein-reagent company, launched a service called 4RISE that handles the expensive part..."
+
+Openings that work: a stake ("Children with brain tumours get sorted into broad risk groups, and
+the group decides the treatment"), a contradiction ("No drug designed by Isomorphic Labs has ever
+been given to a patient"), or a plain fact with weight ("Vaults are hollow protein shells, spotted
+in animal cells back in 1986, and nobody knows what they are for").
+
 ## The page lead
 
 The `<p class="lead">` under the title says what the reader is getting, in one plain sentence — e.g. "Four stories, each in a few plain sentences, with one line on why it matters and one on what the news does not prove." Update the story count each week. Do not reuse the old "The stories worth your attention right now…" line.
